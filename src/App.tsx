@@ -176,10 +176,12 @@ function App() {
           </a>
           <ul className="nav-links">
             <li><a href="#program" onClick={(e) => { e.preventDefault(); scrollTo('program') }}>Program</a></li>
+            {/* Hidden until content is ready
             <li><a href="#outcomes" onClick={(e) => { e.preventDefault(); scrollTo('outcomes') }}>Outcomes</a></li>
             <li><a href="#mentors" onClick={(e) => { e.preventDefault(); scrollTo('mentors') }}>Mentors</a></li>
             <li><a href="#community" onClick={(e) => { e.preventDefault(); scrollTo('community') }}>Community</a></li>
             <li><a href="#about" onClick={(e) => { e.preventDefault(); scrollTo('about') }}>About</a></li>
+            */}
             <li><a href="#faq" onClick={(e) => { e.preventDefault(); scrollTo('faq') }}>FAQ</a></li>
           </ul>
           <a href="#apply" className="nav-cta" onClick={(e) => { e.preventDefault(); scrollTo('apply') }}>Apply &rarr;</a>
@@ -457,8 +459,8 @@ function App() {
         </div>
       </section>
 
-      {/* Outcomes */}
-      <section className="outcomes" id="outcomes">
+      {/* Outcomes - hidden until content ready */}
+      <section className="outcomes" id="outcomes" style={{ display: 'none' }}>
         <div className="container">
           <p className="eyebrow text-center">Cohort 01 &middot; Real numbers from real founders</p>
           <h2 className="text-center" style={{ fontSize: 'clamp(28px, 3.5vw, 40px)', fontWeight: 700 }}>What founders walked out with.</h2>
@@ -517,8 +519,8 @@ function App() {
         </div>
       </section>
 
-      {/* Mentors */}
-      <section className="mentors" id="mentors">
+      {/* Mentors - hidden until content ready */}
+      <section className="mentors" id="mentors" style={{ display: 'none' }}>
         <div className="container">
           <p className="eyebrow text-center">Your Mentors</p>
           <h2 className="text-center" style={{ fontSize: 'clamp(28px, 3.5vw, 40px)', fontWeight: 700 }}>People who've built what you're building.</h2>
@@ -536,8 +538,8 @@ function App() {
         </div>
       </section>
 
-      {/* Community */}
-      <section className="community" id="community">
+      {/* Community - hidden until content ready */}
+      <section className="community" id="community" style={{ display: 'none' }}>
         <div className="container">
           <p className="eyebrow text-center">Beyond the Sessions</p>
           <h2 className="text-center" style={{ fontSize: 'clamp(28px, 3.5vw, 40px)', fontWeight: 700 }}>You're not doing this alone.</h2>

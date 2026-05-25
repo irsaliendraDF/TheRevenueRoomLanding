@@ -168,7 +168,10 @@ img {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+}
+
+.nav-links {
+  margin-left: auto;
 }
 
 .nav-logo {
@@ -206,6 +209,7 @@ img {
   align-items: center;
   gap: 28px;
   list-style: none;
+  margin-right: 20px;
 }
 
 .nav-links a {
@@ -348,7 +352,7 @@ img {
 .hero-tagline {
   font-size: 18px;
   color: var(--ink-soft);
-  max-width: 640px;
+  max-width: 780px;
   margin: 0 auto 36px;
   line-height: 1.7;
 }
@@ -470,14 +474,14 @@ img {
   font-size: clamp(28px, 4vw, 44px);
   font-weight: 700;
   color: var(--ink);
-  max-width: 720px;
+  max-width: 1120px;
   margin: 0 auto 16px;
 }
 
 .problem-headline p {
   font-size: 16px;
   color: var(--muted);
-  max-width: 560px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -826,7 +830,7 @@ img {
 .offer-reveal p {
   font-size: 17px;
   color: var(--ink-soft);
-  max-width: 580px;
+  max-width: 900px;
   margin: 0 auto;
   line-height: 1.7;
 }

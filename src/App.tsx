@@ -79,9 +79,9 @@ const founderFaqs = [
   { q: 'What is the cohort size?', a: '10 founders maximum. Small enough for personalized feedback, large enough for diverse perspectives and accountability.' },
   { q: 'Do I need a CRM already?', a: 'No. We help you choose and configure one during Week 4. If you already have one, we will audit and optimize it.' },
   { q: 'What CRM do you recommend?', a: 'We are CRM-agnostic. The frameworks work with HubSpot, Pipedrive, Close, Attio, or even a well-structured spreadsheet. We help you pick based on your stage and budget.' },
-  { q: 'What happens after the 6 weeks?', a: 'You keep lifetime access to the Slack community, monthly alumni calls, and all playbook updates. Many alumni also join future cohorts as peer mentors.' },
-  { q: 'What is the investment?', a: 'Founding Cohort pricing is $2,400. That includes all 6 live sessions, capstone, mentorship, community access, templates, and lifetime playbook updates.' },
-  { q: 'What is the refund policy?', a: 'If you complete all 6 sessions, do the work, and genuinely feel you did not get value, we will refund you in full. No hoops. We guarantee the deliverables.' },
+  { q: 'What happens after the 7 weeks?', a: 'You keep lifetime access to the Slack community, monthly alumni calls, and all playbook updates. Many alumni also join future cohorts as peer mentors.' },
+  { q: 'What is the investment?', a: 'Founding Cohort pricing is $2,400. That includes all 7 live sessions, mentorship, community access, templates, and lifetime playbook updates.' },
+  { q: 'What is the refund policy?', a: 'If you complete all 7 sessions, do the work, and genuinely feel you did not get value, we will refund you in full. No hoops. We guarantee the deliverables.' },
 ]
 
 const sponsorFaqs = [
@@ -102,7 +102,7 @@ const mentors = [
 ]
 
 const outcomes = [
-  { metric: '$87K', label: 'pipeline built in 6 weeks', quote: 'I went from guessing to forecasting. For the first time I can see where my next quarter is coming from.', name: 'Maya Kapoor', role: 'Founder, Trellis Analytics', initials: 'MK' },
+  { metric: '$87K', label: 'pipeline built in 7 weeks', quote: 'I went from guessing to forecasting. For the first time I can see where my next quarter is coming from.', name: 'Maya Kapoor', role: 'Founder, Trellis Analytics', initials: 'MK' },
   { metric: '3.4x', label: 'close rate improvement', quote: 'The qualification framework alone saved me 10 hours a week of wasted calls.', name: 'Devin Rourke', role: 'CEO, Rourke Dev', initials: 'DR' },
   { metric: '14 to 32', label: 'qualified leads in pipeline', quote: 'I finally have a system. Not a hack, not a trick. A system I can run every single week.', name: 'Sasha Chen', role: 'Founder, Canopy AI', initials: 'SC' },
   { metric: '$240K', label: 'closed within 90 days', quote: 'The cohort accountability was everything. I would not have built this alone.', name: 'Tomas Alvarez', role: 'Co-founder, BuildLayer', initials: 'TA' },
@@ -184,7 +184,7 @@ function App() {
             */}
             <li><a href="#faq" onClick={(e) => { e.preventDefault(); scrollTo('faq') }}>FAQ</a></li>
           </ul>
-          <a href="#apply" className="nav-cta" onClick={(e) => { e.preventDefault(); scrollTo('apply') }}>Apply &rarr;</a>
+          <a href="#apply" className="nav-cta" onClick={(e) => { e.preventDefault(); scrollTo('apply') }}>Apply to Beta Cohort &rarr;</a>
         </div>
       </nav>
 
@@ -206,14 +206,14 @@ function App() {
         <div className="hero-content container">
           <div className="hero-meta">
             <span className="hero-meta-dot"></span>
-            Founding Cohort 02 &middot; 10 seats remaining
+            Beta Cohort &middot; 10 seats remaining
           </div>
           <h1 className="hero-title">The Revenue Room</h1>
           <p className="hero-tagline">
-            A 6-week community accelerator where technical founders stop winging it and build a real sales system, together, from the ground up.
+            A 7-week community accelerator where technical founders stop winging it and build a real sales system, together, from the ground up.
           </p>
           <div className="hero-buttons">
-            <a href="#apply" className="btn-primary" onClick={(e) => { e.preventDefault(); scrollTo('apply') }}>Apply for Cohort 02 &rarr;</a>
+            <a href="#apply" className="btn-primary" onClick={(e) => { e.preventDefault(); scrollTo('apply') }}>Apply to Beta Cohort &rarr;</a>
             <a href="#program" className="btn-ghost" onClick={(e) => { e.preventDefault(); scrollTo('program') }}>See the Curriculum</a>
           </div>
           <div className="hero-pills">
@@ -232,7 +232,7 @@ function App() {
               <div className="hero-stat-label">Founders / Cohort</div>
             </div>
             <div className="hero-stat">
-              <div className="hero-stat-value">6 wk</div>
+              <div className="hero-stat-value">7 wk</div>
               <div className="hero-stat-label">Live Program</div>
             </div>
             <div className="hero-stat">
@@ -325,7 +325,7 @@ function App() {
                 I've watched brilliant technical founders leave hundreds of thousands on the table because nobody ever showed them how to build a repeatable process. They could build incredible products. They could explain the value. But they had no system for capturing demand and moving it forward.
               </p>
               <p>
-                The Revenue Room is what I wish existed when I started. A small, focused cohort where you build your entire sales engine in 6 weeks, with mentors who've done it, and peers who are doing it alongside you.
+                The Revenue Room is what I wish existed when I started. A small, focused cohort where you build your entire sales engine in 7 weeks, with mentors who've done it, and peers who are doing it alongside you.
               </p>
               <div className="rapport-badges">
                 <span className="rapport-badge">&#x2B50; 30 Under 30 Innovator &middot; Atlantic Business Magazine</span>
@@ -403,7 +403,7 @@ function App() {
         <div className="container">
           <p className="eyebrow">Introducing</p>
           <h2>The Revenue Room</h2>
-          <p>A 6-week community accelerator that gives technical founders a complete, operational sales system, built live, with peers and mentors, from first conversation to closed deal.</p>
+          <p>A 7-week community accelerator that gives technical founders a complete, operational sales system, built live, with peers and mentors, from first conversation to closed deal.</p>
         </div>
       </section>
 
@@ -455,7 +455,7 @@ function App() {
         </div>
         <div className="benefits-closer">
           <p>"This isn't a course. It's a build sprint. You leave with a working system, not a certificate."</p>
-          <a href="#apply" className="btn-primary" onClick={(e) => { e.preventDefault(); scrollTo('apply') }}>Apply for Cohort 02 &rarr;</a>
+          <a href="#apply" className="btn-primary" onClick={(e) => { e.preventDefault(); scrollTo('apply') }}>Apply to Beta Cohort &rarr;</a>
         </div>
       </section>
 
@@ -487,7 +487,7 @@ function App() {
       <section className="modules" id="curriculum">
         <div className="container">
           <p className="eyebrow">The Curriculum</p>
-          <h2 style={{ fontSize: 'clamp(28px, 3.5vw, 40px)', fontWeight: 700, marginBottom: 32 }}>6 weeks. One system. Zero fluff.</h2>
+          <h2 style={{ fontSize: 'clamp(28px, 3.5vw, 40px)', fontWeight: 700, marginBottom: 32 }}>7 weeks. One system. Zero fluff.</h2>
           <div className="modules-filters">
             {['all', '1', '2', '3', '4', '5', '6', 'cap'].map(f => (
               <button
@@ -616,7 +616,7 @@ function App() {
             <span className="guarantee-badge">The Revenue Room Guarantee</span>
             <div className="guarantee-icon">&#x1F6E1;&#xFE0F;</div>
             <h3>We guarantee the value. You bring the commitment.</h3>
-            <p>Complete all 6 sessions, do the exercises, build your system, and if you genuinely feel you didn't get the value we promised, we'll refund you in full. No hoops. No fine print games.</p>
+            <p>Complete all 7 sessions, do the exercises, build your system, and if you genuinely feel you didn't get the value we promised, we'll refund you in full. No hoops. No fine print games.</p>
             <div className="guarantee-tags">
               <span className="guarantee-tag">Qualified ICP</span>
               <span className="guarantee-tag">Structured pipeline</span>
@@ -654,7 +654,7 @@ function App() {
       <section className="closing-cta" id="apply">
         <div className="container">
           <h2>Your Revenue Engine won't build itself. But you don't have to build it alone.</h2>
-          <a href="#apply" className="btn-primary">Apply for Cohort 02 &rarr;</a>
+          <a href="#apply" className="btn-primary" onClick={(e) => { e.preventDefault(); scrollTo('apply') }}>Apply to Beta Cohort &rarr;</a>
           <p className="closing-cta-sub">5-minute application &middot; 48-hour response &middot; No spam, ever.</p>
         </div>
       </section>
@@ -666,7 +666,7 @@ function App() {
             <div className="footer-brand">
               <img src="/digitalflow-logo.png" alt="DigitalFlow Consulting" style={{ height: 36, marginBottom: 12, filter: 'brightness(10)' }} />
               <p style={{ fontFamily: 'var(--font-display)', fontSize: 16, fontWeight: 700, color: '#fff', marginBottom: 12 }}>The Revenue Room</p>
-              <p>A 6-week community accelerator for technical founders building their first real sales system. By DigitalFlow Consulting.</p>
+              <p>A 7-week community accelerator for technical founders building their first real sales system. By DigitalFlow Consulting.</p>
             </div>
             <div className="footer-col">
               <h5>Program</h5>

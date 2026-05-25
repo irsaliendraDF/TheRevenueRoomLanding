@@ -157,7 +157,14 @@ function App() {
     <>
       {/* Announcement Bar */}
       <div className="announcement-bar">
-        Founding Cohort 02 &middot; 10 seats &middot; Cohort starts Sept 8, 2026 &middot; Applications close July 1st
+        <div className="announcement-bar-track">
+          <span className="announcement-bar-item">APPLY NOW to the Beta Cohort - Limited to 10 founders</span>
+          <span className="announcement-bar-item">Beta Cohort starts Sept 8, 2026</span>
+          <span className="announcement-bar-item">Applications closing soon - Apply today</span>
+          <span className="announcement-bar-item">APPLY NOW to the Beta Cohort - Limited to 10 founders</span>
+          <span className="announcement-bar-item">Beta Cohort starts Sept 8, 2026</span>
+          <span className="announcement-bar-item">Applications closing soon - Apply today</span>
+        </div>
       </div>
 
       {/* Navigation */}

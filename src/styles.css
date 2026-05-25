@@ -72,11 +72,11 @@ img {
 }
 
 .section-pad {
-  padding: 96px 0;
+  padding: 64px 0;
 }
 
 .section-pad-sm {
-  padding: 64px 0;
+  padding: 48px 0;
 }
 
 .text-center {
@@ -103,17 +103,42 @@ img {
   margin-bottom: 16px;
 }
 
-/* ---- Announcement Bar ---- */
+/* ---- Announcement Bar (Animated Ticker) ---- */
 .announcement-bar {
   background: var(--forest-deep);
   color: var(--gold-light);
-  text-align: center;
-  padding: 10px 16px;
+  padding: 10px 0;
   font-family: var(--font-mono);
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  overflow: hidden;
+  position: relative;
+}
+
+.announcement-bar-track {
+  display: flex;
+  width: max-content;
+  animation: ticker 20s linear infinite;
+}
+
+.announcement-bar-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 48px;
+  white-space: nowrap;
+}
+
+.announcement-bar-item::after {
+  content: '\2022';
+  color: var(--gold);
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* ---- Navigation ---- */
@@ -221,7 +246,7 @@ img {
   position: relative;
   background: var(--cream);
   overflow: hidden;
-  padding: 120px 0 96px;
+  padding: 80px 0 64px;
   text-align: center;
 }
 
@@ -438,7 +463,7 @@ img {
 /* ---- Problem Section ---- */
 .problem-headline {
   text-align: center;
-  padding: 96px 0 40px;
+  padding: 64px 0 32px;
 }
 
 .problem-headline h2 {
@@ -457,9 +482,9 @@ img {
 }
 
 .problem-prose {
-  max-width: 680px;
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 0 24px 80px;
+  padding: 0 24px 56px;
 }
 
 .problem-prose p {
@@ -576,7 +601,7 @@ img {
 /* ---- Rapport / Bio ---- */
 .rapport {
   background: var(--cream);
-  padding: 96px 0;
+  padding: 64px 0;
 }
 
 .rapport-grid {
@@ -669,11 +694,11 @@ img {
 
 /* ---- Solution / Method ---- */
 .solution {
-  padding: 96px 0;
+  padding: 64px 0;
 }
 
 .solution-prose {
-  max-width: 680px;
+  max-width: 1120px;
   margin: 0 auto 48px;
   text-align: center;
 }
@@ -696,7 +721,7 @@ img {
   border: 1px solid var(--gold);
   border-radius: var(--radius-lg);
   padding: 40px;
-  max-width: 720px;
+  max-width: 1120px;
   margin: 0 auto;
 }
 
@@ -732,7 +757,7 @@ img {
 .meaning {
   background: var(--forest);
   color: #fff;
-  padding: 96px 0;
+  padding: 64px 0;
 }
 
 .meaning h2 {
@@ -745,7 +770,7 @@ img {
   font-size: 16px;
   color: rgba(255,255,255,0.75);
   margin-bottom: 40px;
-  max-width: 600px;
+  max-width: 1120px;
 }
 
 .meaning-bullets {
@@ -782,13 +807,13 @@ img {
   font-size: 16px;
   font-weight: 500;
   color: #fff;
-  max-width: 600px;
+  max-width: 1120px;
 }
 
 /* ---- Offer Reveal ---- */
 .offer-reveal {
   text-align: center;
-  padding: 96px 0 48px;
+  padding: 64px 0 40px;
 }
 
 .offer-reveal h2 {
@@ -865,7 +890,7 @@ img {
 
 /* ---- Outcomes ---- */
 .outcomes {
-  padding: 96px 0;
+  padding: 64px 0;
   background: var(--cream);
 }
 
@@ -948,7 +973,7 @@ img {
 /* ---- Modules / Curriculum ---- */
 .modules {
   background: var(--cream);
-  padding: 96px 0;
+  padding: 64px 0;
 }
 
 .modules-filters {
@@ -1075,7 +1100,7 @@ img {
 
 /* ---- Mentors ---- */
 .mentors {
-  padding: 96px 0;
+  padding: 64px 0;
 }
 
 .mentors-grid {
@@ -1136,7 +1161,7 @@ img {
 
 /* ---- Community ---- */
 .community {
-  padding: 96px 0;
+  padding: 64px 0;
   background: var(--warm-white);
 }
 
@@ -1204,7 +1229,7 @@ img {
 
 /* ---- Timeline ---- */
 .timeline {
-  padding: 96px 0;
+  padding: 64px 0;
 }
 
 .timeline-steps {
@@ -1271,7 +1296,7 @@ img {
   border-radius: var(--radius-lg);
   padding: 48px 40px;
   text-align: center;
-  max-width: 720px;
+  max-width: 1120px;
   margin: 0 auto;
   position: relative;
 }
@@ -1335,7 +1360,7 @@ img {
 
 /* ---- FAQ ---- */
 .faq {
-  padding: 96px 0;
+  padding: 64px 0;
 }
 
 .faq-tabs {
@@ -1420,14 +1445,14 @@ img {
 .closing-cta {
   background: var(--forest);
   color: #fff;
-  padding: 96px 0;
+  padding: 64px 0;
   text-align: center;
 }
 
 .closing-cta h2 {
   font-size: clamp(24px, 3.5vw, 36px);
   font-weight: 700;
-  max-width: 560px;
+  max-width: 900px;
   margin: 0 auto 24px;
 }
 

@@ -560,8 +560,8 @@ function App() {
         </div>
       </section>
 
-      {/* Partners */}
-      <section className="partners">
+      {/* Partners - hidden until confirmed partners */}
+      <section className="partners" style={{ display: 'none' }}>
         <div className="container">
           <p className="eyebrow">Ecosystem Partners</p>
           <div className="partners-logos">

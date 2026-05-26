@@ -314,40 +314,24 @@ function App() {
           </div>
           <div className="hero-takeaways">
             <div className="hero-takeaway">
-              <span className="hero-takeaway-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
-              </span>
-              <div>
-                <strong>Validated ICP &amp; Pipeline</strong>
-                <span>Know exactly who to target and where every deal stands</span>
-              </div>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+              <strong>Validated ICP</strong>
+              <span>Know who to target</span>
             </div>
             <div className="hero-takeaway">
-              <span className="hero-takeaway-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
-              </span>
-              <div>
-                <strong>Configured CRM</strong>
-                <span>A system that works for you with automations and daily workflows</span>
-              </div>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg>
+              <strong>Structured Pipeline</strong>
+              <span>See where every deal stands</span>
             </div>
             <div className="hero-takeaway">
-              <span className="hero-takeaway-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-              </span>
-              <div>
-                <strong>Sales Playbook</strong>
-                <span>Discovery scripts, objection handling, and closing frameworks</span>
-              </div>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              <strong>Sales Playbook</strong>
+              <span>Scripts and frameworks</span>
             </div>
             <div className="hero-takeaway">
-              <span className="hero-takeaway-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
-              </span>
-              <div>
-                <strong>Complete Sales Engine</strong>
-                <span>A documented, repeatable system you own forever</span>
-              </div>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+              <strong>Complete Sales Engine</strong>
+              <span>A system you own forever</span>
             </div>
           </div>
         </div>

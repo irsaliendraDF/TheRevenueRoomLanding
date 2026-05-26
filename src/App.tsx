@@ -329,12 +329,12 @@ function App() {
       {/* Problem Headline */}
       <section className="problem-headline container">
         <p className="kicker">The Real Problem Nobody Talks About</p>
-        <h2>You Don't Have a Sales Problem. You Have a System Problem.</h2>
+        <h2>You Don't Have a Sales Problem.<br /><span style={{ color: 'var(--gold)' }}>You Have a System Problem.</span></h2>
         <p>And until you fix the system, no amount of "better pitching" is going to change your close rate.</p>
       </section>
 
       {/* Problem Prose */}
-      <div className="problem-prose">
+      <div className="problem-prose" style={{ textAlign: 'center' }}>
         <p>
           Let me ask you something uncomfortable: <strong>how many real conversations did you have last month that didn't close?</strong>
         </p>
@@ -350,42 +350,53 @@ function App() {
       </div>
 
       {/* Pain Grid */}
-      <section className="container section-pad-sm">
+      <section className="container" style={{ paddingTop: 16, paddingBottom: 32 }}>
         <div className="pain-grid">
           <div className="pain-card">
-            <div className="pain-card-icon">&#x25CF;</div>
+            <div className="pain-card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
             <p>Conversations that feel great but never convert into signed contracts or next steps.</p>
           </div>
           <div className="pain-card">
-            <div className="pain-card-icon">&#x25CF;</div>
+            <div className="pain-card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+            </div>
             <p>"Send us something" follow-ups that disappear into the void and never get a reply.</p>
           </div>
           <div className="pain-card">
-            <div className="pain-card-icon">&#x25CF;</div>
+            <div className="pain-card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+            </div>
             <p>A CRM you opened once, entered three contacts into, and abandoned by week two.</p>
           </div>
           <div className="pain-card">
-            <div className="pain-card-icon">&#x25CF;</div>
+            <div className="pain-card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
             <p>No qualification framework, so you spend hours on calls with people who were never going to buy.</p>
           </div>
           <div className="pain-card">
-            <div className="pain-card-icon">&#x25CF;</div>
+            <div className="pain-card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22"/><path d="m18 2 4 4-4 4"/></svg>
+            </div>
             <p>Doing your own sales, winging it every single time, and hoping something sticks.</p>
           </div>
           <div className="pain-card">
-            <div className="pain-card-icon">&#x25CF;</div>
+            <div className="pain-card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
             <p>Pouring money into more leads while your existing process leaks revenue at every stage.</p>
           </div>
         </div>
 
         {/* Pull Quote */}
         <div className="pull-quote">
-          <span className="pull-quote-mark">&ldquo;</span>
-          <p>If your process can't convert the conversations you're already having, more leads won't save you.</p>
+          <p>&ldquo;If your process can't convert the conversations you're already having, more leads won't save you.&rdquo;</p>
         </div>
 
         {/* Section Divider */}
-        <div className="section-divider">
+        <div className="section-divider" style={{ paddingTop: 16 }}>
           <span>There's a better way</span>
         </div>
       </section>

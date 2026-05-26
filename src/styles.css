@@ -490,7 +490,7 @@ img {
 .problem-prose {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 0 24px 56px;
+  padding: 0 24px 24px;
 }
 
 .problem-prose p {
@@ -533,12 +533,12 @@ img {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: rgba(62,77,52,0.08);
+  background: var(--forest);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  color: var(--forest);
+  color: var(--cream);
   font-size: 16px;
 }
 
@@ -552,31 +552,18 @@ img {
 .pull-quote {
   background: var(--forest);
   border-radius: var(--radius-lg);
-  padding: 48px 40px;
-  margin: 48px 0;
-  position: relative;
-}
-
-.pull-quote-mark {
-  font-family: var(--font-display);
-  font-size: 80px;
-  color: var(--gold);
-  opacity: 0.4;
-  line-height: 0.8;
-  position: absolute;
-  top: 24px;
-  left: 32px;
+  padding: 24px 32px;
+  margin: 24px 0 8px;
+  box-shadow: 0 12px 32px -8px rgba(62,77,52,0.4);
 }
 
 .pull-quote p {
   font-family: var(--font-display);
-  font-size: clamp(18px, 2.5vw, 24px);
+  font-size: clamp(16px, 2vw, 20px);
   font-weight: 500;
   color: #fff;
   line-height: 1.5;
-  position: relative;
-  z-index: 1;
-  padding-left: 16px;
+  text-align: center;
 }
 
 /* ---- Section Divider ---- */

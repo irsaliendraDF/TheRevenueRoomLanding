@@ -597,7 +597,7 @@ function App() {
               </div>
               <div className={`module-body ${openModules.includes(m.num) ? 'open' : ''}`}>
                 <p>{m.body}</p>
-                <p className="module-outcome">{m.outcome}</p>
+                <p className="module-outcome"><span className="module-outcome-highlight">Walk away with:</span> {m.outcome.replace('Walk away with: ', '')}</p>
               </div>
             </div>
           ))}

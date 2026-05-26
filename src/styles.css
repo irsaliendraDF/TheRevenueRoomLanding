@@ -1146,6 +1146,15 @@ img {
   font-weight: 500;
 }
 
+.module-outcome-highlight {
+  background: rgba(255,167,79,0.15);
+  color: var(--gold-deep);
+  padding: 2px 8px;
+  border-radius: 100px;
+  font-weight: 600;
+  margin-right: 4px;
+}
+
 /* ---- Mentors ---- */
 .mentors {
   padding: 64px 0;

@@ -680,12 +680,12 @@ function App() {
             <div className="timeline-step">
               <div className="timeline-step-dot">3</div>
               <h4>Accept &amp; Enroll</h4>
-              <p>~24 hrs</p>
+              <p>~July/August</p>
             </div>
             <div className="timeline-step">
               <div className="timeline-step-dot">4</div>
               <h4>Onboard</h4>
-              <p>~1 wk</p>
+              <p>~September</p>
             </div>
           </div>
         </div>

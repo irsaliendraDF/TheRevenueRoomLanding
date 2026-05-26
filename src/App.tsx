@@ -453,29 +453,29 @@ function App() {
 
       {/* Meaning Section (Dark) */}
       <section className="meaning">
-        <div className="container">
+        <div className="container" style={{ textAlign: 'center' }}>
           <h2>Because this isn't really about closing rates.</h2>
-          <p className="meaning-sub">It's about being able to build a business without the constant anxiety of not knowing where your next dollar is coming from.</p>
+          <p className="meaning-sub" style={{ margin: '0 auto 40px' }}>It's about being able to build a business without the constant anxiety of not knowing where your next dollar is coming from.</p>
           <div className="meaning-bullets">
             <div className="meaning-bullet">
-              <span className="meaning-bullet-icon">&darr;</span>
+              <span className="meaning-bullet-icon">&rarr;</span>
               <p>Knowing exactly which conversations are worth your time and which ones aren't</p>
             </div>
             <div className="meaning-bullet">
-              <span className="meaning-bullet-icon">&darr;</span>
+              <span className="meaning-bullet-icon">&rarr;</span>
               <p>Having a clear view of your pipeline so you can plan months ahead, not days</p>
             </div>
             <div className="meaning-bullet">
-              <span className="meaning-bullet-icon">&darr;</span>
+              <span className="meaning-bullet-icon">&rarr;</span>
               <p>Waking up on Monday knowing exactly who to talk to and what to say</p>
             </div>
             <div className="meaning-bullet">
-              <span className="meaning-bullet-icon">&darr;</span>
+              <span className="meaning-bullet-icon">&rarr;</span>
               <p>Building something that compounds instead of resetting to zero every month</p>
             </div>
           </div>
-          <p className="meaning-close">
-            <strong>That's what a system gives you.</strong> Not just more deals. Peace of mind. Predictability. The confidence that comes from knowing your revenue isn't random.
+          <p className="meaning-close" style={{ margin: '0 auto' }}>
+            <strong>A system gives you predictable revenue.</strong> That changes everything.
           </p>
         </div>
       </section>

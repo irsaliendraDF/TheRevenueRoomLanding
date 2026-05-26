@@ -3,8 +3,8 @@
    ============================================================ */
 
 :root {
-  --ink: #2a2a22;
-  --ink-soft: #3d342b;
+  --ink: #1a2e1a;
+  --ink-soft: #2d3f2a;
   --cream: #fff3e2;
   --warm-white: #fffaf3;
   --gold: #FFA74F;
@@ -227,8 +227,8 @@ img {
 }
 
 .nav-cta {
-  background: var(--ink);
-  color: #fff;
+  background: var(--gold);
+  color: var(--ink);
   font-family: var(--font-mono);
   font-size: 12px;
   font-weight: 500;
@@ -237,12 +237,14 @@ img {
   border-radius: 100px;
   border: none;
   cursor: pointer;
-  transition: background 0.15s, transform 0.1s;
+  transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
 }
 
 .nav-cta:hover {
-  background: var(--forest);
+  background: var(--gold-deep);
+  color: #fff;
   transform: translateY(-1px);
+  box-shadow: var(--shadow-lift);
 }
 
 /* ---- Hero ---- */

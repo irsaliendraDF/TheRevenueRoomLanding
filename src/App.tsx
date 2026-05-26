@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { supabase } from './lib/supabase'
 
 /* ============================================================
    THE REVENUE ROOM - Landing Page
@@ -115,6 +116,52 @@ function App() {
   const [weekFilter, setWeekFilter] = useState('all')
   const [openModules, setOpenModules] = useState<string[]>([])
   const [faqTab, setFaqTab] = useState<'founders' | 'sponsors'>('founders')
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    companyName: '',
+    companyDescription: '',
+    currentSales: '',
+    biggestChallenge: '',
+    revenueRange: '',
+    howHeard: '',
+  })
+  const [formLoading, setFormLoading] = useState(false)
+  const [formSubmitted, setFormSubmitted] = useState(false)
+  const [formError, setFormError] = useState('')
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target
+    if (name === 'companyDescription') {
+      const wordCount = value.trim().split(/\s+/).filter(Boolean).length
+      if (wordCount > 200) return
+    }
+    setFormData(prev => ({ ...prev, [name]: value }))
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setFormLoading(true)
+    setFormError('')
+    const { error } = await supabase.from('applications').insert({
+      first_name: formData.firstName,
+      last_name: formData.lastName,
+      email: formData.email,
+      company_name: formData.companyName,
+      company_description: formData.companyDescription,
+      current_sales_approach: formData.currentSales,
+      biggest_challenge: formData.biggestChallenge,
+      monthly_revenue_range: formData.revenueRange,
+      how_heard: formData.howHeard,
+    })
+    setFormLoading(false)
+    if (error) {
+      setFormError('Something went wrong. Please try again or email irene@digitalflowconsulting.ca directly.')
+    } else {
+      setFormSubmitted(true)
+    }
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -650,12 +697,99 @@ function App() {
         </div>
       </section>
 
-      {/* Closing CTA */}
+      {/* Application Form */}
       <section className="closing-cta" id="apply">
         <div className="container">
           <h2>Your Revenue Engine won't build itself. But you don't have to build it alone.</h2>
-          <a href="#apply" className="btn-primary" onClick={(e) => { e.preventDefault(); scrollTo('apply') }}>Apply to Beta Cohort &rarr;</a>
-          <p className="closing-cta-sub">5-minute application &middot; 48-hour response &middot; No spam, ever.</p>
+          <p className="closing-cta-sub" style={{ marginTop: 0, marginBottom: 32 }}>5-minute application &middot; 48-hour response &middot; No spam, ever.</p>
+
+          {formSubmitted ? (
+            <div className="form-success">
+              <div className="form-success-icon">&#x2713;</div>
+              <h3>Application received!</h3>
+              <p>Thanks for applying to the Beta Cohort. We'll review your application and get back to you within 48 hours.</p>
+            </div>
+          ) : (
+            <form className="application-form" onSubmit={handleSubmit}>
+              <div className="form-row">
+                <div className="form-group">
+                  <label htmlFor="firstName">First name *</label>
+                  <input type="text" id="firstName" name="firstName" required value={formData.firstName} onChange={handleChange} />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="lastName">Last name *</label>
+                  <input type="text" id="lastName" name="lastName" required value={formData.lastName} onChange={handleChange} />
+                </div>
+              </div>
+
+              <div className="form-row">
+                <div className="form-group">
+                  <label htmlFor="email">Email *</label>
+                  <input type="email" id="email" name="email" required value={formData.email} onChange={handleChange} />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="companyName">Company name *</label>
+                  <input type="text" id="companyName" name="companyName" required value={formData.companyName} onChange={handleChange} />
+                </div>
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="companyDescription">Give a brief description of your company *</label>
+                <textarea id="companyDescription" name="companyDescription" required rows={3} maxLength={1200} value={formData.companyDescription} onChange={handleChange} />
+                <span className="form-hint">{formData.companyDescription.trim().split(/\s+/).filter(Boolean).length}/200 words max</span>
+              </div>
+
+              <div className="form-row">
+                <div className="form-group">
+                  <label htmlFor="currentSales">How are you currently handling sales? *</label>
+                  <select id="currentSales" name="currentSales" required value={formData.currentSales} onChange={handleChange}>
+                    <option value="">Select one...</option>
+                    <option value="Doing it myself">Doing it myself</option>
+                    <option value="Small team">Small team</option>
+                    <option value="No process yet">No process yet</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div className="form-group">
+                  <label htmlFor="revenueRange">What's your current monthly revenue range? *</label>
+                  <select id="revenueRange" name="revenueRange" required value={formData.revenueRange} onChange={handleChange}>
+                    <option value="">Select one...</option>
+                    <option value="Pre-revenue">Pre-revenue</option>
+                    <option value="Under $5K">Under $5K</option>
+                    <option value="$5K-$15K">$5K-$15K</option>
+                    <option value="$15K-$50K">$15K-$50K</option>
+                    <option value="$50K+">$50K+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="biggestChallenge">What's your biggest sales challenge right now? *</label>
+                <textarea id="biggestChallenge" name="biggestChallenge" required rows={2} value={formData.biggestChallenge} onChange={handleChange} />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="howHeard">How did you hear about us? *</label>
+                <select id="howHeard" name="howHeard" required value={formData.howHeard} onChange={handleChange}>
+                  <option value="">Select one...</option>
+                  <option value="LinkedIn">LinkedIn</option>
+                  <option value="TikTok">TikTok</option>
+                  <option value="Instagram">Instagram</option>
+                  <option value="Referral">Referral</option>
+                  <option value="Accelerator/Incubator">Accelerator/Incubator</option>
+                  <option value="Podcast">Podcast</option>
+                  <option value="Event">Event</option>
+                  <option value="Advertisement">Advertisement</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <button type="submit" className="btn-primary form-submit" disabled={formLoading}>
+                {formLoading ? 'Submitting...' : 'Apply to Beta Cohort →'}
+              </button>
+              {formError && <p className="form-error">{formError}</p>}
+            </form>
+          )}
         </div>
       </section>
 

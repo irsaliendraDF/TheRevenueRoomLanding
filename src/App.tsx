@@ -415,13 +415,14 @@ function App() {
                 <span className="rapport-badge">&#x2B50; One to Watch 2025 &middot; Digital Nova Scotia</span>
               </div>
               <div className="rapport-mentors">
-                <p className="rapport-mentors-label">Mentor at</p>
+                <p className="rapport-mentors-label">Mentor &amp; Partner</p>
                 <div className="rapport-mentor-logos">
-                  <svg width="80" height="28" viewBox="0 0 80 28" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="20" fontFamily="var(--font-display)" fontSize="18" fontWeight="700" fill="#3e4d34">Volta</text></svg>
-                  <span className="rapport-mentor-divider"></span>
-                  <svg width="120" height="28" viewBox="0 0 120 28" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="20" fontFamily="var(--font-display)" fontSize="18" fontWeight="700" fill="#3e4d34">Startup Yard</text></svg>
-                  <span className="rapport-mentor-divider"></span>
-                  <svg width="50" height="28" viewBox="0 0 50 28" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="20" fontFamily="var(--font-display)" fontSize="18" fontWeight="700" fill="#3e4d34">CGLCC</text></svg>
+                  <img src="/volta-logo.jpg" alt="Volta" className="mentor-logo" />
+                  <img src="/cglcc-logo.png" alt="CGLCC" className="mentor-logo" />
+                  <img src="/tribe-logo.png" alt="Tribe" className="mentor-logo" />
+                  <img src="/halifax-chamber-logo.png" alt="Halifax Chamber of Commerce" className="mentor-logo" />
+                  <img src="/onside-logo.webp" alt="Onside" className="mentor-logo" />
+                  <img src="/movement51-logo.webp" alt="Movement51" className="mentor-logo" />
                 </div>
               </div>
             </div>

@@ -688,20 +688,22 @@ img {
 
 .rapport-mentor-logos {
   display: flex;
-  gap: 16px;
+  gap: 20px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-.rapport-mentor-logos span {
-  font-size: 13px;
-  color: var(--muted);
-  font-weight: 500;
+.mentor-logo {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.75;
+  transition: opacity 0.2s;
+  mix-blend-mode: multiply;
 }
 
-.rapport-mentor-divider {
-  width: 1px;
-  height: 20px;
-  background: var(--border);
+.mentor-logo:hover {
+  opacity: 1;
 }
 
 /* ---- Solution / Method ---- */

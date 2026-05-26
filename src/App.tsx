@@ -103,13 +103,13 @@ const mentors = [
   { name: 'Priya Venkat', role: 'Guest - Founder-Led GTM', initials: 'PV', type: 'initials' as const },
 ]
 
-const outcomes = [
-  { metric: '$87K', label: 'pipeline built in 7 weeks', quote: 'I went from guessing to forecasting. For the first time I can see where my next quarter is coming from.', name: 'Maya Kapoor', role: 'Founder, Trellis Analytics', initials: 'MK' },
-  { metric: '3.4x', label: 'close rate improvement', quote: 'The qualification framework alone saved me 10 hours a week of wasted calls.', name: 'Devin Rourke', role: 'CEO, Rourke Dev', initials: 'DR' },
-  { metric: '14 to 32', label: 'qualified leads in pipeline', quote: 'I finally have a system. Not a hack, not a trick. A system I can run every single week.', name: 'Sasha Chen', role: 'Founder, Canopy AI', initials: 'SC' },
-  { metric: '$240K', label: 'closed within 90 days', quote: 'The cohort accountability was everything. I would not have built this alone.', name: 'Tomas Alvarez', role: 'Co-founder, BuildLayer', initials: 'TA' },
-  { metric: '$5K to $22K', label: 'avg deal size increase', quote: 'I was underpricing because I could not articulate value. Week 5 fixed that permanently.', name: 'Jordan Park', role: 'Founder, SignalPath', initials: 'JP' },
-  { metric: '9/10', label: 'would recommend to a founder', quote: 'Best investment I made this year. The ROI was obvious by week 3.', name: 'Emma Westbrook', role: 'CEO, Westbrook Studio', initials: 'EW' },
+const expectedOutcomes = [
+  { week: 'Week 1', title: 'Clarity on what is broken', before: 'Guessing why deals stall and blaming your pitch, your pricing, or yourself', after: 'A diagnosis of exactly where your sales process breaks down across strategy, process, and execution' },
+  { week: 'Week 2', title: 'Know exactly who to target', before: 'Selling to anyone who will listen and wasting hours on calls with people who were never going to buy', after: 'A validated ICP, a qualification scorecard, and a shortlist of your 10 highest-value target accounts' },
+  { week: 'Week 3', title: 'A pipeline you can see', before: 'Deals floating in your head or a spreadsheet with no stages, no next steps, and no way to forecast', after: 'Defined pipeline stages with exit criteria, a forecasting model, and a weekly review rhythm' },
+  { week: 'Week 4', title: 'A CRM that works for you', before: 'A CRM you opened once and abandoned, or no system at all beyond memory and sticky notes', after: 'A configured CRM with your live pipeline, outreach sequences, automations, and a daily workflow' },
+  { week: 'Week 5', title: 'Conversations that convert', before: 'Winging every sales call, freezing at objections, and avoiding the ask', after: 'A discovery call script, a personal objection playbook, and a closing framework practised with real peer feedback' },
+  { week: 'Week 6-7', title: 'A system that improves itself', before: 'No idea which numbers matter, no way to tell if things are getting better or worse', after: 'A KPI dashboard, an experiment tracker, and a complete Sales Engine Playbook you own forever' },
 ]
 
 function App() {
@@ -544,19 +544,22 @@ function App() {
       {/* Outcomes */}
       <section className="outcomes" id="outcomes">
         <div className="container">
-          <p className="eyebrow text-center">Cohort 01 &middot; Real numbers from real founders</p>
-          <h2 className="text-center" style={{ fontSize: 'clamp(28px, 3.5vw, 40px)', fontWeight: 700 }}>What founders walked out with.</h2>
+          <p className="eyebrow text-center">What you walk away with</p>
+          <h2 className="text-center" style={{ fontSize: 'clamp(28px, 3.5vw, 40px)', fontWeight: 700, marginBottom: 12 }}>7 weeks from now, this is the difference.</h2>
+          <p className="text-center" style={{ color: 'var(--muted)', fontSize: 16, maxWidth: 640, margin: '0 auto 48px' }}>Every week builds a specific piece of your Revenue Engine. Here is exactly what changes.</p>
           <div className="outcomes-grid">
-            {outcomes.map((o, i) => (
+            {expectedOutcomes.map((o, i) => (
               <div className="outcome-card" key={i}>
-                <div className="outcome-metric">{o.metric}</div>
-                <div className="outcome-metric-label">{o.label}</div>
-                <p className="outcome-quote">"{o.quote}"</p>
-                <div className="outcome-author">
-                  <div className="outcome-avatar">{o.initials}</div>
-                  <div className="outcome-author-info">
-                    <div className="outcome-author-name">{o.name}</div>
-                    <div className="outcome-author-role">{o.role}</div>
+                <div className="outcome-metric-label" style={{ marginBottom: 4 }}>{o.week}</div>
+                <div style={{ fontFamily: 'var(--font-display)', fontSize: 20, fontWeight: 700, color: 'var(--ink)', marginBottom: 16 }}>{o.title}</div>
+                <div className="outcome-before-after">
+                  <div className="outcome-ba-row">
+                    <span className="outcome-ba-label outcome-ba-before">Before</span>
+                    <p>{o.before}</p>
+                  </div>
+                  <div className="outcome-ba-row">
+                    <span className="outcome-ba-label outcome-ba-after">After</span>
+                    <p>{o.after}</p>
                   </div>
                 </div>
               </div>

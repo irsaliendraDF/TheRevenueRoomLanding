@@ -758,6 +758,15 @@ img {
   color: var(--muted);
   font-family: var(--font-mono);
   font-size: 12px;
+  overflow: hidden;
+}
+
+.rapport-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  border-radius: var(--radius-lg);
 }
 
 .rapport-role {
@@ -1939,18 +1948,26 @@ img {
 
   .rapport-grid {
     grid-template-columns: 1fr;
+    text-align: center;
   }
 
   .rapport-photo {
-    width: 100%;
-    height: 280px;
+    width: 260px;
+    height: 320px;
+    margin: 0 auto;
+  }
+
+  .rapport-badges {
+    align-items: center;
+  }
+
+  .rapport-mentor-logos {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .rapport-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: var(--radius-lg);
+    object-position: center 15%;
   }
 
   .hero-stats {

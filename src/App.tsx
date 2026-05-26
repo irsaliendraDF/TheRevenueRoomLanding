@@ -410,14 +410,18 @@ function App() {
                 The Revenue Room is what I wish existed when I started. A small, focused cohort where you build your entire sales engine in 7 weeks, with mentors who've done it, and peers who are doing it alongside you.
               </p>
               <div className="rapport-badges">
+                <span className="rapport-badge">&#x1F680; Serial Entrepreneur</span>
                 <span className="rapport-badge">&#x2B50; 30 Under 30 Innovator &middot; Atlantic Business Magazine</span>
                 <span className="rapport-badge">&#x2B50; One to Watch 2025 &middot; Digital Nova Scotia</span>
               </div>
               <div className="rapport-mentors">
                 <p className="rapport-mentors-label">Mentor at</p>
                 <div className="rapport-mentor-logos">
-                  <span>Volta</span>
-                  <span>Startup Yard</span>
+                  <svg width="80" height="28" viewBox="0 0 80 28" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="20" fontFamily="var(--font-display)" fontSize="18" fontWeight="700" fill="#3e4d34">Volta</text></svg>
+                  <span className="rapport-mentor-divider"></span>
+                  <svg width="120" height="28" viewBox="0 0 120 28" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="20" fontFamily="var(--font-display)" fontSize="18" fontWeight="700" fill="#3e4d34">Startup Yard</text></svg>
+                  <span className="rapport-mentor-divider"></span>
+                  <svg width="50" height="28" viewBox="0 0 50 28" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="20" fontFamily="var(--font-display)" fontSize="18" fontWeight="700" fill="#3e4d34">CGLCC</text></svg>
                 </div>
               </div>
             </div>

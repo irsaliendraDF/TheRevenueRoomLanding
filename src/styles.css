@@ -698,6 +698,12 @@ img {
   font-weight: 500;
 }
 
+.rapport-mentor-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--border);
+}
+
 /* ---- Solution / Method ---- */
 .solution {
   padding: 64px 0;

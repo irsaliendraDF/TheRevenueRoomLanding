@@ -873,9 +873,9 @@ function App() {
 
       {/* Contact Modal */}
       {showContact && (
-        <div className="modal-overlay" onClick={() => setShowContact(false)}>
+        <div className="modal-overlay" onClick={() => { setShowContact(false); setContactData({ firstName: '', lastName: '', email: '', message: '' }); setContactSubmitted(false); setContactError('') }}>
           <div className="modal" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={() => setShowContact(false)}>&times;</button>
+            <button className="modal-close" onClick={() => { setShowContact(false); setContactData({ firstName: '', lastName: '', email: '', message: '' }); setContactSubmitted(false); setContactError('') }}>&times;</button>
             {contactSubmitted ? (
               <div className="form-success" style={{ padding: '24px 0' }}>
                 <div className="form-success-icon" style={{ background: 'var(--forest)', color: '#fff' }}>&#x2713;</div>
@@ -917,7 +917,7 @@ function App() {
       {/* Footer */}
       <footer className="footer">
         <div className="container">
-          <div className="footer-grid" style={{ gridTemplateColumns: '2fr 1fr 1fr' }}>
+          <div className="footer-grid">
             <div className="footer-brand">
               <img src="/digitalflow-logo.png" alt="DigitalFlow Consulting" style={{ height: 36, marginBottom: 12 }} />
               <p style={{ fontFamily: 'var(--font-display)', fontSize: 16, fontWeight: 700, color: '#fff', marginBottom: 12 }}>The Revenue Room</p>

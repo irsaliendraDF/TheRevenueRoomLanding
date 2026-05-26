@@ -1624,7 +1624,7 @@ img {
 
 .faq-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 12px;
 }
 
@@ -1690,7 +1690,7 @@ img {
 .closing-cta-sub {
   font-size: 11px;
   font-family: var(--font-mono);
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.75);
   margin-top: 20px;
 }
 
@@ -1758,7 +1758,7 @@ img {
   display: block;
   font-family: var(--font-mono);
   font-size: 10px;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.7);
   margin-top: 6px;
   letter-spacing: 0.02em;
 }
@@ -2081,7 +2081,8 @@ img {
   }
 
   .hero-buttons .btn-primary,
-  .hero-buttons .btn-ghost {
+  .hero-buttons .btn-ghost,
+  .hero-buttons .btn-forest {
     width: 100%;
     text-align: center;
     justify-content: center;

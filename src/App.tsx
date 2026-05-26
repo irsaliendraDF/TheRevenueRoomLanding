@@ -736,7 +736,7 @@ function App() {
       <section className="closing-cta" id="apply">
         <div className="container">
           <h2>Your Revenue Engine won't build itself. But you don't have to build it alone.</h2>
-          <p className="closing-cta-sub" style={{ marginTop: 0, marginBottom: 32 }}>5-minute application &middot; 48-hour response &middot; No spam, ever.</p>
+          <p className="closing-cta-sub" style={{ marginTop: 0, marginBottom: 32 }}>5-minute application &middot; 48-hour response</p>
 
           {formSubmitted ? (
             <div className="form-success">

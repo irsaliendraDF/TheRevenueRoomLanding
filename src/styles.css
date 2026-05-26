@@ -518,15 +518,15 @@ img {
   align-items: flex-start;
   gap: 14px;
   background: #fff;
-  border: 1px solid var(--border-soft);
+  border: 1.5px solid var(--gold);
   border-radius: var(--radius-lg);
   padding: 20px;
-  transition: box-shadow 0.2s, border-color 0.2s;
+  transition: box-shadow 0.2s, transform 0.2s;
 }
 
 .pain-card:hover {
   box-shadow: var(--shadow-lift);
-  border-color: var(--border);
+  transform: translateY(-2px);
 }
 
 .pain-card-icon {
@@ -850,21 +850,27 @@ img {
   align-items: flex-start;
   gap: 14px;
   background: #fff;
-  border: 1px solid var(--border-soft);
+  border: 1.5px solid var(--gold);
   border-radius: var(--radius-lg);
   padding: 20px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.benefit-card:hover {
+  box-shadow: var(--shadow-lift);
+  transform: translateY(-2px);
 }
 
 .benefit-card-icon {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: rgba(62,77,52,0.08);
+  background: var(--forest);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  color: var(--forest);
+  color: var(--cream);
   font-size: 16px;
 }
 

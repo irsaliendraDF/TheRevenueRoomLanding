@@ -481,7 +481,7 @@ function App() {
       </section>
 
       {/* Offer Reveal */}
-      <section className="offer-reveal">
+      <section className="offer-reveal" style={{ paddingBottom: 16 }}>
         <div className="container">
           <p className="eyebrow">Introducing</p>
           <h2>The Revenue Room</h2>
@@ -490,45 +490,57 @@ function App() {
       </section>
 
       {/* Benefits Grid */}
-      <section className="container section-pad-sm">
+      <section className="container" style={{ paddingTop: 16, paddingBottom: 48 }}>
         <div className="benefits-grid">
           <div className="benefit-card">
-            <div className="benefit-card-icon">&#x25CF;</div>
+            <div className="benefit-card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
             <div>
               <h4>Know exactly who to sell to</h4>
               <p>A validated ICP and qualification framework so you never waste another call on a bad fit.</p>
             </div>
           </div>
           <div className="benefit-card">
-            <div className="benefit-card-icon">&#x25CF;</div>
+            <div className="benefit-card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg>
+            </div>
             <div>
               <h4>Structured pipeline</h4>
               <p>Clear stages, exit criteria, and a weekly rhythm that ensures nothing falls through the cracks.</p>
             </div>
           </div>
           <div className="benefit-card">
-            <div className="benefit-card-icon">&#x25CF;</div>
+            <div className="benefit-card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+            </div>
             <div>
               <h4>CRM as growth engine</h4>
               <p>Properly configured with automations, custom views, and workflows you will actually use daily.</p>
             </div>
           </div>
           <div className="benefit-card">
-            <div className="benefit-card-icon">&#x25CF;</div>
+            <div className="benefit-card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
             <div>
               <h4>Sales conversation framework</h4>
               <p>Discovery scripts, objection playbooks, and closing techniques that feel natural, not pushy.</p>
             </div>
           </div>
           <div className="benefit-card">
-            <div className="benefit-card-icon">&#x25CF;</div>
+            <div className="benefit-card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
             <div>
               <h4>See your real numbers</h4>
               <p>A metrics dashboard that shows conversion rates, velocity, and exactly where to optimize next.</p>
             </div>
           </div>
           <div className="benefit-card">
-            <div className="benefit-card-icon">&#x25CF;</div>
+            <div className="benefit-card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+            </div>
             <div>
               <h4>Complete Sales Engine playbook</h4>
               <p>Everything documented, templated, and ready to run on repeat, forever.</p>

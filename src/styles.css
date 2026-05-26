@@ -694,7 +694,8 @@ img {
 }
 
 .mentor-logo {
-  height: 32px;
+  height: 28px;
+  max-width: 100px;
   width: auto;
   object-fit: contain;
   opacity: 0.75;
@@ -704,6 +705,26 @@ img {
 
 .mentor-logo:hover {
   opacity: 1;
+}
+
+.mentor-logo[alt="Volta"] {
+  height: 22px;
+}
+
+.mentor-logo[alt="CGLCC"] {
+  height: 30px;
+}
+
+.mentor-logo[alt="Movement51"] {
+  height: 18px;
+}
+
+.mentor-logo[alt="Onside"] {
+  height: 22px;
+}
+
+.mentor-logo[alt="Halifax Chamber of Commerce"] {
+  height: 32px;
 }
 
 /* ---- Solution / Method ---- */

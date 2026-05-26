@@ -74,26 +74,26 @@ const modules = [
 ]
 
 const founderFaqs = [
-  { q: 'Who is this for?', a: 'Technical founders and solo B2B operators who have a product people want but no repeatable system for turning conversations into revenue. If you are doing your own sales and it feels like guessing, this is for you.' },
-  { q: 'What if I have zero sales experience?', a: 'Perfect. The program is designed for founders who never trained in sales. We build from first principles, not jargon.' },
-  { q: 'How much time per week?', a: 'Plan for 4-5 hours: a 90-minute live session plus exercises, peer pods, and CRM setup work. Most founders say the structure actually saves them time because they stop context-switching.' },
-  { q: 'Is this live or self-paced?', a: 'Live. One 90-minute session per week with your cohort plus async community support. Recordings are available if you miss a session, but the value is in the live interaction.' },
-  { q: 'What is the cohort size?', a: '10 founders maximum. Small enough for personalized feedback, large enough for diverse perspectives and accountability.' },
-  { q: 'Do I need a CRM already?', a: 'No. We help you choose and configure one during Week 4. If you already have one, we will audit and optimize it.' },
-  { q: 'What CRM do you recommend?', a: 'We are CRM-agnostic. The frameworks work with HubSpot, Pipedrive, Close, Attio, or even a well-structured spreadsheet. We help you pick based on your stage and budget.' },
-  { q: 'What happens after the 7 weeks?', a: 'You keep lifetime access to the Slack community, monthly alumni calls, and all playbook updates. Many alumni also join future cohorts as peer mentors.' },
-  { q: 'What is the investment?', a: 'Founding Cohort pricing is $2,400. That includes all 7 live sessions, mentorship, community access, templates, and lifetime playbook updates.' },
-  { q: 'What is the refund policy?', a: 'If you complete all 7 sessions, do the work, and genuinely feel you did not get value, we will refund you in full. No hoops. We guarantee the deliverables.' },
+  { q: 'Who is this for?', a: 'B2B founders and high-ticket service businesses doing their own sales, roughly pre-revenue through $250K ARR. If you have customer conversations happening but no repeatable system for turning them into revenue, this is built for you.' },
+  { q: 'What if I have zero sales experience?', a: 'Perfect. The program is designed for founders who never trained in sales. We build from first principles, not jargon. Most founders in the Revenue Room are technical and have never had formal sales training.' },
+  { q: 'How much time per week?', a: 'Plan for 4-6 hours: a 2-hour live session plus homework, peer pod check-ins, and CRM setup work. Most founders say the structure actually saves them time because they stop context-switching on sales.' },
+  { q: 'Is this live or self-paced?', a: 'Fully live and virtual. One 2-hour session per week over Zoom with your cohort, plus async support in Slack and your Notion Success Hub. Recordings are available if you miss a session, but the real value is in the live interaction.' },
+  { q: 'What is the beta cohort size?', a: 'Capped at 10 founders. This is deliberately small so Irene can personally work with every founder. Small enough for real feedback, real practice, and real accountability.' },
+  { q: 'Do I need a CRM already?', a: 'No. We help you choose and configure one during Week 4. If you already have one, we will audit and optimize it. We are CRM-agnostic. The frameworks work with HubSpot, Pipedrive, Close, Attio, or even a well-structured spreadsheet.' },
+  { q: 'How does pricing work?', a: 'The Revenue Room is sponsor-funded. Accelerators, incubators, and ecosystem partners sponsor seats so founders can participate. During your application, we will work with you to identify sponsorship options, including provincial training grants you may be eligible for. Pricing details are shared during the application process.' },
+  { q: 'What happens after the 7 weeks?', a: 'You keep your complete Sales Engine Playbook forever, plus lifetime access to the Slack community and all future playbook updates. Your Revenue Index diagnostic gives you a before-and-after snapshot of your progress.' },
+  { q: 'What is the refund policy?', a: 'For sponsor-funded seats, a full refund is available through the end of Week 1 if the program is not the right fit. After Week 1, all seats are non-refundable. The Revenue Engine only works if you build it, and we ask for your full commitment once you are past that first week.' },
+  { q: 'What do I walk away with?', a: 'A complete, documented Revenue Engine: validated ICP, structured pipeline with exit criteria, configured CRM, discovery call scripts, objection playbook, closing framework, metrics dashboard, and a capstone Sales Engine Playbook reviewed by mentors and peers.' },
 ]
 
 const sponsorFaqs = [
-  { q: 'What does sponsoring a cohort mean?', a: 'You fund seats for founders in your ecosystem. They get the full Revenue Room experience at no cost, and you get brand visibility, impact metrics, and first access to high-potential founders.' },
-  { q: 'How many seats can we sponsor?', a: 'Anywhere from 2 to the full cohort of 10. Most partners sponsor 3-5 seats per cohort.' },
-  { q: 'What is the cost per seat?', a: 'Sponsor pricing is custom based on volume and partnership tier. Reach out and we will build a proposal within 48 hours.' },
-  { q: 'What reporting do sponsors receive?', a: 'Aggregate cohort outcomes: pipeline built, deals closed, revenue generated. We also provide anonymized testimonials and case studies you can use in your own reporting.' },
-  { q: 'Can we nominate founders from our portfolio?', a: 'Absolutely. Nominated founders still go through the application process to ensure fit, but they receive priority review.' },
-  { q: 'Do you offer multi-cohort discounts?', a: 'Yes. Annual partnerships (3+ cohorts) receive preferred pricing and co-branding opportunities.' },
-  { q: 'How do we get started?', a: 'Email irene@digitalflowconsulting.ca or click the Sponsor a Cohort button below. We will set up a 20-minute call to scope the partnership.' },
+  { q: 'What does sponsoring a cohort mean?', a: 'You fund seats for founders in your ecosystem. They get the full Revenue Room experience, and you get measurable outcomes: pipeline created, deals closed, revenue generated. Plus brand visibility and first access to high-potential founders building real sales systems.' },
+  { q: 'What are the sponsorship tiers?', a: 'Three tiers: Community/Partner at $1,500 per seat (for smaller incubators and mission-aligned orgs), Standard at $1,950 per seat (for mid-sized accelerators and economic development agencies), and Enterprise at $2,500+ per seat (for large corporates, banks, and national programs). Beta cohort sponsors receive a 50% discount at $750 per seat.' },
+  { q: 'How many seats can we sponsor?', a: 'Minimum 3 seats per partner for the beta cohort. Most partners sponsor 3-5 seats. Volume discounts of 10% apply for 10+ seats from one sponsor, and multi-cohort commitments (3+ cohorts per year) receive 15% off.' },
+  { q: 'What reporting do sponsors receive?', a: 'Standard tier and above includes a cohort performance report with aggregated, anonymized outcomes, founder progress snapshots, and a quarterly state-of-the-cohort briefing. Enterprise tier adds co-branded materials and custom reporting tied to your KPIs.' },
+  { q: 'Can we nominate founders from our portfolio?', a: 'Absolutely. Nominated founders still go through the application process to ensure fit, but they receive priority review. We coordinate the fit interview with your program lead.' },
+  { q: 'What does the founder experience include?', a: 'Every sponsored founder gets: 7 live modules, cohort sessions, homework accountability, Accountability Pod placement, Slack community, a DigitalFlow Revenue Index diagnostic, Notion Success Hub with SOPs, certificate of completion, and a capstone review of their Sales Engine Playbook.' },
+  { q: 'How do we get started?', a: 'Email irene@digitalflowconsulting.ca with your program name, founder count, and target cohort. We will send back a 1-page sponsor brief within 48 hours and set up a 20-minute scoping call.' },
 ]
 
 const mentors = [
@@ -292,7 +292,7 @@ function App() {
           </div>
           <h1 className="hero-title">The Revenue Room</h1>
           <p className="hero-tagline">
-            A 7-week community accelerator where technical founders stop winging it and build a real sales system, together, from the ground up.
+            A 7-week community accelerator where B2B founders stop winging it and build a real sales system, together, from the ground up.
           </p>
           <div className="hero-buttons">
             <a href="#apply" className="btn-primary" onClick={(e) => { e.preventDefault(); scrollTo('apply') }}>Apply to Beta Cohort &rarr;</a>
@@ -300,9 +300,9 @@ function App() {
           </div>
           <div className="hero-pills">
             <span className="hero-pill"><span className="hero-pill-icon">&#x1F3AF;</span> B2B Founders</span>
-            <span className="hero-pill"><span className="hero-pill-icon">&#x1F527;</span> Technical Operators</span>
-            <span className="hero-pill"><span className="hero-pill-icon">&#x1F680;</span> Solo GTM Leaders</span>
-            <span className="hero-pill"><span className="hero-pill-icon">&#x1F4A1;</span> First-Time Sellers</span>
+            <span className="hero-pill"><span className="hero-pill-icon">&#x1F527;</span> Technical Founders</span>
+            <span className="hero-pill"><span className="hero-pill-icon">&#x1F393;</span> Domain Expert Founders</span>
+            <span className="hero-pill"><span className="hero-pill-icon">&#x1F4A1;</span> Founder-Led Sales</span>
           </div>
           <div className="hero-stats">
             <div className="hero-stat">
@@ -342,7 +342,7 @@ function App() {
           Not cold leads. Not spam replies. Real conversations with people who seemed interested, asked questions, maybe even said "send me something" or "let's circle back next quarter."
         </p>
         <p>
-          If you're like most technical founders I work with, the answer is somewhere between 3 and 8. Each one representing $5K-$15K in potential revenue. That's $50K just sitting on the table. Not because your product isn't good. Not because you can't communicate value. But because you have no system for what happens after "that sounds interesting."
+          If you're like most founders I work with, the answer is somewhere between 3 and 8. Each one representing $5K-$15K in potential revenue. That's $50K just sitting on the table. Not because your product isn't good. Not because you can't communicate value. But because you have no system for what happens after "that sounds interesting."
         </p>
         <p>
           You're doing your own sales. You're winging every conversation. And the results reflect it.
@@ -404,7 +404,7 @@ function App() {
                 I've spent the last 4 years helping B2B founders build sales systems that actually work. Not theory. Not "frameworks" you'll never implement. Real, operational systems that turn conversations into contracts.
               </p>
               <p>
-                I've watched brilliant technical founders leave hundreds of thousands on the table because nobody ever showed them how to build a repeatable process. They could build incredible products. They could explain the value. But they had no system for capturing demand and moving it forward.
+                I've watched brilliant founders leave hundreds of thousands on the table because nobody ever showed them how to build a repeatable process. Whether they came from engineering, research, education, or operations, they could all explain the value of what they built. But they had no system for capturing demand and moving it forward.
               </p>
               <p>
                 The Revenue Room is what I wish existed when I started. A small, focused cohort where you build your entire sales engine in 7 weeks, with mentors who've done it, and peers who are doing it alongside you.
@@ -485,7 +485,7 @@ function App() {
         <div className="container">
           <p className="eyebrow">Introducing</p>
           <h2>The Revenue Room</h2>
-          <p>A 7-week community accelerator that gives technical founders a complete, operational sales system, built live, with peers and mentors, from first conversation to closed deal.</p>
+          <p>A 7-week community accelerator that gives B2B founders a complete, operational sales system, built live, with peers and mentors, from first conversation to closed deal.</p>
         </div>
       </section>
 
@@ -719,7 +719,7 @@ function App() {
           <h2 className="text-center" style={{ fontSize: 'clamp(28px, 3.5vw, 40px)', fontWeight: 700, marginBottom: 32 }}>Got questions? Good.</h2>
           <div className="faq-tabs">
             <button className={`faq-tab ${faqTab === 'founders' ? 'active' : ''}`} onClick={() => setFaqTab('founders')}>For Founders</button>
-            <button className={`faq-tab ${faqTab === 'sponsors' ? 'active' : ''}`} onClick={() => setFaqTab('sponsors')}>For Program Leads</button>
+            <button className={`faq-tab ${faqTab === 'sponsors' ? 'active' : ''}`} onClick={() => setFaqTab('sponsors')}>For Program Sponsors</button>
           </div>
           <div className="faq-grid">
             {(faqTab === 'founders' ? founderFaqs : sponsorFaqs).map((item, i) => (
@@ -878,7 +878,7 @@ function App() {
             <div className="footer-brand">
               <img src="/digitalflow-logo.png" alt="DigitalFlow Consulting" style={{ height: 36, marginBottom: 12 }} />
               <p style={{ fontFamily: 'var(--font-display)', fontSize: 16, fontWeight: 700, color: '#fff', marginBottom: 12 }}>The Revenue Room</p>
-              <p>A 7-week community accelerator for technical founders building their first real sales system. By DigitalFlow Consulting.</p>
+              <p>A 7-week community accelerator for B2B founders building their first real sales system. By DigitalFlow Consulting.</p>
             </div>
             <div className="footer-col">
               <h5>Program</h5>

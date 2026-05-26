@@ -475,7 +475,7 @@ function App() {
             </div>
           </div>
           <p className="meaning-close" style={{ margin: '0 auto' }}>
-            <strong>A system gives you predictable revenue.</strong> That changes everything.
+            <span style={{ textDecoration: 'underline', textUnderlineOffset: '4px' }}>A system gives you predictable revenue. That changes everything.</span>
           </p>
         </div>
       </section>

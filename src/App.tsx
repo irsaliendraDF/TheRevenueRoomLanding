@@ -548,7 +548,7 @@ function App() {
           </div>
         </div>
         <div className="benefits-closer">
-          <p>"This isn't a course. It's a build sprint. You leave with a working system, not a certificate."</p>
+          <p>"This isn't a course. It's a build sprint. You leave with a working system plus a certificate."</p>
           <a href="#apply" className="btn-primary" onClick={(e) => { e.preventDefault(); scrollTo('apply') }}>Apply to Beta Cohort &rarr;</a>
         </div>
       </section>

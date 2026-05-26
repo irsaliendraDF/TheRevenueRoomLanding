@@ -104,12 +104,12 @@ const mentors = [
 ]
 
 const expectedOutcomes = [
-  { week: 'Week 1', title: 'Clarity on what is broken', before: 'Guessing why deals stall and blaming your pitch, your pricing, or yourself', after: 'A diagnosis of exactly where your sales process breaks down across strategy, process, and execution' },
-  { week: 'Week 2', title: 'Know exactly who to target', before: 'Selling to anyone who will listen and wasting hours on calls with people who were never going to buy', after: 'A validated ICP, a qualification scorecard, and a shortlist of your 10 highest-value target accounts' },
-  { week: 'Week 3', title: 'A pipeline you can see', before: 'Deals floating in your head or a spreadsheet with no stages, no next steps, and no way to forecast', after: 'Defined pipeline stages with exit criteria, a forecasting model, and a weekly review rhythm' },
-  { week: 'Week 4', title: 'A CRM that works for you', before: 'A CRM you opened once and abandoned, or no system at all beyond memory and sticky notes', after: 'A configured CRM with your live pipeline, outreach sequences, automations, and a daily workflow' },
-  { week: 'Week 5', title: 'Conversations that convert', before: 'Winging every sales call, freezing at objections, and avoiding the ask', after: 'A discovery call script, a personal objection playbook, and a closing framework practised with real peer feedback' },
-  { week: 'Week 6-7', title: 'A system that improves itself', before: 'No idea which numbers matter, no way to tell if things are getting better or worse', after: 'A KPI dashboard, an experiment tracker, and a complete Sales Engine Playbook you own forever' },
+  { week: 'Week 1', title: 'Clarity on what is broken', before: 'Guessing why deals stall', after: 'A clear diagnosis of where your process breaks down' },
+  { week: 'Week 2', title: 'Know exactly who to target', before: 'Selling to anyone who will listen', after: 'A validated ICP and your 10 highest-value targets' },
+  { week: 'Week 3', title: 'A pipeline you can see', before: 'Deals floating in your head with no way to forecast', after: 'Pipeline stages, exit criteria, and a forecasting model' },
+  { week: 'Week 4', title: 'A CRM that actually works', before: 'No system beyond memory and spreadsheets', after: 'A configured CRM with automations and a daily workflow' },
+  { week: 'Week 5', title: 'Conversations that close', before: 'Winging every call and freezing at objections', after: 'Discovery scripts, objection playbook, and closing framework' },
+  { week: 'Week 6-7', title: 'A system that compounds', before: 'No way to tell what is working or why', after: 'KPI dashboard and a complete Sales Engine Playbook you own forever' },
 ]
 
 function App() {
@@ -546,7 +546,7 @@ function App() {
         <div className="container">
           <p className="eyebrow text-center">What you walk away with</p>
           <h2 className="text-center" style={{ fontSize: 'clamp(28px, 3.5vw, 40px)', fontWeight: 700, marginBottom: 12 }}>7 weeks from now, this is the difference.</h2>
-          <p className="text-center" style={{ color: 'var(--muted)', fontSize: 16, maxWidth: 640, margin: '0 auto 48px' }}>Every week builds a specific piece of your Revenue Engine. Here is exactly what changes.</p>
+          <p className="text-center" style={{ color: 'var(--muted)', fontSize: 16, maxWidth: 640, margin: '0 auto 48px' }}>Here is exactly what changes.</p>
           <div className="outcomes-grid">
             {expectedOutcomes.map((o, i) => (
               <div className="outcome-card" key={i}>

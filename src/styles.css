@@ -1014,8 +1014,8 @@ img {
 }
 
 .outcome-ba-after {
-  background: rgba(62,77,52,0.12);
-  color: var(--forest);
+  background: rgba(62,77,52,0.25);
+  color: #2d5a1e;
 }
 
 /* ---- Modules / Curriculum ---- */

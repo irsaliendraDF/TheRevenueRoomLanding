@@ -398,7 +398,7 @@ function App() {
               <img src="/irene.jpg" alt="Irene, Founder of DigitalFlow Consulting" />
             </div>
             <div className="rapport-text">
-              <p className="rapport-role">Founder &middot; DigitalFlow Consulting</p>
+              <p className="rapport-role">Founder &middot; <a href="https://www.digitalflowconsulting.ca" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gold-deep)', textDecoration: 'underline', textUnderlineOffset: '3px' }}>DigitalFlow Consulting</a></p>
               <h2 className="rapport-name">Hi, I'm Irene.</h2>
               <p>
                 I've spent the last 7 years helping B2B founders build sales systems that actually work. Not theory. Not "frameworks" you'll never implement. Real, operational systems that turn conversations into contracts.

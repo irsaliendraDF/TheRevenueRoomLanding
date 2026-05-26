@@ -285,18 +285,26 @@ function App() {
             <circle cx="180" cy="480" r="3" fill="#3e4d34" />
           </svg>
         </div>
+        <div className="hero-particles">
+          <span className="particle particle-1"></span>
+          <span className="particle particle-2"></span>
+          <span className="particle particle-3"></span>
+          <span className="particle particle-4"></span>
+          <span className="particle particle-5"></span>
+          <span className="particle particle-6"></span>
+        </div>
         <div className="hero-content container">
-          <div className="hero-meta">
+          <a href="#apply" className="hero-meta hero-meta-link" onClick={(e) => { e.preventDefault(); scrollTo('apply') }}>
             <span className="hero-meta-dot"></span>
-            Beta Cohort &middot; 10 seats remaining
-          </div>
+            Beta Cohort &middot; Apply Now!
+          </a>
           <h1 className="hero-title">The Revenue Room</h1>
           <p className="hero-tagline">
             A 7-week community accelerator where B2B founders stop winging it and build a real sales system, together, from the ground up.
           </p>
           <div className="hero-buttons">
             <a href="#apply" className="btn-primary" onClick={(e) => { e.preventDefault(); scrollTo('apply') }}>Apply to Beta Cohort &rarr;</a>
-            <a href="#program" className="btn-ghost" onClick={(e) => { e.preventDefault(); scrollTo('program') }}>See the Curriculum</a>
+            <a href="#curriculum" className="btn-forest" onClick={(e) => { e.preventDefault(); scrollTo('curriculum') }}>See the Curriculum</a>
           </div>
           <div className="hero-pills">
             <span className="hero-pill"><span className="hero-pill-icon">&#x1F3AF;</span> B2B Founders</span>
@@ -304,25 +312,44 @@ function App() {
             <span className="hero-pill"><span className="hero-pill-icon">&#x1F393;</span> Domain Expert Founders</span>
             <span className="hero-pill"><span className="hero-pill-icon">&#x1F4A1;</span> Founder-Led Sales</span>
           </div>
-          <div className="hero-stats">
-            <div className="hero-stat">
-              <div className="hero-stat-value">$2.4M</div>
-              <div className="hero-stat-label">Pipeline Built</div>
+          <div className="hero-takeaways">
+            <div className="hero-takeaway">
+              <span className="hero-takeaway-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+              </span>
+              <div>
+                <strong>Validated ICP &amp; Pipeline</strong>
+                <span>Know exactly who to target and where every deal stands</span>
+              </div>
             </div>
-            <div className="hero-stat">
-              <div className="hero-stat-value">10</div>
-              <div className="hero-stat-label">Founders / Cohort</div>
+            <div className="hero-takeaway">
+              <span className="hero-takeaway-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+              </span>
+              <div>
+                <strong>Configured CRM</strong>
+                <span>A system that works for you with automations and daily workflows</span>
+              </div>
             </div>
-            <div className="hero-stat">
-              <div className="hero-stat-value">7 wk</div>
-              <div className="hero-stat-label">Live Program</div>
+            <div className="hero-takeaway">
+              <span className="hero-takeaway-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </span>
+              <div>
+                <strong>Sales Playbook</strong>
+                <span>Discovery scripts, objection handling, and closing frameworks</span>
+              </div>
             </div>
-            <div className="hero-stat">
-              <div className="hero-stat-value">87%</div>
-              <div className="hero-stat-label">Closed a Deal</div>
+            <div className="hero-takeaway">
+              <span className="hero-takeaway-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+              </span>
+              <div>
+                <strong>Complete Sales Engine</strong>
+                <span>A documented, repeatable system you own forever</span>
+              </div>
             </div>
           </div>
-          <p className="hero-caption">Intentionally capped at 10 founders per cohort for maximum accountability and personalized feedback.</p>
         </div>
       </section>
 
@@ -629,6 +656,7 @@ function App() {
               </div>
             </div>
           ))}
+          <p style={{ textAlign: 'center', fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 15, color: 'var(--forest)', marginTop: 32, lineHeight: 1.6 }}>Intentionally capped at 10 founders per cohort for maximum accountability and personalized feedback.</p>
         </div>
       </section>
 

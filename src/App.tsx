@@ -130,6 +130,11 @@ function App() {
   const [formLoading, setFormLoading] = useState(false)
   const [formSubmitted, setFormSubmitted] = useState(false)
   const [formError, setFormError] = useState('')
+  const [showContact, setShowContact] = useState(false)
+  const [contactData, setContactData] = useState({ firstName: '', lastName: '', email: '', message: '' })
+  const [contactLoading, setContactLoading] = useState(false)
+  const [contactSubmitted, setContactSubmitted] = useState(false)
+  const [contactError, setContactError] = useState('')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
@@ -160,6 +165,24 @@ function App() {
       setFormError('Something went wrong. Please try again or email irene@digitalflowconsulting.ca directly.')
     } else {
       setFormSubmitted(true)
+    }
+  }
+
+  const handleContactSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setContactLoading(true)
+    setContactError('')
+    const { error } = await supabase.from('contact_messages').insert({
+      first_name: contactData.firstName,
+      last_name: contactData.lastName,
+      email: contactData.email,
+      message: contactData.message,
+    })
+    setContactLoading(false)
+    if (error) {
+      setContactError('Something went wrong. Please try again.')
+    } else {
+      setContactSubmitted(true)
     }
   }
 
@@ -222,7 +245,7 @@ function App() {
             <span className="nav-logo-text">The Revenue Room</span>
           </a>
           <ul className="nav-links">
-            <li><a href="#program" onClick={(e) => { e.preventDefault(); scrollTo('program') }}>Program</a></li>
+            <li><a href="#curriculum" onClick={(e) => { e.preventDefault(); scrollTo('curriculum') }}>Program</a></li>
             {/* Hidden until content is ready
             <li><a href="#outcomes" onClick={(e) => { e.preventDefault(); scrollTo('outcomes') }}>Outcomes</a></li>
             <li><a href="#mentors" onClick={(e) => { e.preventDefault(); scrollTo('mentors') }}>Mentors</a></li>
@@ -506,8 +529,8 @@ function App() {
         </div>
       </section>
 
-      {/* Outcomes - hidden until content ready */}
-      <section className="outcomes" id="outcomes" style={{ display: 'none' }}>
+      {/* Outcomes */}
+      <section className="outcomes" id="outcomes">
         <div className="container">
           <p className="eyebrow text-center">Cohort 01 &middot; Real numbers from real founders</p>
           <h2 className="text-center" style={{ fontSize: 'clamp(28px, 3.5vw, 40px)', fontWeight: 700 }}>What founders walked out with.</h2>
@@ -793,30 +816,64 @@ function App() {
         </div>
       </section>
 
+      {/* Contact Modal */}
+      {showContact && (
+        <div className="modal-overlay" onClick={() => setShowContact(false)}>
+          <div className="modal" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setShowContact(false)}>&times;</button>
+            {contactSubmitted ? (
+              <div className="form-success" style={{ padding: '24px 0' }}>
+                <div className="form-success-icon" style={{ background: 'var(--forest)', color: '#fff' }}>&#x2713;</div>
+                <h3 style={{ color: 'var(--ink)' }}>Message sent!</h3>
+                <p style={{ color: 'var(--ink-soft)' }}>We'll get back to you within 48 hours.</p>
+              </div>
+            ) : (
+              <form onSubmit={handleContactSubmit}>
+                <h3 style={{ fontFamily: 'var(--font-display)', fontSize: 22, fontWeight: 700, marginBottom: 4 }}>Get in touch</h3>
+                <p style={{ fontSize: 14, color: 'var(--muted)', marginBottom: 24 }}>Have a question? We'll get back to you within 48 hours.</p>
+                <div className="form-row">
+                  <div className="form-group" style={{ marginBottom: 16 }}>
+                    <label style={{ color: 'var(--ink)' }}>First name *</label>
+                    <input type="text" required value={contactData.firstName} onChange={(e) => setContactData(prev => ({ ...prev, firstName: e.target.value }))} />
+                  </div>
+                  <div className="form-group" style={{ marginBottom: 16 }}>
+                    <label style={{ color: 'var(--ink)' }}>Last name *</label>
+                    <input type="text" required value={contactData.lastName} onChange={(e) => setContactData(prev => ({ ...prev, lastName: e.target.value }))} />
+                  </div>
+                </div>
+                <div className="form-group" style={{ marginBottom: 16 }}>
+                  <label style={{ color: 'var(--ink)' }}>Email *</label>
+                  <input type="email" required value={contactData.email} onChange={(e) => setContactData(prev => ({ ...prev, email: e.target.value }))} />
+                </div>
+                <div className="form-group" style={{ marginBottom: 16 }}>
+                  <label style={{ color: 'var(--ink)' }}>Message *</label>
+                  <textarea required rows={4} value={contactData.message} onChange={(e) => setContactData(prev => ({ ...prev, message: e.target.value }))} />
+                </div>
+                <button type="submit" className="btn-primary form-submit" style={{ borderRadius: 'var(--radius)' }} disabled={contactLoading}>
+                  {contactLoading ? 'Sending...' : 'Send Message'}
+                </button>
+                {contactError && <p className="form-error">{contactError}</p>}
+              </form>
+            )}
+          </div>
+        </div>
+      )}
+
       {/* Footer */}
       <footer className="footer">
         <div className="container">
-          <div className="footer-grid">
+          <div className="footer-grid" style={{ gridTemplateColumns: '2fr 1fr 1fr' }}>
             <div className="footer-brand">
-              <img src="/digitalflow-logo.png" alt="DigitalFlow Consulting" style={{ height: 36, marginBottom: 12, filter: 'brightness(10)' }} />
+              <img src="/digitalflow-logo.png" alt="DigitalFlow Consulting" style={{ height: 36, marginBottom: 12 }} />
               <p style={{ fontFamily: 'var(--font-display)', fontSize: 16, fontWeight: 700, color: '#fff', marginBottom: 12 }}>The Revenue Room</p>
               <p>A 7-week community accelerator for technical founders building their first real sales system. By DigitalFlow Consulting.</p>
             </div>
             <div className="footer-col">
               <h5>Program</h5>
               <ul>
-                <li><a href="#program" onClick={(e) => { e.preventDefault(); scrollTo('program') }}>Curriculum</a></li>
+                <li><a href="#curriculum" onClick={(e) => { e.preventDefault(); scrollTo('curriculum') }}>Curriculum</a></li>
                 <li><a href="#outcomes" onClick={(e) => { e.preventDefault(); scrollTo('outcomes') }}>Outcomes</a></li>
-                <li><a href="#mentors" onClick={(e) => { e.preventDefault(); scrollTo('mentors') }}>Mentors</a></li>
                 <li><a href="#faq" onClick={(e) => { e.preventDefault(); scrollTo('faq') }}>FAQ</a></li>
-              </ul>
-            </div>
-            <div className="footer-col">
-              <h5>Community</h5>
-              <ul>
-                <li><a href="#community" onClick={(e) => { e.preventDefault(); scrollTo('community') }}>Slack</a></li>
-                <li><a href="#community" onClick={(e) => { e.preventDefault(); scrollTo('community') }}>Accountability Pods</a></li>
-                <li><a href="#community" onClick={(e) => { e.preventDefault(); scrollTo('community') }}>Alumni Network</a></li>
               </ul>
             </div>
             <div className="footer-col">
@@ -824,7 +881,7 @@ function App() {
               <ul>
                 <li><a href="https://digitalflowconsulting.ca" target="_blank" rel="noopener noreferrer">DigitalFlow Consulting</a></li>
                 <li><a href="#about" onClick={(e) => { e.preventDefault(); scrollTo('about') }}>About Irene</a></li>
-                <li><a href="mailto:irene@digitalflowconsulting.ca">Contact</a></li>
+                <li><a href="#" onClick={(e) => { e.preventDefault(); setShowContact(true) }}>Contact</a></li>
               </ul>
             </div>
           </div>

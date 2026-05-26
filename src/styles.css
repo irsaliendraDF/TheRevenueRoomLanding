@@ -1594,6 +1594,58 @@ img {
   line-height: 1.6;
 }
 
+/* ---- Contact Modal ---- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(42,42,34,0.5);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.modal {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  max-width: 520px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 24px 48px -12px rgba(42,42,34,0.25);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: var(--muted);
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px;
+}
+
+.modal-close:hover {
+  color: var(--ink);
+}
+
+.modal .form-group label {
+  color: var(--ink);
+}
+
+@media (max-width: 480px) {
+  .modal {
+    padding: 28px 20px;
+  }
+}
+
 /* ---- Footer ---- */
 .footer {
   background: var(--ink);
@@ -1603,7 +1655,7 @@ img {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 40px;
   margin-bottom: 48px;
 }

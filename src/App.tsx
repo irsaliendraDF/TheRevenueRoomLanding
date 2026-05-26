@@ -670,22 +670,22 @@ function App() {
             <div className="timeline-step">
               <div className="timeline-step-dot">1</div>
               <h4>Apply</h4>
-              <p>~5 min</p>
+              <p>Now through August</p>
             </div>
             <div className="timeline-step">
               <div className="timeline-step-dot">2</div>
               <h4>Fit Call</h4>
-              <p>~48 hrs</p>
+              <p>Within 48 hrs</p>
             </div>
             <div className="timeline-step">
               <div className="timeline-step-dot">3</div>
               <h4>Accept &amp; Enroll</h4>
-              <p>~July/August</p>
+              <p>August 2026</p>
             </div>
             <div className="timeline-step">
               <div className="timeline-step-dot">4</div>
-              <h4>Onboard</h4>
-              <p>~September</p>
+              <h4>Onboard &amp; Kickoff</h4>
+              <p>Sept 8, 2026</p>
             </div>
           </div>
         </div>

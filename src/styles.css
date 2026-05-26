@@ -708,7 +708,8 @@ img {
 }
 
 .mentor-logo[alt="Volta"] {
-  height: 34px;
+  height: 70px;
+  max-width: none;
 }
 
 .mentor-logo[alt="CGLCC"] {

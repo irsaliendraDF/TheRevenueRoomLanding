@@ -439,7 +439,7 @@ function App() {
             </p>
           </div>
           <div className="method-box">
-            <p className="method-box-label">The Revenue Engine Method&trade;</p>
+            <p className="method-box-label">The Revenue Engine Method</p>
             <div className="method-steps">
               <span className="method-step">Conversations that qualify correctly</span>
               <span className="method-arrow">&rarr;</span>

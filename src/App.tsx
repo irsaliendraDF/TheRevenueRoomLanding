@@ -401,7 +401,7 @@ function App() {
               <p className="rapport-role">Founder &middot; DigitalFlow Consulting</p>
               <h2 className="rapport-name">Hi, I'm Irene.</h2>
               <p>
-                I've spent the last 4 years helping B2B founders build sales systems that actually work. Not theory. Not "frameworks" you'll never implement. Real, operational systems that turn conversations into contracts.
+                I've spent the last 7 years helping B2B founders build sales systems that actually work. Not theory. Not "frameworks" you'll never implement. Real, operational systems that turn conversations into contracts.
               </p>
               <p>
                 I've watched brilliant founders leave hundreds of thousands on the table because nobody ever showed them how to build a repeatable process. Whether they came from engineering, research, education, or operations, they could all explain the value of what they built. But they had no system for capturing demand and moving it forward.

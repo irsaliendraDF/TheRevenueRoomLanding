@@ -114,8 +114,8 @@ const outcomes = [
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false)
-  const [weekFilter, setWeekFilter] = useState('all')
-  const [openModules, setOpenModules] = useState<string[]>([])
+  const [weekFilter, setWeekFilter] = useState('1')
+  const [openModules, setOpenModules] = useState<string[]>(['01'])
   const [faqTab, setFaqTab] = useState<'founders' | 'sponsors'>('founders')
   const [formData, setFormData] = useState({
     firstName: '',
@@ -571,7 +571,7 @@ function App() {
           <p className="eyebrow">The Curriculum</p>
           <h2 style={{ fontSize: 'clamp(28px, 3.5vw, 40px)', fontWeight: 700, marginBottom: 32 }}>7 weeks. One system. Zero fluff.</h2>
           <div className="modules-filters">
-            {['all', '1', '2', '3', '4', '5', '6', 'cap'].map(f => (
+            {['1', '2', '3', '4', '5', '6', 'cap', 'all'].map(f => (
               <button
                 key={f}
                 className={`modules-filter-btn ${weekFilter === f ? 'active' : ''}`}

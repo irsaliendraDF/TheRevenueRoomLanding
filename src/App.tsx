@@ -698,7 +698,7 @@ function App() {
             <span className="guarantee-badge">The Revenue Room Guarantee</span>
             <div className="guarantee-icon">&#x1F6E1;&#xFE0F;</div>
             <h3>We guarantee the value. You bring the commitment.</h3>
-            <p>Complete all 7 sessions, do the exercises, build your system, and if you genuinely feel you didn't get the value we promised, we'll refund you in full. No hoops. No fine print games.</p>
+            <p>A full refund is available through the end of Week 1 if the program is not the right fit. No questions asked. After Week 1, all seats are non-refundable. The Revenue Engine only works if you build it, and we ask for your full commitment once you are past that first week.</p>
             <div className="guarantee-tags">
               <span className="guarantee-tag">Qualified ICP</span>
               <span className="guarantee-tag">Structured pipeline</span>
@@ -707,7 +707,7 @@ function App() {
               <span className="guarantee-tag">Objection playbook</span>
               <span className="guarantee-tag">Metrics dashboard</span>
             </div>
-            <p className="guarantee-fine">These are the deliverables we guarantee. If you do the work and don't walk away with all six, you get your money back.</p>
+            <p className="guarantee-fine">These are the deliverables every founder walks away with. Accelerator-sponsored seats are subject to the sponsoring organization's terms.</p>
           </div>
         </div>
       </section>

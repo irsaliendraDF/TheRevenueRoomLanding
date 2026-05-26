@@ -1300,7 +1300,7 @@ img {
 .guarantee-box {
   border: 2px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 48px 40px;
+  padding: 32px 28px;
   text-align: center;
   max-width: 1120px;
   margin: 0 auto;

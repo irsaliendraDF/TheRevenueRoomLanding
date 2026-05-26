@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { supabase } from './lib/supabase'
+import confetti from 'canvas-confetti'
 
 /* ============================================================
    THE REVENUE ROOM - Landing Page
@@ -165,6 +166,17 @@ function App() {
       setFormError('Something went wrong. Please try again or email irene@digitalflowconsulting.ca directly.')
     } else {
       setFormSubmitted(true)
+      const end = Date.now() + 3000
+      const colors = ['#FFA74F', '#3e4d34', '#ffc474', '#c9943a', '#5e734e']
+      const frame = () => {
+        confetti({ particleCount: 3, angle: 60, spread: 55, origin: { x: 0, y: 0.7 }, colors })
+        confetti({ particleCount: 3, angle: 120, spread: 55, origin: { x: 1, y: 0.7 }, colors })
+        if (Date.now() < end) requestAnimationFrame(frame)
+      }
+      frame()
+      setTimeout(() => {
+        confetti({ particleCount: 100, spread: 100, origin: { y: 0.6 }, colors })
+      }, 300)
     }
   }
 

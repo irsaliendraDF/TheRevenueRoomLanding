@@ -1238,7 +1238,7 @@ img {
 
 .module-card {
   background: #fff;
-  border: 1px solid var(--border-soft);
+  border: 1.5px solid var(--gold);
   border-radius: var(--radius-lg);
   margin-bottom: 12px;
   overflow: hidden;

@@ -277,12 +277,26 @@ function App() {
           <div className="hero-blob hero-blob--forest"></div>
         </div>
         <div className="hero-orbit">
-          <svg width="600" height="600" viewBox="0 0 600 600" fill="none" style={{ opacity: 0.15 }}>
-            <circle cx="300" cy="300" r="200" stroke="#3e4d34" strokeWidth="1" strokeDasharray="8 6" />
-            <circle cx="300" cy="300" r="260" stroke="#c9943a" strokeWidth="1" strokeDasharray="4 8" />
-            <circle cx="300" cy="100" r="4" fill="#3e4d34" />
-            <circle cx="500" cy="300" r="3" fill="#c9943a" />
-            <circle cx="180" cy="480" r="3" fill="#3e4d34" />
+          <svg width="700" height="700" viewBox="0 0 700 700" fill="none" style={{ opacity: 0.12 }}>
+            <circle cx="350" cy="350" r="140" stroke="#3e4d34" strokeWidth="0.8" strokeDasharray="6 8" />
+            <circle cx="350" cy="350" r="210" stroke="#c9943a" strokeWidth="1" strokeDasharray="8 6" />
+            <circle cx="350" cy="350" r="280" stroke="#3e4d34" strokeWidth="0.6" strokeDasharray="4 10" />
+            <circle cx="350" cy="350" r="340" stroke="#c9943a" strokeWidth="0.5" strokeDasharray="3 12" />
+            {/* Dots on orbits */}
+            <circle cx="350" cy="210" r="4" fill="#3e4d34" />
+            <circle cx="560" cy="350" r="3" fill="#c9943a" />
+            <circle cx="210" cy="530" r="3" fill="#3e4d34" />
+            <circle cx="490" cy="140" r="2.5" fill="#c9943a" />
+            <circle cx="100" cy="300" r="3" fill="#3e4d34" />
+            <circle cx="600" cy="500" r="2" fill="#c9943a" />
+          </svg>
+        </div>
+        <div className="hero-orbit hero-orbit--reverse">
+          <svg width="500" height="500" viewBox="0 0 500 500" fill="none" style={{ opacity: 0.08 }}>
+            <circle cx="250" cy="250" r="180" stroke="#c9943a" strokeWidth="0.6" strokeDasharray="2 8" />
+            <circle cx="250" cy="250" r="230" stroke="#3e4d34" strokeWidth="0.5" strokeDasharray="6 12" />
+            <circle cx="250" cy="70" r="3" fill="#c9943a" />
+            <circle cx="430" cy="250" r="2.5" fill="#3e4d34" />
           </svg>
         </div>
         <div className="hero-particles">
@@ -292,6 +306,22 @@ function App() {
           <span className="particle particle-4"></span>
           <span className="particle particle-5"></span>
           <span className="particle particle-6"></span>
+        </div>
+        <div className="hero-coins">
+          <span className="coin coin-1">$</span>
+          <span className="coin coin-2">$</span>
+          <span className="coin coin-3">$</span>
+          <span className="coin coin-4">$</span>
+          <span className="coin coin-5">$</span>
+          <span className="coin coin-6">$</span>
+          <span className="coin coin-7">$</span>
+          <span className="coin coin-8">$</span>
+        </div>
+        <div className="hero-rings">
+          <span className="ring ring-1"></span>
+          <span className="ring ring-2"></span>
+          <span className="ring ring-3"></span>
+          <span className="ring ring-4"></span>
         </div>
         <div className="hero-content container">
           <a href="#apply" className="hero-meta hero-meta-link" onClick={(e) => { e.preventDefault(); scrollTo('apply') }}>

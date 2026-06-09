@@ -80,7 +80,8 @@ const founderFaqs = [
   { q: 'Is this live or self-paced?', a: 'Fully live and virtual. One 2-hour session per week over Zoom with your cohort, plus async support in Slack and your Notion Success Hub. Recordings are available if you miss a session, but the real value is in the live interaction.' },
   { q: 'What is the beta cohort size?', a: 'Capped at 10 founders. This is deliberately small so Irene can personally work with every founder. Small enough for real feedback, real practice, and real accountability.' },
   { q: 'Do I need a CRM already?', a: 'No. We help you choose and configure one during Week 4. If you already have one, we will audit and optimize it. We are CRM-agnostic. The frameworks work with HubSpot, Pipedrive, Close, Attio, or even a well-structured spreadsheet.' },
-  { q: 'How does pricing work?', a: 'The Revenue Room is sponsor-funded. Accelerators, incubators, and ecosystem partners sponsor seats so founders can participate. During your application, we will work with you to identify sponsorship options, including provincial training grants you may be eligible for. Pricing details are shared during the application process.' },
+  { q: 'What happens after I submit interest?', a: 'Submitting interest is not a commitment. First, we send you a short pre-qualification assessment so we can understand where you are. Next, you book a fit call with Irene. If the Revenue Room is the right fit, we walk through financing options for your spot. If it is not the right fit right now, no worries, we will check in with you before every cohort to see if the timing and qualification are right.' },
+  { q: 'How does pricing work?', a: 'The Revenue Room is sponsor-funded. Accelerators, incubators, and ecosystem partners sponsor seats so founders can participate. On your fit call we will work through financing options for your spot, including sponsorship and provincial training grants you may be eligible for. Pricing details are shared on that call.' },
   { q: 'What happens after the 7 weeks?', a: 'You keep your complete Sales Engine Playbook forever, plus lifetime access to the Slack community and all future playbook updates. Your Revenue Index diagnostic gives you a before-and-after snapshot of your progress.' },
   { q: 'What is the refund policy?', a: 'For sponsor-funded seats, a full refund is available through the end of Week 1 if the program is not the right fit. After Week 1, all seats are non-refundable. The Revenue Engine only works if you build it, and we ask for your full commitment once you are past that first week.' },
   { q: 'What do I walk away with?', a: 'A complete, documented Revenue Engine: validated ICP, structured pipeline with exit criteria, configured CRM, discovery call scripts, objection playbook, closing framework, metrics dashboard, and a capstone Sales Engine Playbook reviewed by mentors and peers.' },
@@ -240,12 +241,12 @@ function App() {
       {/* Announcement Bar */}
       <div className="announcement-bar">
         <div className="announcement-bar-track">
-          <span className="announcement-bar-item">APPLY NOW to the Beta Cohort - Limited to 10 founders</span>
+          <span className="announcement-bar-item">SUBMIT INTEREST in the Beta Cohort - Limited to 10 founders</span>
           <span className="announcement-bar-item">Beta Cohort starts Sept 8, 2026</span>
-          <span className="announcement-bar-item">Applications closing soon - Apply today</span>
-          <span className="announcement-bar-item">APPLY NOW to the Beta Cohort - Limited to 10 founders</span>
+          <span className="announcement-bar-item">Spots are limited - Submit your interest today</span>
+          <span className="announcement-bar-item">SUBMIT INTEREST in the Beta Cohort - Limited to 10 founders</span>
           <span className="announcement-bar-item">Beta Cohort starts Sept 8, 2026</span>
-          <span className="announcement-bar-item">Applications closing soon - Apply today</span>
+          <span className="announcement-bar-item">Spots are limited - Submit your interest today</span>
         </div>
       </div>
 
@@ -266,7 +267,7 @@ function App() {
             */}
             <li><a href="#faq" onClick={(e) => { e.preventDefault(); scrollTo('faq') }}>FAQ</a></li>
           </ul>
-          <a href="#apply" className="nav-cta" onClick={(e) => { e.preventDefault(); scrollTo('apply') }}>Apply to Beta Cohort &rarr;</a>
+          <a href="#apply" className="nav-cta" onClick={(e) => { e.preventDefault(); scrollTo('apply') }}>Submit Interest &rarr;</a>
         </div>
       </nav>
 
@@ -326,14 +327,14 @@ function App() {
         <div className="hero-content container">
           <a href="#apply" className="hero-meta hero-meta-link" onClick={(e) => { e.preventDefault(); scrollTo('apply') }}>
             <span className="hero-meta-dot"></span>
-            Beta Cohort &middot; Apply Now!
+            Beta Cohort &middot; Submit Interest
           </a>
           <h1 className="hero-title">The Revenue Room</h1>
           <p className="hero-tagline">
             A 7-week community accelerator where B2B founders stop winging it and build a real sales system, together, from the ground up.
           </p>
           <div className="hero-buttons">
-            <a href="#apply" className="btn-primary" onClick={(e) => { e.preventDefault(); scrollTo('apply') }}>Apply to Beta Cohort &rarr;</a>
+            <a href="#apply" className="btn-primary" onClick={(e) => { e.preventDefault(); scrollTo('apply') }}>Submit Interest &rarr;</a>
             <a href="#curriculum" className="btn-forest" onClick={(e) => { e.preventDefault(); scrollTo('curriculum') }}>See the Curriculum</a>
           </div>
           <div className="hero-pills">
@@ -606,7 +607,7 @@ function App() {
         </div>
         <div className="benefits-closer">
           <p>This isn't a course. It's a build sprint. You leave with a working system plus a certificate.</p>
-          <a href="#apply" className="btn-primary" onClick={(e) => { e.preventDefault(); scrollTo('apply') }}>Apply to Beta Cohort &rarr;</a>
+          <a href="#apply" className="btn-primary" onClick={(e) => { e.preventDefault(); scrollTo('apply') }}>Submit Interest &rarr;</a>
         </div>
       </section>
 
@@ -742,25 +743,26 @@ function App() {
           <div className="timeline-steps">
             <div className="timeline-step">
               <div className="timeline-step-dot">1</div>
-              <h4>Apply</h4>
+              <h4>Submit Interest</h4>
               <p>Now through August</p>
             </div>
             <div className="timeline-step">
               <div className="timeline-step-dot">2</div>
-              <h4>Fit Call</h4>
-              <p>Within 48 hrs</p>
+              <h4>Pre-Qualification</h4>
+              <p>Short assessment, within 48 hrs</p>
             </div>
             <div className="timeline-step">
               <div className="timeline-step-dot">3</div>
-              <h4>Accept &amp; Enroll</h4>
-              <p>August 2026</p>
+              <h4>Fit Call with Irene</h4>
+              <p>If it's a fit, we cover financing</p>
             </div>
             <div className="timeline-step">
               <div className="timeline-step-dot">4</div>
-              <h4>Onboard &amp; Kickoff</h4>
+              <h4>Enroll &amp; Kickoff</h4>
               <p>Sept 8, 2026</p>
             </div>
           </div>
+          <p style={{ textAlign: 'center', fontSize: 14, color: 'var(--forest)', marginTop: 24, maxWidth: 620, marginLeft: 'auto', marginRight: 'auto', lineHeight: 1.6 }}>Not a fit right now? No worries. We'll check in with you before every cohort to see if the timing and qualification are right, so you're never left wondering.</p>
         </div>
       </section>
 
@@ -809,13 +811,14 @@ function App() {
       <section className="closing-cta" id="apply">
         <div className="container">
           <h2>Your Revenue Engine won't build itself. But you don't have to build it alone.</h2>
-          <p className="closing-cta-sub" style={{ marginTop: 0, marginBottom: 32 }}>5-minute application &middot; 48-hour response</p>
+          <p className="closing-cta-sub" style={{ marginTop: 0, marginBottom: 8 }}>5-minute form &middot; 48-hour response</p>
+          <p className="closing-cta-sub" style={{ marginTop: 0, marginBottom: 32, fontSize: 14, opacity: 0.9 }}>Submit your interest below. We'll send a short pre-qualification assessment, then book a fit call with Irene. If it's a fit, we'll walk through financing options for your spot.</p>
 
           {formSubmitted ? (
             <div className="form-success">
               <div className="form-success-icon">&#x2713;</div>
-              <h3>Application received!</h3>
-              <p>Thanks for applying to the Beta Cohort. We'll review your application and get back to you within 48 hours.</p>
+              <h3>Interest received!</h3>
+              <p>Thanks for your interest in the Beta Cohort. We'll review it and send you a short pre-qualification assessment within 48 hours, then book a fit call with Irene. Not a fit this round? No worries, we'll check in before each cohort.</p>
             </div>
           ) : (
             <form className="application-form" onSubmit={handleSubmit}>
@@ -893,7 +896,7 @@ function App() {
               </div>
 
               <button type="submit" className="btn-primary form-submit" disabled={formLoading}>
-                {formLoading ? 'Submitting...' : 'Apply to Beta Cohort →'}
+                {formLoading ? 'Submitting...' : 'Submit Interest →'}
               </button>
               {formError && <p className="form-error">{formError}</p>}
             </form>

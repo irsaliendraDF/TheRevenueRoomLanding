@@ -76,13 +76,13 @@ const modules = [
 const founderFaqs = [
   { q: 'Who is this for?', a: 'B2B founders and high-ticket service businesses doing their own sales, roughly pre-revenue through $250K ARR. If you have customer conversations happening but no repeatable system for turning them into revenue, this is built for you.' },
   { q: 'What if I have zero sales experience?', a: 'Perfect. The program is designed for founders who never trained in sales. We build from first principles, not jargon. Most founders in the Revenue Room are technical and have never had formal sales training.' },
-  { q: 'How much time per week?', a: 'Plan for 4-6 hours: a 2-hour live session plus homework, peer pod check-ins, and CRM setup work. Most founders say the structure actually saves them time because they stop context-switching on sales.' },
-  { q: 'Is this live or self-paced?', a: 'Fully live and virtual. One 2-hour session per week over Zoom with your cohort, plus async support in Slack and your Notion Success Hub. Recordings are available if you miss a session, but the real value is in the live interaction.' },
-  { q: 'What is the beta cohort size?', a: 'Capped at 10 founders. This is deliberately small so Irene can personally work with every founder. Small enough for real feedback, real practice, and real accountability.' },
+  { q: 'How much time per week?', a: 'Plan for 2.5 to 3 hours: a 90-minute live session plus homework, peer pod check-ins, and CRM setup work. Most founders say the structure actually saves them time because they stop context-switching on sales.' },
+  { q: 'Is this live or self-paced?', a: 'Fully live and virtual. One 90-minute session per week over Zoom with your cohort, plus async support in the community space inside your Revenue Room platform and your Notion Success Hub. Recordings are available if you miss a session, but the real value is in the live interaction.' },
+  { q: 'What is the beta cohort size?', a: 'Capped at 8 founders. This is deliberately small so Irene can personally work with every founder. Small enough for real feedback, real practice, and real accountability.' },
   { q: 'Do I need a CRM already?', a: 'No. We help you choose and configure one during Week 4. If you already have one, we will audit and optimize it. We are CRM-agnostic. The frameworks work with HubSpot, Pipedrive, Close, Attio, or even a well-structured spreadsheet.' },
   { q: 'What happens after I submit interest?', a: 'Submitting interest is not a commitment. First, we send you a short pre-qualification assessment so we can understand where you are. Next, you book a fit call with Irene. If the Revenue Room is the right fit, we walk through financing options for your spot. If it is not the right fit right now, no worries, we will check in with you before every cohort to see if the timing and qualification are right.' },
   { q: 'How does pricing work?', a: 'The Revenue Room is sponsor-funded. Accelerators, incubators, and ecosystem partners sponsor seats so founders can participate. On your fit call we will work through financing options for your spot, including sponsorship and provincial training grants you may be eligible for. Pricing details are shared on that call.' },
-  { q: 'What happens after the 7 weeks?', a: 'You keep your complete Sales Engine Playbook forever, plus lifetime access to the Slack community and all future playbook updates. Your Revenue Index diagnostic gives you a before-and-after snapshot of your progress.' },
+  { q: 'What happens after the 7 weeks?', a: 'You keep your complete Sales Engine Playbook forever, plus lifetime access to the alumni community and all future playbook updates. Your Revenue Index diagnostic gives you a before-and-after snapshot of your progress.' },
   { q: 'What is the refund policy?', a: 'For sponsor-funded seats, a full refund is available through the end of Week 1 if the program is not the right fit. After Week 1, all seats are non-refundable. The Revenue Engine only works if you build it, and we ask for your full commitment once you are past that first week.' },
   { q: 'What do I walk away with?', a: 'A complete, documented Revenue Engine: validated ICP, structured pipeline with exit criteria, configured CRM, discovery call scripts, objection playbook, closing framework, metrics dashboard, and a capstone Sales Engine Playbook reviewed by mentors and peers.' },
 ]
@@ -93,7 +93,7 @@ const sponsorFaqs = [
   { q: 'How many seats can we sponsor?', a: 'Minimum 3 seats per partner for the beta cohort. Most partners sponsor 3-5 seats. Volume discounts of 10% apply for 10+ seats from one sponsor, and multi-cohort commitments (3+ cohorts per year) receive 15% off.' },
   { q: 'What reporting do sponsors receive?', a: 'Standard tier and above includes a cohort performance report with aggregated, anonymized outcomes, founder progress snapshots, and a quarterly state-of-the-cohort briefing. Enterprise tier adds co-branded materials and custom reporting tied to your KPIs.' },
   { q: 'Can we nominate founders from our portfolio?', a: 'Absolutely. Nominated founders still go through the application process to ensure fit, but they receive priority review. We coordinate the fit interview with your program lead.' },
-  { q: 'What does the founder experience include?', a: 'Every sponsored founder gets: 7 live modules, cohort sessions, homework accountability, Accountability Pod placement, Slack community, a DigitalFlow Revenue Index diagnostic, Notion Success Hub with SOPs, certificate of completion, and a capstone review of their Sales Engine Playbook.' },
+  { q: 'What does the founder experience include?', a: 'Every sponsored founder gets: 7 live modules, cohort sessions, homework accountability, Accountability Pod placement, cohort community access, a DigitalFlow Revenue Index diagnostic, Notion Success Hub with SOPs, certificate of completion, and a capstone review of their Sales Engine Playbook.' },
   { q: 'How do we get started?', a: 'Email irene@digitalflowconsulting.ca with your program name, founder count, and target cohort. We will send back a 1-page sponsor brief within 48 hours and set up a 20-minute scoping call.' },
 ]
 
@@ -241,10 +241,10 @@ function App() {
       {/* Announcement Bar */}
       <div className="announcement-bar">
         <div className="announcement-bar-track">
-          <span className="announcement-bar-item">SUBMIT INTEREST in the Beta Cohort - Limited to 10 founders</span>
+          <span className="announcement-bar-item">SUBMIT INTEREST in the Beta Cohort - Limited to 8 founders</span>
           <span className="announcement-bar-item">Beta Cohort starts Sept 8, 2026</span>
           <span className="announcement-bar-item">Spots are limited - Submit your interest today</span>
-          <span className="announcement-bar-item">SUBMIT INTEREST in the Beta Cohort - Limited to 10 founders</span>
+          <span className="announcement-bar-item">SUBMIT INTEREST in the Beta Cohort - Limited to 8 founders</span>
           <span className="announcement-bar-item">Beta Cohort starts Sept 8, 2026</span>
           <span className="announcement-bar-item">Spots are limited - Submit your interest today</span>
         </div>
@@ -671,7 +671,7 @@ function App() {
               </div>
             </div>
           ))}
-          <p style={{ textAlign: 'center', fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 15, color: 'var(--forest)', marginTop: 32, lineHeight: 1.6 }}>Intentionally capped at 10 founders per cohort for maximum accountability and personalized feedback.</p>
+          <p style={{ textAlign: 'center', fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 15, color: 'var(--forest)', marginTop: 32, lineHeight: 1.6 }}>Intentionally capped at 8 founders per cohort for maximum accountability and personalized feedback.</p>
         </div>
       </section>
 
@@ -705,8 +705,8 @@ function App() {
               <p>You're matched with 2-3 peers for weekly check-ins. Share wins, troubleshoot blockers, and hold each other to commitments. The pod is where the real accountability happens.</p>
             </div>
             <div className="community-card">
-              <h4>Slack Community</h4>
-              <p>Async support between sessions. Post a call recording for feedback, share a win, ask a question about your CRM setup. Active alumni keep the channel rich long after your cohort ends.</p>
+              <h4>Cohort Community</h4>
+              <p>Async support between sessions. Post a call recording for feedback, share a win, ask a question about your CRM setup. Active alumni keep it rich long after your cohort ends.</p>
             </div>
             <div className="community-card">
               <h4>Live Role-Play</h4>

@@ -498,7 +498,7 @@ function App() {
             {/* Irene */}
             <div className="founder-card">
               <div className="founder-photo">
-                <img src="/irene.jpg" alt="Irene, co-founder of The Revenue Room and founder of DigitalFlow Consulting" />
+                <img src="/irene-headshot.jpg" alt="Irene, co-founder of The Revenue Room and founder of DigitalFlow Consulting" />
               </div>
               <div className="founder-body">
                 <p className="founder-role">Co-founder &middot; <a href="https://www.digitalflowconsulting.ca" target="_blank" rel="noopener noreferrer">DigitalFlow Consulting</a></p>
@@ -788,14 +788,14 @@ function App() {
           </div>
           <div className="funding-grid">
             <button className="funding-card" onClick={() => setFundingModal('canada')}>
-              <img className="funding-flag" src="/flag-ca.svg" alt="Canada flag" />
+              <img className="funding-flag" src="/Flag-Canada.webp" alt="Canada flag" />
               <span className="funding-region">{fundingPaths.canada.region}</span>
               <h3>{fundingPaths.canada.title}</h3>
               <p>{fundingPaths.canada.summary}</p>
               <span className="funding-card-more">See how it works &rarr;</span>
             </button>
             <button className="funding-card" onClick={() => setFundingModal('us')}>
-              <img className="funding-flag" src="/flag-us.svg" alt="United States flag" />
+              <img className="funding-flag" src="/Flag-United-States-of-America.webp" alt="United States flag" />
               <span className="funding-region">{fundingPaths.us.region}</span>
               <h3>{fundingPaths.us.title}</h3>
               <p>{fundingPaths.us.summary}</p>

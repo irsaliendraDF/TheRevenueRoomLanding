@@ -1380,11 +1380,12 @@ img {
 
 .funding-flag {
   display: block;
-  height: 26px;
+  height: 28px;
   width: auto;
   margin-bottom: 14px;
   border-radius: 3px;
-  box-shadow: 0 1px 3px rgba(11,31,29,0.2);
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 1px 3px rgba(11,31,29,0.12);
 }
 
 .funding-region {

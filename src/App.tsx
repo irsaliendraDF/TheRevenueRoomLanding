@@ -168,7 +168,7 @@ function App() {
     } else {
       setFormSubmitted(true)
       const end = Date.now() + 3000
-      const colors = ['#FFA74F', '#3e4d34', '#ffc474', '#c9943a', '#5e734e']
+      const colors = ['#D19A34', '#0F5B54', '#E3B75B', '#17857C', '#9FE1CB']
       const frame = () => {
         confetti({ particleCount: 3, angle: 60, spread: 55, origin: { x: 0, y: 0.7 }, colors })
         confetti({ particleCount: 3, angle: 120, spread: 55, origin: { x: 1, y: 0.7 }, colors })
@@ -279,25 +279,25 @@ function App() {
         </div>
         <div className="hero-orbit">
           <svg width="700" height="700" viewBox="0 0 700 700" fill="none" style={{ opacity: 0.12 }}>
-            <circle cx="350" cy="350" r="140" stroke="#3e4d34" strokeWidth="0.8" strokeDasharray="6 8" />
-            <circle cx="350" cy="350" r="210" stroke="#c9943a" strokeWidth="1" strokeDasharray="8 6" />
-            <circle cx="350" cy="350" r="280" stroke="#3e4d34" strokeWidth="0.6" strokeDasharray="4 10" />
-            <circle cx="350" cy="350" r="340" stroke="#c9943a" strokeWidth="0.5" strokeDasharray="3 12" />
+            <circle cx="350" cy="350" r="140" stroke="#0F5B54" strokeWidth="0.8" strokeDasharray="6 8" />
+            <circle cx="350" cy="350" r="210" stroke="#D19A34" strokeWidth="1" strokeDasharray="8 6" />
+            <circle cx="350" cy="350" r="280" stroke="#0F5B54" strokeWidth="0.6" strokeDasharray="4 10" />
+            <circle cx="350" cy="350" r="340" stroke="#D19A34" strokeWidth="0.5" strokeDasharray="3 12" />
             {/* Dots on orbits */}
-            <circle cx="350" cy="210" r="4" fill="#3e4d34" />
-            <circle cx="560" cy="350" r="3" fill="#c9943a" />
-            <circle cx="210" cy="530" r="3" fill="#3e4d34" />
-            <circle cx="490" cy="140" r="2.5" fill="#c9943a" />
-            <circle cx="100" cy="300" r="3" fill="#3e4d34" />
-            <circle cx="600" cy="500" r="2" fill="#c9943a" />
+            <circle cx="350" cy="210" r="4" fill="#0F5B54" />
+            <circle cx="560" cy="350" r="3" fill="#D19A34" />
+            <circle cx="210" cy="530" r="3" fill="#0F5B54" />
+            <circle cx="490" cy="140" r="2.5" fill="#D19A34" />
+            <circle cx="100" cy="300" r="3" fill="#0F5B54" />
+            <circle cx="600" cy="500" r="2" fill="#D19A34" />
           </svg>
         </div>
         <div className="hero-orbit hero-orbit--reverse">
           <svg width="500" height="500" viewBox="0 0 500 500" fill="none" style={{ opacity: 0.08 }}>
-            <circle cx="250" cy="250" r="180" stroke="#c9943a" strokeWidth="0.6" strokeDasharray="2 8" />
-            <circle cx="250" cy="250" r="230" stroke="#3e4d34" strokeWidth="0.5" strokeDasharray="6 12" />
-            <circle cx="250" cy="70" r="3" fill="#c9943a" />
-            <circle cx="430" cy="250" r="2.5" fill="#3e4d34" />
+            <circle cx="250" cy="250" r="180" stroke="#D19A34" strokeWidth="0.6" strokeDasharray="2 8" />
+            <circle cx="250" cy="250" r="230" stroke="#0F5B54" strokeWidth="0.5" strokeDasharray="6 12" />
+            <circle cx="250" cy="70" r="3" fill="#D19A34" />
+            <circle cx="430" cy="250" r="2.5" fill="#0F5B54" />
           </svg>
         </div>
         <div className="hero-particles">
@@ -443,41 +443,97 @@ function App() {
         </div>
       </section>
 
-      {/* Rapport / Bio */}
-      <section className="rapport" id="about">
+      {/* Founders / Partnership (About) */}
+      <section className="founders" id="about">
         <div className="container">
-          <div className="rapport-grid">
-            <div className="rapport-photo">
-              <img src="/irene.jpg" alt="Irene, Founder of DigitalFlow Consulting" />
-            </div>
-            <div className="rapport-text">
-              <p className="rapport-role">Founder &middot; <a href="https://www.digitalflowconsulting.ca" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gold-deep)', textDecoration: 'underline', textUnderlineOffset: '3px' }}>DigitalFlow Consulting</a></p>
-              <h2 className="rapport-name">Hi, I'm Irene.</h2>
-              <p>
-                I've spent the last 7 years helping B2B founders build sales systems that actually work. Not theory. Not "frameworks" you'll never implement. Real, operational systems that turn conversations into contracts.
-              </p>
-              <p>
-                I've watched brilliant founders leave hundreds of thousands on the table because nobody ever showed them how to build a repeatable process. Whether they came from engineering, research, education, or operations, they could all explain the value of what they built. But they had no system for capturing demand and moving it forward.
-              </p>
-              <p>
-                The Revenue Room is what I wish existed when I started. A small, focused cohort where you build your entire sales engine in 7 weeks, with mentors who've done it, and peers who are doing it alongside you.
-              </p>
-              <div className="rapport-badges">
-                <span className="rapport-badge">&#x1F680; Serial Entrepreneur</span>
-                <span className="rapport-badge">&#x2B50; 30 Under 30 Innovator &middot; Atlantic Business Magazine</span>
-                <span className="rapport-badge">&#x2B50; One to Watch 2025 &middot; Digital Nova Scotia</span>
+          <div className="founders-head">
+            <p className="eyebrow">The Partnership</p>
+            <h2>Two operators. One room.</h2>
+            <p>
+              The Revenue Room is a partnership between DigitalFlow and North Peak, built and taught by people who have carried the bag in real B2B rooms, not career instructors. Here is who you build alongside.
+            </p>
+          </div>
+
+          <div className="founders-grid">
+            {/* Irene */}
+            <div className="founder-card">
+              <div className="founder-photo">
+                <img src="/irene.jpg" alt="Irene, co-founder of The Revenue Room and founder of DigitalFlow Consulting" />
               </div>
-              <div className="rapport-mentors">
-                <p className="rapport-mentors-label">Mentor &amp; Partner</p>
-                <div className="rapport-mentor-logos">
-                  <img src="/volta-logo.jpg" alt="Volta" className="mentor-logo" />
-                  <img src="/cglcc-logo.png" alt="CGLCC" className="mentor-logo" />
-                  <img src="/tribe-logo.png" alt="Tribe" className="mentor-logo" />
-                  <img src="/halifax-chamber-logo.png" alt="Halifax Chamber of Commerce" className="mentor-logo" />
-                  <img src="/onside-logo.webp" alt="Onside" className="mentor-logo" />
-                  <img src="/movement51-logo.webp" alt="Movement51" className="mentor-logo" />
+              <div className="founder-body">
+                <p className="founder-role">Co-founder &middot; <a href="https://www.digitalflowconsulting.ca" target="_blank" rel="noopener noreferrer">DigitalFlow Consulting</a></p>
+                <h3 className="founder-name">Irene</h3>
+                <p className="founder-oneliner">The revenue-systems operator who turns founder conversations into repeatable sales.</p>
+                <div className="founder-bio">
+                  <p>
+                    For the last 7 years I've helped B2B founders build sales systems that actually work. Not theory, not frameworks you'll never open. Real, operational systems that turn conversations into contracts.
+                  </p>
+                  <p>
+                    I've watched brilliant founders leave hundreds of thousands on the table because nobody ever showed them how to build a repeatable process. The Revenue Room is what I wish existed when I started.
+                  </p>
+                </div>
+                <div className="founder-badges">
+                  <span className="founder-badge">&#x1F680; Serial Entrepreneur</span>
+                  <span className="founder-badge">&#x2B50; 30 Under 30 &middot; Atlantic Business Magazine</span>
+                  <span className="founder-badge">&#x2B50; One to Watch 2025 &middot; Digital Nova Scotia</span>
                 </div>
               </div>
+            </div>
+
+            {/* Chris — PLACEHOLDER: swap headshot, bio, and badges for Chris's real content */}
+            <div className="founder-card">
+              <div className="founder-photo founder-photo--placeholder">
+                <span className="founder-draft-badge">Placeholder</span>
+                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg>
+                <span>Add Chris's headshot</span>
+              </div>
+              <div className="founder-body">
+                <p className="founder-role">Co-founder &middot; North Peak</p>
+                <h3 className="founder-name">Chris</h3>
+                <p className="founder-oneliner">[Draft] The enterprise-sales operator who has closed the deals our founders are learning to run.</p>
+                <div className="founder-bio">
+                  <p>
+                    [Placeholder, to finalize with Chris.] Chris has spent years on the other side of the table, building and leading B2B revenue: real pipeline, real quotas, real rooms. He knows the founder-led sales wall because he has helped teams climb it.
+                  </p>
+                  <p>
+                    [Placeholder.] In the Revenue Room he brings the operator's edge: the discipline, the deal mechanics, and an honest read on what actually moves a pilot to a signed contract.
+                  </p>
+                </div>
+                <div className="founder-badges">
+                  <span className="founder-badge">&#x2691; North Peak</span>
+                  <span className="founder-badge">&#x2B50; [Draft] Add a credential</span>
+                  <span className="founder-badge">&#x2B50; [Draft] Add a credential</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Partnership lockup — the two marks side by side in the middle */}
+          <div className="partnership">
+            <div className="partnership-lockup">
+              <div className="partnership-logos">
+                <img src="/digitalflow-logo.png" alt="DigitalFlow" className="df-logo" />
+                <span className="partnership-x">&times;</span>
+                {/* TODO: replace this text wordmark with the real North Peak logo file (e.g. /northpeak-logo.png) */}
+                <span className="northpeak-wordmark">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><path d="M2 20 L9 8 L13 14 L16 9 L22 20 Z"/></svg>
+                  North Peak
+                </span>
+              </div>
+              <p className="partnership-caption">A cross-border partnership &middot; Canada &times; United States</p>
+            </div>
+          </div>
+
+          {/* Ecosystem / co-brand partners */}
+          <div className="ecosystem">
+            <p className="ecosystem-label">Mentors &amp; ecosystem partners</p>
+            <div className="ecosystem-logos">
+              <img src="/volta-logo.jpg" alt="Volta" className="mentor-logo" />
+              <img src="/cglcc-logo.png" alt="CGLCC" className="mentor-logo" />
+              <img src="/tribe-logo.png" alt="Tribe" className="mentor-logo" />
+              <img src="/halifax-chamber-logo.png" alt="Halifax Chamber of Commerce" className="mentor-logo" />
+              <img src="/onside-logo.webp" alt="Onside" className="mentor-logo" />
+              <img src="/movement51-logo.webp" alt="Movement51" className="mentor-logo" />
             </div>
           </div>
         </div>
@@ -954,7 +1010,7 @@ function App() {
             <div className="footer-brand">
               <img src="/digitalflow-logo.png" alt="DigitalFlow Consulting" style={{ height: 36, marginBottom: 12 }} />
               <p style={{ fontFamily: 'var(--font-display)', fontSize: 16, fontWeight: 700, color: '#fff', marginBottom: 12 }}>The Revenue Room</p>
-              <p>A 7-week community accelerator for B2B founders building their first real sales system. By DigitalFlow Consulting.</p>
+              <p>A 7-week accelerator for B2B founders building their first real sales system. A partnership of DigitalFlow &times; North Peak.</p>
             </div>
             <div className="footer-col">
               <h5>Program</h5>
@@ -968,7 +1024,7 @@ function App() {
               <h5>Company</h5>
               <ul>
                 <li><a href="https://digitalflowconsulting.ca" target="_blank" rel="noopener noreferrer">DigitalFlow Consulting</a></li>
-                <li><a href="#about" onClick={(e) => { e.preventDefault(); scrollTo('about') }}>About Irene</a></li>
+                <li><a href="#about" onClick={(e) => { e.preventDefault(); scrollTo('about') }}>The Founders</a></li>
                 <li><a href="#" onClick={(e) => { e.preventDefault(); setShowContact(true) }}>Contact</a></li>
               </ul>
             </div>

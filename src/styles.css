@@ -3,24 +3,38 @@
    ============================================================ */
 
 :root {
-  --ink: #1a2e1a;
-  --ink-soft: #2d3f2a;
-  --cream: #fff3e2;
-  --warm-white: #fffaf3;
-  --gold: #FFA74F;
-  --gold-deep: #c9943a;
-  --gold-light: #ffc474;
-  --gold-pale: #fff3e2;
-  --rust: #5e734e;
-  --forest: #3e4d34;
-  --forest-deep: #2d3a25;
-  --forest-light: #5e734e;
-  --muted: #8a7d6e;
-  --border: #e0d8ce;
-  --border-soft: #ece4d8;
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-body: 'DM Sans', system-ui, sans-serif;
-  --font-mono: 'DM Mono', 'JetBrains Mono', ui-monospace, monospace;
+  /* ---- The Revenue Room · Brand Kit v1.0 (DigitalFlow × North Peak) ----
+     Bone-forward and warm, led by deep teal, with warm gold as the accent
+     and ink used only as a grounding anchor. Brass is retired. */
+
+  /* Brand palette (canonical names) */
+  --teal: #0F5B54;         /* deep teal · primary */
+  --teal-deep: #0A423D;    /* darker teal · hovers */
+  --teal-signal: #17857C;  /* signal teal · secondary / links */
+  --gold-warm: #D19A34;    /* warm gold · accent */
+  --mint: #9FE1CB;         /* soft mint tint */
+  --bone: #F4F0E8;         /* bone · surface / light type */
+
+  /* Legacy variable names remapped to the new palette so every existing
+     component picks up the rebrand automatically. */
+  --ink: #0B1F1D;          /* ink · anchor / deepest contrast */
+  --ink-soft: #1d332e;     /* soft ink for body copy */
+  --cream: #F4F0E8;        /* -> bone surface */
+  --warm-white: #FBF8F1;   /* -> lightest bone */
+  --gold: #D19A34;         /* -> warm gold accent */
+  --gold-deep: #A9781F;    /* deep gold for text/hover on light */
+  --gold-light: #E3B75B;   /* lighter gold */
+  --gold-pale: #F4E9CF;    /* pale gold tint (fills) */
+  --rust: #17857C;         /* -> signal teal */
+  --forest: #0F5B54;       /* -> deep teal (primary dark accent) */
+  --forest-deep: #0A423D;  /* -> darker teal */
+  --forest-light: #17857C; /* -> signal teal */
+  --muted: #7d7466;        /* warm muted grey */
+  --border: #e0dace;       /* bone-tuned border */
+  --border-soft: #ebe5d8;  /* soft bone border */
+  --font-display: 'Piazzolla', Georgia, 'Times New Roman', serif;
+  --font-body: 'Schibsted Grotesk', system-ui, -apple-system, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'JetBrains Mono', ui-monospace, monospace;
   --nav-height: 68px;
   --radius-sm: 4px;
   --radius: 6px;
@@ -349,7 +363,7 @@ img {
   color: var(--ink);
   margin-bottom: 20px;
   letter-spacing: -0.02em;
-  text-shadow: 0 4px 24px rgba(62,77,52,0.15), 0 1px 3px rgba(42,42,34,0.1);
+  text-shadow: 0 4px 24px rgba(15,91,84,0.18), 0 1px 3px rgba(11,31,29,0.1);
   animation: heroTitleIn 0.8s ease-out both;
 }
 
@@ -996,6 +1010,261 @@ img {
   height: 32px;
 }
 
+/* ---- Founders / Partnership (About) ---- */
+.founders {
+  background: var(--cream);
+  padding: 72px 0;
+}
+
+.founders-head {
+  max-width: 720px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.founders-head h2 {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+
+.founders-head p {
+  font-size: 16px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+
+.founders-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.founder-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.founder-card:hover {
+  box-shadow: var(--shadow-lift);
+  transform: translateY(-3px);
+}
+
+.founder-photo {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  background: var(--border-soft);
+  overflow: hidden;
+}
+
+.founder-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+}
+
+/* Placeholder headshot (clearly marked, swap for the real photo) */
+.founder-photo--placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(160deg, var(--teal) 0%, var(--ink) 100%);
+  color: var(--mint);
+}
+
+.founder-photo--placeholder svg {
+  opacity: 0.85;
+}
+
+.founder-photo--placeholder span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.72);
+}
+
+.founder-draft-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: var(--gold);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 100px;
+}
+
+.founder-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 26px 26px 28px;
+}
+
+.founder-role {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--teal-signal);
+  margin-bottom: 6px;
+}
+
+.founder-role a {
+  color: var(--teal-signal);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.founder-name {
+  font-size: 27px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.founder-oneliner {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--teal);
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.founder-bio p {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.72;
+  margin-bottom: 12px;
+}
+
+.founder-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+.founder-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--teal);
+  background: rgba(15,91,84,0.07);
+  padding: 6px 12px;
+  border-radius: 100px;
+}
+
+/* Partnership lockup — the two marks side by side in the middle */
+.partnership {
+  margin-top: 44px;
+  text-align: center;
+}
+
+.partnership-lockup {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 28px 40px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--warm-white);
+}
+
+.partnership-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.partnership-logos .df-logo {
+  height: 42px;
+  width: auto;
+}
+
+.partnership-x {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--gold);
+  line-height: 1;
+}
+
+/* Placeholder North Peak wordmark — swap for the real logo file */
+.northpeak-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.northpeak-wordmark svg {
+  color: var(--teal);
+  flex-shrink: 0;
+}
+
+.partnership-caption {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+/* Ecosystem / co-brand partners strip */
+.ecosystem {
+  margin-top: 44px;
+  padding-top: 36px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.ecosystem-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.ecosystem-logos {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 /* ---- Solution / Method ---- */
 .solution {
   padding: 64px 0;
@@ -1322,8 +1591,8 @@ img {
 }
 
 .outcome-ba-after {
-  background: rgba(62,77,52,0.25);
-  color: #2d5a1e;
+  background: rgba(15,91,84,0.16);
+  color: var(--teal);
 }
 
 /* ---- Modules / Curriculum ---- */
@@ -2078,6 +2347,20 @@ img {
   .rapport-grid {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  .founders-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .partnership-lockup {
+    padding: 24px 24px;
+    width: 100%;
+  }
+
+  .partnership-logos {
+    gap: 20px;
   }
 
   .rapport-photo {

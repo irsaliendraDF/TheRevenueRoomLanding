@@ -127,8 +127,8 @@ const fundingPaths = {
     steps: [
       'Submit interest below',
       'Complete a short pre-qualification (a funding question routes you to the Canada path)',
-      'Fit call with Irene, where we map your funding options together',
-      'Enroll and start Sept 8, 2026',
+      'Fit call with the team, where we map your funding options together',
+      'Enroll in the next cohort block',
     ],
     selfPay: 'If no funded route fits right now, a self-pay option is available and quoted privately on your fit call.',
   },
@@ -145,8 +145,8 @@ const fundingPaths = {
     steps: [
       'Submit interest below',
       'Complete a short pre-qualification (a funding question routes you to the US path)',
-      'Fit call with Irene, where we map your funding options together',
-      'Enroll and start Sept 8, 2026',
+      'Fit call with the team, where we map your funding options together',
+      'Enroll in the next cohort block',
     ],
     selfPay: 'If no funded route fits right now, a self-pay option is available and quoted privately on your fit call.',
   },
@@ -518,12 +518,11 @@ function App() {
                   <span className="founder-badge">&#x2B50; One to Watch 2025 &middot; Digital Nova Scotia</span>
                 </div>
                 <div className="founder-logos">
-                  <p className="founder-logos-label">Mentors &amp; Ecosystem Partners</p>
+                  <p className="founder-logos-label">Mentor and Partner to:</p>
                   <div className="founder-logos-row">
                     <img src="/volta-logo.jpg" alt="Volta" className="mentor-logo" />
                     <img src="/cglcc-logo.png" alt="CGLCC" className="mentor-logo" />
                     <img src="/tribe-logo.png" alt="Tribe" className="mentor-logo" />
-                    <img src="/halifax-chamber-logo.png" alt="Halifax Chamber of Commerce" className="mentor-logo" />
                     <img src="/onside-logo.webp" alt="Onside" className="mentor-logo" />
                     <img src="/movement51-logo.webp" alt="Movement51" className="mentor-logo" />
                   </div>
@@ -556,7 +555,7 @@ function App() {
                   <span className="founder-badge">&#x2B50; [Draft] Add a credential</span>
                 </div>
                 <div className="founder-logos">
-                  <p className="founder-logos-label">North Peak Partners</p>
+                  <p className="founder-logos-label">Mentor and Partner to:</p>
                   {/* PLACEHOLDER: swap in North Peak's own mentor / partner logos */}
                   <div className="founder-logos-placeholder">Add North Peak's partner &amp; mentor logos</div>
                 </div>
@@ -569,7 +568,11 @@ function App() {
             <div className="partnership-lockup">
               <p className="partnership-label">A Cross-Border Partnership</p>
               <div className="partnership-logos">
-                <img src="/digitalflow-logo.png" alt="DigitalFlow" className="df-logo" />
+                {/* Leaf mark paired with a wordmark so it matches North Peak. Swap for an official horizontal DigitalFlow logo when available. */}
+                <span className="df-wordmark">
+                  <img src="/digitalflow-logo.png" alt="DigitalFlow" />
+                  DigitalFlow
+                </span>
                 <span className="partnership-x">&times;</span>
                 {/* TODO: replace this text wordmark with the real North Peak logo file (e.g. /northpeak-logo.png) */}
                 <span className="northpeak-wordmark">
@@ -785,14 +788,14 @@ function App() {
           </div>
           <div className="funding-grid">
             <button className="funding-card" onClick={() => setFundingModal('canada')}>
-              <span className="funding-flag">&#x1F1E8;&#x1F1E6;</span>
+              <img className="funding-flag" src="/flag-ca.svg" alt="Canada flag" />
               <span className="funding-region">{fundingPaths.canada.region}</span>
               <h3>{fundingPaths.canada.title}</h3>
               <p>{fundingPaths.canada.summary}</p>
               <span className="funding-card-more">See how it works &rarr;</span>
             </button>
             <button className="funding-card" onClick={() => setFundingModal('us')}>
-              <span className="funding-flag">&#x1F1FA;&#x1F1F8;</span>
+              <img className="funding-flag" src="/flag-us.svg" alt="United States flag" />
               <span className="funding-region">{fundingPaths.us.region}</span>
               <h3>{fundingPaths.us.title}</h3>
               <p>{fundingPaths.us.summary}</p>

@@ -11,7 +11,7 @@ const modules = [
   {
     num: '01',
     week: 1,
-    date: 'Sept 8',
+    date: 'Sept 14',
     title: 'Clarity Kickoff',
     tagline: 'Define your revenue goals and audit your current sales reality.',
     body: 'We start by mapping exactly where you are today: what you are selling, to whom, and how those conversations are actually going. No sugarcoating. You will audit your last 30 days of sales activity and identify the biggest gaps between effort and revenue.',
@@ -20,7 +20,7 @@ const modules = [
   {
     num: '02',
     week: 2,
-    date: 'Sept 15',
+    date: 'Sept 21',
     title: 'Know Your Waters',
     tagline: 'Build your Ideal Customer Profile and qualification framework.',
     body: 'Most founders sell to anyone who will listen. This week you build a razor-sharp ICP backed by real data, then design a qualification framework so you never waste another hour on a bad-fit prospect.',
@@ -29,7 +29,7 @@ const modules = [
   {
     num: '03',
     week: 3,
-    date: 'Sept 22',
+    date: 'Sept 28',
     title: 'Pipeline Master Builder',
     tagline: 'Design a pipeline that shows you exactly where every deal stands.',
     body: 'We build your actual pipeline stages from first touch to closed-won, define the exit criteria for each stage, and set up the tracking system so nothing falls through the cracks again.',
@@ -38,7 +38,7 @@ const modules = [
   {
     num: '04',
     week: 4,
-    date: 'Sept 29',
+    date: 'Oct 5',
     title: 'The Engine Room',
     tagline: 'Configure your CRM as a revenue engine, not a data graveyard.',
     body: 'Your CRM should work for you, not the other way around. This week we configure it properly: custom fields that matter, automations that save time, and views that show you exactly what to do next.',
@@ -47,7 +47,7 @@ const modules = [
   {
     num: '05',
     week: 5,
-    date: 'Oct 6',
+    date: 'Oct 12',
     title: "Deal-Maker's Lab",
     tagline: 'Master discovery calls, objection handling, and closing frameworks.',
     body: 'The live role-play week. You will practice real discovery calls, handle the objections that have been killing your deals, and learn closing frameworks that feel natural, not salesy. Peers give live feedback.',
@@ -56,7 +56,7 @@ const modules = [
   {
     num: '06',
     week: 6,
-    date: 'Oct 13',
+    date: 'Oct 19',
     title: 'Sales Science & Optimization',
     tagline: 'Read your numbers and build a system that improves itself.',
     body: 'We turn your pipeline into a dashboard: conversion rates by stage, average deal velocity, win/loss patterns. You learn to read the signals so you can optimize without guessing.',
@@ -65,7 +65,7 @@ const modules = [
   {
     num: 'CAP',
     week: 7,
-    date: 'Oct 20',
+    date: 'Oct 26',
     title: 'Build Your Sales Engine',
     tagline: 'Present your complete Revenue Engine to the cohort and mentors.',
     body: 'Capstone week. You present your full Sales Engine: ICP, pipeline, CRM, frameworks, and metrics. Mentors and peers give final feedback. You leave with a complete, documented system you own forever.',
@@ -95,13 +95,6 @@ const sponsorFaqs = [
   { q: 'Can we nominate founders from our portfolio?', a: 'Absolutely. Nominated founders still go through the application process to ensure fit, but they receive priority review. We coordinate the fit interview with your program lead.' },
   { q: 'What does the founder experience include?', a: 'Every sponsored founder gets: 7 live modules, cohort sessions, homework accountability, Accountability Pod placement, cohort community access, a DigitalFlow Revenue Index diagnostic, Notion Success Hub with SOPs, certificate of completion, and a capstone review of their Sales Engine Playbook.' },
   { q: 'How do we get started?', a: 'Email irene@digitalflowconsulting.ca with your program name, founder count, and target cohort. We will send back a 1-page sponsor brief within 48 hours and set up a 20-minute scoping call.' },
-]
-
-const mentors = [
-  { name: 'Irene', role: 'Lead Instructor', type: 'photo' as const },
-  { name: 'Marcus Reid', role: 'Guest - CRM & Ops', initials: 'MR', type: 'initials' as const },
-  { name: 'Lena Holmes', role: 'Guest - Enterprise Sales', initials: 'LH', type: 'initials' as const },
-  { name: 'Priya Venkat', role: 'Guest - Founder-Led GTM', initials: 'PV', type: 'initials' as const },
 ]
 
 const expectedOutcomes = [
@@ -242,10 +235,10 @@ function App() {
       <div className="announcement-bar">
         <div className="announcement-bar-track">
           <span className="announcement-bar-item">SUBMIT INTEREST in the Beta Cohort - Limited to 8 founders</span>
-          <span className="announcement-bar-item">Beta Cohort starts Sept 8, 2026</span>
+          <span className="announcement-bar-item">Beta Cohort starts Sept 14, 2026</span>
           <span className="announcement-bar-item">Spots are limited - Submit your interest today</span>
           <span className="announcement-bar-item">SUBMIT INTEREST in the Beta Cohort - Limited to 8 founders</span>
-          <span className="announcement-bar-item">Beta Cohort starts Sept 8, 2026</span>
+          <span className="announcement-bar-item">Beta Cohort starts Sept 14, 2026</span>
           <span className="announcement-bar-item">Spots are limited - Submit your interest today</span>
         </div>
       </div>
@@ -261,7 +254,6 @@ function App() {
             <li><a href="#curriculum" onClick={(e) => { e.preventDefault(); scrollTo('curriculum') }}>Program</a></li>
             {/* Hidden until content is ready
             <li><a href="#outcomes" onClick={(e) => { e.preventDefault(); scrollTo('outcomes') }}>Outcomes</a></li>
-            <li><a href="#mentors" onClick={(e) => { e.preventDefault(); scrollTo('mentors') }}>Mentors</a></li>
             <li><a href="#community" onClick={(e) => { e.preventDefault(); scrollTo('community') }}>Community</a></li>
             <li><a href="#about" onClick={(e) => { e.preventDefault(); scrollTo('about') }}>About</a></li>
             */}
@@ -675,25 +667,6 @@ function App() {
         </div>
       </section>
 
-      {/* Mentors - hidden until content ready */}
-      <section className="mentors" id="mentors" style={{ display: 'none' }}>
-        <div className="container">
-          <p className="eyebrow text-center">Your Mentors</p>
-          <h2 className="text-center" style={{ fontSize: 'clamp(28px, 3.5vw, 40px)', fontWeight: 700 }}>People who've built what you're building.</h2>
-          <div className="mentors-grid">
-            {mentors.map((m, i) => (
-              <div className="mentor-card" key={i}>
-                <div className={`mentor-avatar ${m.type === 'photo' ? 'mentor-avatar--photo' : 'mentor-avatar--initials'}`}>
-                  {m.type === 'photo' ? 'Photo' : m.initials}
-                </div>
-                <div className="mentor-name">{m.name}</div>
-                <div className="mentor-role">{m.role}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Community - hidden until content ready */}
       <section className="community" id="community" style={{ display: 'none' }}>
         <div className="container">
@@ -759,7 +732,7 @@ function App() {
             <div className="timeline-step">
               <div className="timeline-step-dot">4</div>
               <h4>Enroll &amp; Kickoff</h4>
-              <p>Sept 8, 2026</p>
+              <p>Sept 14, 2026</p>
             </div>
           </div>
           <p style={{ textAlign: 'center', fontSize: 14, color: 'var(--forest)', marginTop: 24, maxWidth: 620, marginLeft: 'auto', marginRight: 'auto', lineHeight: 1.6 }}>Not a fit right now? No worries. We'll check in with you before every cohort to see if the timing and qualification are right, so you're never left wondering.</p>

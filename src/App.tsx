@@ -113,6 +113,45 @@ const expectedOutcomes = [
   { week: 'Week 6-7', title: 'A system that compounds', before: 'No way to tell what is working or why', after: 'KPI dashboard and a complete Sales Engine Playbook you own forever' },
 ]
 
+const fundingPaths = {
+  canada: {
+    region: 'Building in Canada',
+    title: 'Grants & Accelerators',
+    summary: 'Fund your seat through provincial training grants, an accelerator or incubator, or a corporate sponsor. Most Canadian founders never pay out of pocket.',
+    intro: 'The Revenue Room is sponsor-funded, and in Canada that usually means a founder pays little or nothing themselves. On your fit call we help you find the route that fits.',
+    ways: [
+      { h: 'Provincial training grants', p: 'Workforce and skills-training grants can cover part or all of a seat. We point you to the ones you may qualify for, including WIPSI, ACOA, and REGI-style programs.' },
+      { h: 'Accelerator or incubator', p: 'If you are in a program, they can sponsor your seat directly as founder development.' },
+      { h: 'Corporate or ecosystem sponsor', p: 'Ecosystem partners sponsor seats for founders in their network, often at the beta-cohort rate.' },
+    ],
+    steps: [
+      'Submit interest below',
+      'Complete a short pre-qualification (a funding question routes you to the Canada path)',
+      'Fit call with Irene, where we map your funding options together',
+      'Enroll and start Sept 8, 2026',
+    ],
+    selfPay: 'If no funded route fits right now, a self-pay option is available and quoted privately on your fit call.',
+  },
+  us: {
+    region: 'Building in the United States',
+    title: 'Investors & PE',
+    summary: 'Fund your seat through an investor or PE backer as an investment in revenue-readiness, so you stop being the bottleneck for your own revenue.',
+    intro: 'In the US the seat is usually funded as a portfolio investment: a founder who builds predictable pipeline and stops being founder-dependent for revenue is a better bet. We help you frame it that way.',
+    ways: [
+      { h: 'A current investor', p: 'Your existing backer funds the seat as a small, high-leverage investment in revenue-readiness and ROI.' },
+      { h: 'A PE operating partner', p: 'For portfolio companies, an operating partner can fund the seat to de-risk founder-led sales.' },
+      { h: 'Accelerator or corporate sponsor', p: 'If you are in a US program or have a corporate sponsor, they can cover the seat directly.' },
+    ],
+    steps: [
+      'Submit interest below',
+      'Complete a short pre-qualification (a funding question routes you to the US path)',
+      'Fit call with Irene, where we map your funding options together',
+      'Enroll and start Sept 8, 2026',
+    ],
+    selfPay: 'If no funded route fits right now, a self-pay option is available and quoted privately on your fit call.',
+  },
+} as const
+
 function App() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [weekFilter, setWeekFilter] = useState('1')
@@ -133,6 +172,7 @@ function App() {
   const [formSubmitted, setFormSubmitted] = useState(false)
   const [formError, setFormError] = useState('')
   const [showContact, setShowContact] = useState(false)
+  const [fundingModal, setFundingModal] = useState<'canada' | 'us' | null>(null)
   const [contactData, setContactData] = useState({ firstName: '', lastName: '', email: '', message: '' })
   const [contactLoading, setContactLoading] = useState(false)
   const [contactSubmitted, setContactSubmitted] = useState(false)
@@ -254,11 +294,11 @@ function App() {
       <nav className={`nav ${isScrolled ? 'is-scrolled' : ''}`}>
         <div className="nav-inner">
           <a href="#" className="nav-logo" onClick={() => scrollTo('hero')}>
-            <img src="/digitalflow-logo.png" alt="DigitalFlow" style={{ height: 32 }} />
             <span className="nav-logo-text">The Revenue Room</span>
           </a>
           <ul className="nav-links">
             <li><a href="#curriculum" onClick={(e) => { e.preventDefault(); scrollTo('curriculum') }}>Program</a></li>
+            <li><a href="#funding" onClick={(e) => { e.preventDefault(); scrollTo('funding') }}>Funding</a></li>
             {/* Hidden until content is ready
             <li><a href="#outcomes" onClick={(e) => { e.preventDefault(); scrollTo('outcomes') }}>Outcomes</a></li>
             <li><a href="#mentors" onClick={(e) => { e.preventDefault(); scrollTo('mentors') }}>Mentors</a></li>
@@ -477,10 +517,21 @@ function App() {
                   <span className="founder-badge">&#x2B50; 30 Under 30 &middot; Atlantic Business Magazine</span>
                   <span className="founder-badge">&#x2B50; One to Watch 2025 &middot; Digital Nova Scotia</span>
                 </div>
+                <div className="founder-logos">
+                  <p className="founder-logos-label">Mentors &amp; Ecosystem Partners</p>
+                  <div className="founder-logos-row">
+                    <img src="/volta-logo.jpg" alt="Volta" className="mentor-logo" />
+                    <img src="/cglcc-logo.png" alt="CGLCC" className="mentor-logo" />
+                    <img src="/tribe-logo.png" alt="Tribe" className="mentor-logo" />
+                    <img src="/halifax-chamber-logo.png" alt="Halifax Chamber of Commerce" className="mentor-logo" />
+                    <img src="/onside-logo.webp" alt="Onside" className="mentor-logo" />
+                    <img src="/movement51-logo.webp" alt="Movement51" className="mentor-logo" />
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Chris — PLACEHOLDER: swap headshot, bio, and badges for Chris's real content */}
+            {/* Chris — PLACEHOLDER: swap headshot, bio, badges, and logos for Chris's real content */}
             <div className="founder-card">
               <div className="founder-photo founder-photo--placeholder">
                 <span className="founder-draft-badge">Placeholder</span>
@@ -504,6 +555,11 @@ function App() {
                   <span className="founder-badge">&#x2B50; [Draft] Add a credential</span>
                   <span className="founder-badge">&#x2B50; [Draft] Add a credential</span>
                 </div>
+                <div className="founder-logos">
+                  <p className="founder-logos-label">North Peak Partners</p>
+                  {/* PLACEHOLDER: swap in North Peak's own mentor / partner logos */}
+                  <div className="founder-logos-placeholder">Add North Peak's partner &amp; mentor logos</div>
+                </div>
               </div>
             </div>
           </div>
@@ -511,6 +567,7 @@ function App() {
           {/* Partnership lockup — the two marks side by side in the middle */}
           <div className="partnership">
             <div className="partnership-lockup">
+              <p className="partnership-label">A Cross-Border Partnership</p>
               <div className="partnership-logos">
                 <img src="/digitalflow-logo.png" alt="DigitalFlow" className="df-logo" />
                 <span className="partnership-x">&times;</span>
@@ -520,20 +577,7 @@ function App() {
                   North Peak
                 </span>
               </div>
-              <p className="partnership-caption">A cross-border partnership &middot; Canada &times; United States</p>
-            </div>
-          </div>
-
-          {/* Ecosystem / co-brand partners */}
-          <div className="ecosystem">
-            <p className="ecosystem-label">Mentors &amp; ecosystem partners</p>
-            <div className="ecosystem-logos">
-              <img src="/volta-logo.jpg" alt="Volta" className="mentor-logo" />
-              <img src="/cglcc-logo.png" alt="CGLCC" className="mentor-logo" />
-              <img src="/tribe-logo.png" alt="Tribe" className="mentor-logo" />
-              <img src="/halifax-chamber-logo.png" alt="Halifax Chamber of Commerce" className="mentor-logo" />
-              <img src="/onside-logo.webp" alt="Onside" className="mentor-logo" />
-              <img src="/movement51-logo.webp" alt="Movement51" className="mentor-logo" />
+              <p className="partnership-caption">Canada &times; United States</p>
             </div>
           </div>
         </div>
@@ -728,6 +772,34 @@ function App() {
             </div>
           ))}
           <p style={{ textAlign: 'center', fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 15, color: 'var(--forest)', marginTop: 32, lineHeight: 1.6 }}>Intentionally capped at 10 founders per cohort for maximum accountability and personalized feedback.</p>
+        </div>
+      </section>
+
+      {/* Funding Your Seat */}
+      <section className="funding" id="funding">
+        <div className="container">
+          <div className="funding-head">
+            <p className="eyebrow">Funding Your Seat</p>
+            <h2>A selective, paid cohort, with two ways to fund your seat.</h2>
+            <p>The Revenue Room is a paid accelerator, and most founders never pay out of pocket. How you fund your seat depends on where you are building. Choose your path to see exactly how it works.</p>
+          </div>
+          <div className="funding-grid">
+            <button className="funding-card" onClick={() => setFundingModal('canada')}>
+              <span className="funding-flag">&#x1F1E8;&#x1F1E6;</span>
+              <span className="funding-region">{fundingPaths.canada.region}</span>
+              <h3>{fundingPaths.canada.title}</h3>
+              <p>{fundingPaths.canada.summary}</p>
+              <span className="funding-card-more">See how it works &rarr;</span>
+            </button>
+            <button className="funding-card" onClick={() => setFundingModal('us')}>
+              <span className="funding-flag">&#x1F1FA;&#x1F1F8;</span>
+              <span className="funding-region">{fundingPaths.us.region}</span>
+              <h3>{fundingPaths.us.title}</h3>
+              <p>{fundingPaths.us.summary}</p>
+              <span className="funding-card-more">See how it works &rarr;</span>
+            </button>
+          </div>
+          <p className="funding-note-inline">Not sure which fits? Submit interest and we will help you find the right route on your fit call.</p>
         </div>
       </section>
 
@@ -960,6 +1032,42 @@ function App() {
         </div>
       </section>
 
+      {/* Funding Pathway Modal */}
+      {fundingModal && (
+        <div className="modal-overlay" onClick={() => setFundingModal(null)}>
+          <div className="modal modal--funding funding-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setFundingModal(null)}>&times;</button>
+            <p className="funding-modal-region">{fundingPaths[fundingModal].region}</p>
+            <h3>{fundingPaths[fundingModal].title}</h3>
+            <p className="funding-modal-intro">{fundingPaths[fundingModal].intro}</p>
+            <div className="funding-ways">
+              {fundingPaths[fundingModal].ways.map((w, i) => (
+                <div className="funding-way" key={i}>
+                  <span className="funding-way-icon">&#x2713;</span>
+                  <div>
+                    <h4>{w.h}</h4>
+                    <p>{w.p}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="funding-steps">
+              <p className="funding-steps-label">How to navigate it</p>
+              <ol>
+                {fundingPaths[fundingModal].steps.map((s, i) => (
+                  <li key={i}>{s}</li>
+                ))}
+              </ol>
+            </div>
+            <p className="funding-selfpay">{fundingPaths[fundingModal].selfPay}</p>
+            <div className="funding-ctas">
+              <button className="btn-primary" onClick={() => { setFundingModal(null); scrollTo('apply') }}>Submit Interest &rarr;</button>
+              <button className="btn-forest" onClick={() => { setFundingModal(null); setShowContact(true) }}>Contact Us Directly</button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Contact Modal */}
       {showContact && (
         <div className="modal-overlay" onClick={() => { setShowContact(false); setContactData({ firstName: '', lastName: '', email: '', message: '' }); setContactSubmitted(false); setContactError('') }}>
@@ -1016,6 +1124,7 @@ function App() {
               <h5>Program</h5>
               <ul>
                 <li><a href="#curriculum" onClick={(e) => { e.preventDefault(); scrollTo('curriculum') }}>Curriculum</a></li>
+                <li><a href="#funding" onClick={(e) => { e.preventDefault(); scrollTo('funding') }}>Funding</a></li>
                 <li><a href="#outcomes" onClick={(e) => { e.preventDefault(); scrollTo('outcomes') }}>Outcomes</a></li>
                 <li><a href="#faq" onClick={(e) => { e.preventDefault(); scrollTo('faq') }}>FAQ</a></li>
               </ul>

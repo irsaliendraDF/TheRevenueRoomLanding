@@ -490,7 +490,7 @@ function App() {
             <p className="eyebrow">The Partnership</p>
             <h2>Two operators. One room.</h2>
             <p>
-              The Revenue Room is a partnership between DigitalFlow and North Peak, built and taught by people who have carried the bag in real B2B rooms, not career instructors. Here is who you build alongside.
+              The Revenue Room is a partnership between DigitalFlow and North Peak, built and taught by people who have carried the bag in real B2B rooms, not career instructors.
             </p>
           </div>
 

@@ -134,12 +134,12 @@ const fundingPaths = {
   },
   us: {
     region: 'Building in the United States',
-    title: 'Investors & PE',
-    summary: 'Fund your seat through an investor or PE backer as an investment in revenue-readiness, so you stop being the bottleneck for your own revenue.',
+    title: 'Investors & Private Equity',
+    summary: 'Fund your seat through an investor or private equity firm as an investment in revenue-readiness, so you stop being the bottleneck for your own revenue.',
     intro: 'In the US the seat is usually funded as a portfolio investment: a founder who builds predictable pipeline and stops being founder-dependent for revenue is a better bet. We help you frame it that way.',
     ways: [
       { h: 'A current investor', p: 'Your existing backer funds the seat as a small, high-leverage investment in revenue-readiness and ROI.' },
-      { h: 'A PE operating partner', p: 'For portfolio companies, an operating partner can fund the seat to de-risk founder-led sales.' },
+      { h: 'A private equity firm', p: 'For portfolio companies, an operating partner at the firm can fund the seat to de-risk founder-led sales.' },
       { h: 'Accelerator or corporate sponsor', p: 'If you are in a US program or have a corporate sponsor, they can cover the seat directly.' },
     ],
     steps: [

@@ -11,7 +11,7 @@ const modules = [
   {
     num: '01',
     week: 1,
-    date: 'Sept 8',
+    date: 'Sept 14',
     title: 'Clarity Kickoff',
     tagline: 'Define your revenue goals and audit your current sales reality.',
     body: 'We start by mapping exactly where you are today: what you are selling, to whom, and how those conversations are actually going. No sugarcoating. You will audit your last 30 days of sales activity and identify the biggest gaps between effort and revenue.',
@@ -20,7 +20,7 @@ const modules = [
   {
     num: '02',
     week: 2,
-    date: 'Sept 15',
+    date: 'Sept 21',
     title: 'Know Your Waters',
     tagline: 'Build your Ideal Customer Profile and qualification framework.',
     body: 'Most founders sell to anyone who will listen. This week you build a razor-sharp ICP backed by real data, then design a qualification framework so you never waste another hour on a bad-fit prospect.',
@@ -29,7 +29,7 @@ const modules = [
   {
     num: '03',
     week: 3,
-    date: 'Sept 22',
+    date: 'Sept 28',
     title: 'Pipeline Master Builder',
     tagline: 'Design a pipeline that shows you exactly where every deal stands.',
     body: 'We build your actual pipeline stages from first touch to closed-won, define the exit criteria for each stage, and set up the tracking system so nothing falls through the cracks again.',
@@ -38,7 +38,7 @@ const modules = [
   {
     num: '04',
     week: 4,
-    date: 'Sept 29',
+    date: 'Oct 5',
     title: 'The Engine Room',
     tagline: 'Configure your CRM as a revenue engine, not a data graveyard.',
     body: 'Your CRM should work for you, not the other way around. This week we configure it properly: custom fields that matter, automations that save time, and views that show you exactly what to do next.',
@@ -47,7 +47,7 @@ const modules = [
   {
     num: '05',
     week: 5,
-    date: 'Oct 6',
+    date: 'Oct 12',
     title: "Deal-Maker's Lab",
     tagline: 'Master discovery calls, objection handling, and closing frameworks.',
     body: 'The live role-play week. You will practice real discovery calls, handle the objections that have been killing your deals, and learn closing frameworks that feel natural, not salesy. Peers give live feedback.',
@@ -56,7 +56,7 @@ const modules = [
   {
     num: '06',
     week: 6,
-    date: 'Oct 13',
+    date: 'Oct 19',
     title: 'Sales Science & Optimization',
     tagline: 'Read your numbers and build a system that improves itself.',
     body: 'We turn your pipeline into a dashboard: conversion rates by stage, average deal velocity, win/loss patterns. You learn to read the signals so you can optimize without guessing.',
@@ -65,7 +65,7 @@ const modules = [
   {
     num: 'CAP',
     week: 7,
-    date: 'Oct 20',
+    date: 'Oct 26',
     title: 'Build Your Sales Engine',
     tagline: 'Present your complete Revenue Engine to the cohort and mentors.',
     body: 'Capstone week. You present your full Sales Engine: ICP, pipeline, CRM, frameworks, and metrics. Mentors and peers give final feedback. You leave with a complete, documented system you own forever.',
@@ -76,13 +76,13 @@ const modules = [
 const founderFaqs = [
   { q: 'Who is this for?', a: 'B2B founders and high-ticket service businesses doing their own sales, roughly pre-revenue through $250K ARR. If you have customer conversations happening but no repeatable system for turning them into revenue, this is built for you.' },
   { q: 'What if I have zero sales experience?', a: 'Perfect. The program is designed for founders who never trained in sales. We build from first principles, not jargon. Most founders in the Revenue Room are technical and have never had formal sales training.' },
-  { q: 'How much time per week?', a: 'Plan for 4-6 hours: a 2-hour live session plus homework, peer pod check-ins, and CRM setup work. Most founders say the structure actually saves them time because they stop context-switching on sales.' },
-  { q: 'Is this live or self-paced?', a: 'Fully live and virtual. One 2-hour session per week over Zoom with your cohort, plus async support in Slack and your Notion Success Hub. Recordings are available if you miss a session, but the real value is in the live interaction.' },
-  { q: 'What is the beta cohort size?', a: 'Capped at 10 founders. This is deliberately small so Irene can personally work with every founder. Small enough for real feedback, real practice, and real accountability.' },
+  { q: 'How much time per week?', a: 'Plan for 2.5 to 3 hours: a 90-minute live session plus homework, peer pod check-ins, and CRM setup work. Most founders say the structure actually saves them time because they stop context-switching on sales.' },
+  { q: 'Is this live or self-paced?', a: 'Fully live and virtual. One 90-minute session per week over Zoom with your cohort, plus async support in the community space inside your Revenue Room platform and your Notion Success Hub. Recordings are available if you miss a session, but the real value is in the live interaction.' },
+  { q: 'What is the beta cohort size?', a: 'Capped at 8 founders. This is deliberately small so Irene can personally work with every founder. Small enough for real feedback, real practice, and real accountability.' },
   { q: 'Do I need a CRM already?', a: 'No. We help you choose and configure one during Week 4. If you already have one, we will audit and optimize it. We are CRM-agnostic. The frameworks work with HubSpot, Pipedrive, Close, Attio, or even a well-structured spreadsheet.' },
-  { q: 'What happens after I submit interest?', a: 'Submitting interest is not a commitment. First, we send you a short pre-qualification assessment so we can understand where you are. Next, you book a fit call with Irene. If the Revenue Room is the right fit, we walk through financing options for your spot. If it is not the right fit right now, no worries, we will check in with you before every cohort to see if the timing and qualification are right.' },
-  { q: 'How does pricing work?', a: 'The Revenue Room is sponsor-funded. Accelerators, incubators, and ecosystem partners sponsor seats so founders can participate. On your fit call we will work through financing options for your spot, including sponsorship and provincial training grants you may be eligible for. Pricing details are shared on that call.' },
-  { q: 'What happens after the 7 weeks?', a: 'You keep your complete Sales Engine Playbook forever, plus lifetime access to the Slack community and all future playbook updates. Your Revenue Index diagnostic gives you a before-and-after snapshot of your progress.' },
+  { q: 'What happens after I submit interest?', a: 'Submitting interest is not a commitment. First, we send you a short pre-qualification assessment so we can understand where you are. Next, you book a review call with Irene. If the Revenue Room is the right fit, we walk through financing options for your spot. If it is not the right fit right now, no worries, we will check in with you before every cohort to see if the timing and qualification are right.' },
+  { q: 'How does pricing work?', a: 'The Revenue Room is sponsor-funded. Accelerators, incubators, and ecosystem partners sponsor seats so founders can participate. On your review call we will work through financing options for your spot, including sponsorship and provincial training grants you may be eligible for. Pricing details are shared on that call.' },
+  { q: 'What happens after the 7 weeks?', a: 'You keep your complete Sales Engine Playbook forever, plus lifetime access to the alumni community and all future playbook updates. Your Revenue Index diagnostic gives you a before-and-after snapshot of your progress.' },
   { q: 'What is the refund policy?', a: 'For sponsor-funded seats, a full refund is available through the end of Week 1 if the program is not the right fit. After Week 1, all seats are non-refundable. The Revenue Engine only works if you build it, and we ask for your full commitment once you are past that first week.' },
   { q: 'What do I walk away with?', a: 'A complete, documented Revenue Engine: validated ICP, structured pipeline with exit criteria, configured CRM, discovery call scripts, objection playbook, closing framework, metrics dashboard, and a capstone Sales Engine Playbook reviewed by mentors and peers.' },
 ]
@@ -93,15 +93,8 @@ const sponsorFaqs = [
   { q: 'How many seats can we sponsor?', a: 'Minimum 3 seats per partner for the beta cohort. Most partners sponsor 3-5 seats. Volume discounts of 10% apply for 10+ seats from one sponsor, and multi-cohort commitments (3+ cohorts per year) receive 15% off.' },
   { q: 'What reporting do sponsors receive?', a: 'Standard tier and above includes a cohort performance report with aggregated, anonymized outcomes, founder progress snapshots, and a quarterly state-of-the-cohort briefing. Enterprise tier adds co-branded materials and custom reporting tied to your KPIs.' },
   { q: 'Can we nominate founders from our portfolio?', a: 'Absolutely. Nominated founders still go through the application process to ensure fit, but they receive priority review. We coordinate the fit interview with your program lead.' },
-  { q: 'What does the founder experience include?', a: 'Every sponsored founder gets: 7 live modules, cohort sessions, homework accountability, Accountability Pod placement, Slack community, a DigitalFlow Revenue Index diagnostic, Notion Success Hub with SOPs, certificate of completion, and a capstone review of their Sales Engine Playbook.' },
+  { q: 'What does the founder experience include?', a: 'Every sponsored founder gets: 7 live modules, cohort sessions, homework accountability, Accountability Pod placement, cohort community access, a DigitalFlow Revenue Index diagnostic, Notion Success Hub with SOPs, certificate of completion, and a capstone review of their Sales Engine Playbook.' },
   { q: 'How do we get started?', a: 'Email irene@digitalflowconsulting.ca with your program name, founder count, and target cohort. We will send back a 1-page sponsor brief within 48 hours and set up a 20-minute scoping call.' },
-]
-
-const mentors = [
-  { name: 'Irene', role: 'Lead Instructor', type: 'photo' as const },
-  { name: 'Marcus Reid', role: 'Guest - CRM & Ops', initials: 'MR', type: 'initials' as const },
-  { name: 'Lena Holmes', role: 'Guest - Enterprise Sales', initials: 'LH', type: 'initials' as const },
-  { name: 'Priya Venkat', role: 'Guest - Founder-Led GTM', initials: 'PV', type: 'initials' as const },
 ]
 
 const expectedOutcomes = [
@@ -118,7 +111,7 @@ const fundingPaths = {
     region: 'Building in Canada',
     title: 'Grants & Accelerators',
     summary: 'Fund your seat through provincial training grants, an accelerator or incubator, or a corporate sponsor. Most Canadian founders never pay out of pocket.',
-    intro: 'The Revenue Room is sponsor-funded, and in Canada that usually means a founder pays little or nothing themselves. On your fit call we help you find the route that fits.',
+    intro: 'The Revenue Room is sponsor-funded, and in Canada that usually means a founder pays little or nothing themselves. On your review call we help you find the route that fits.',
     ways: [
       { h: 'Provincial training grants', p: 'Workforce and skills-training grants can cover part or all of a seat. We point you to the ones you may qualify for, including WIPSI, ACOA, and REGI-style programs.' },
       { h: 'Accelerator or incubator', p: 'If you are in a program, they can sponsor your seat directly as founder development.' },
@@ -127,10 +120,10 @@ const fundingPaths = {
     steps: [
       'Submit interest below',
       'Complete a short pre-qualification (a funding question routes you to the Canada path)',
-      'Fit call with the team, where we map your funding options together',
+      'Review call with the team, where we map your funding options together',
       'Enroll in the next cohort block',
     ],
-    selfPay: 'If no funded route fits right now, a self-pay option is available and quoted privately on your fit call.',
+    selfPay: 'If no funded route fits right now, a self-pay option is available and quoted privately on your review call.',
   },
   us: {
     region: 'Building in the United States',
@@ -145,10 +138,10 @@ const fundingPaths = {
     steps: [
       'Submit interest below',
       'Complete a short pre-qualification (a funding question routes you to the US path)',
-      'Fit call with the team, where we map your funding options together',
+      'Review call with the team, where we map your funding options together',
       'Enroll in the next cohort block',
     ],
-    selfPay: 'If no funded route fits right now, a self-pay option is available and quoted privately on your fit call.',
+    selfPay: 'If no funded route fits right now, a self-pay option is available and quoted privately on your review call.',
   },
 } as const
 
@@ -281,11 +274,11 @@ function App() {
       {/* Announcement Bar */}
       <div className="announcement-bar">
         <div className="announcement-bar-track">
-          <span className="announcement-bar-item">SUBMIT INTEREST in the Beta Cohort - Limited to 10 founders</span>
-          <span className="announcement-bar-item">Beta Cohort starts Sept 8, 2026</span>
+          <span className="announcement-bar-item">SUBMIT INTEREST in the Beta Cohort - Limited to 8 founders</span>
+          <span className="announcement-bar-item">Beta Cohort starts Sept 14, 2026</span>
           <span className="announcement-bar-item">Spots are limited - Submit your interest today</span>
-          <span className="announcement-bar-item">SUBMIT INTEREST in the Beta Cohort - Limited to 10 founders</span>
-          <span className="announcement-bar-item">Beta Cohort starts Sept 8, 2026</span>
+          <span className="announcement-bar-item">SUBMIT INTEREST in the Beta Cohort - Limited to 8 founders</span>
+          <span className="announcement-bar-item">Beta Cohort starts Sept 14, 2026</span>
           <span className="announcement-bar-item">Spots are limited - Submit your interest today</span>
         </div>
       </div>
@@ -301,7 +294,6 @@ function App() {
             <li><a href="#funding" onClick={(e) => { e.preventDefault(); scrollTo('funding') }}>Funding</a></li>
             {/* Hidden until content is ready
             <li><a href="#outcomes" onClick={(e) => { e.preventDefault(); scrollTo('outcomes') }}>Outcomes</a></li>
-            <li><a href="#mentors" onClick={(e) => { e.preventDefault(); scrollTo('mentors') }}>Mentors</a></li>
             <li><a href="#community" onClick={(e) => { e.preventDefault(); scrollTo('community') }}>Community</a></li>
             <li><a href="#about" onClick={(e) => { e.preventDefault(); scrollTo('about') }}>About</a></li>
             */}
@@ -774,7 +766,7 @@ function App() {
               </div>
             </div>
           ))}
-          <p style={{ textAlign: 'center', fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 15, color: 'var(--forest)', marginTop: 32, lineHeight: 1.6 }}>Intentionally capped at 10 founders per cohort for maximum accountability and personalized feedback.</p>
+          <p style={{ textAlign: 'center', fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 15, color: 'var(--forest)', marginTop: 32, lineHeight: 1.6 }}>Intentionally capped at 8 founders per cohort for maximum accountability and personalized feedback.</p>
         </div>
       </section>
 
@@ -802,26 +794,7 @@ function App() {
               <span className="funding-card-more">See how it works &rarr;</span>
             </button>
           </div>
-          <p className="funding-note-inline">Not sure which fits? Submit interest and we will help you find the right route on your fit call.</p>
-        </div>
-      </section>
-
-      {/* Mentors - hidden until content ready */}
-      <section className="mentors" id="mentors" style={{ display: 'none' }}>
-        <div className="container">
-          <p className="eyebrow text-center">Your Mentors</p>
-          <h2 className="text-center" style={{ fontSize: 'clamp(28px, 3.5vw, 40px)', fontWeight: 700 }}>People who've built what you're building.</h2>
-          <div className="mentors-grid">
-            {mentors.map((m, i) => (
-              <div className="mentor-card" key={i}>
-                <div className={`mentor-avatar ${m.type === 'photo' ? 'mentor-avatar--photo' : 'mentor-avatar--initials'}`}>
-                  {m.type === 'photo' ? 'Photo' : m.initials}
-                </div>
-                <div className="mentor-name">{m.name}</div>
-                <div className="mentor-role">{m.role}</div>
-              </div>
-            ))}
-          </div>
+          <p className="funding-note-inline">Not sure which fits? Submit interest and we will help you find the right route on your review call.</p>
         </div>
       </section>
 
@@ -833,11 +806,11 @@ function App() {
           <div className="community-grid">
             <div className="community-card">
               <h4>Accountability Pods</h4>
-              <p>You're matched with 2-3 peers for weekly check-ins. Share wins, troubleshoot blockers, and hold each other to commitments. The pod is where the real accountability happens.</p>
+              <p>You're matched with 3-5 peers for weekly check-ins. Share wins, troubleshoot blockers, and hold each other to commitments. The pod is where the real accountability happens.</p>
             </div>
             <div className="community-card">
-              <h4>Slack Community</h4>
-              <p>Async support between sessions. Post a call recording for feedback, share a win, ask a question about your CRM setup. Active alumni keep the channel rich long after your cohort ends.</p>
+              <h4>Cohort Community</h4>
+              <p>Async support between sessions. Post a call recording for feedback, share a win, ask a question about your CRM setup. Active alumni keep it rich long after your cohort ends.</p>
             </div>
             <div className="community-card">
               <h4>Live Role-Play</h4>
@@ -884,13 +857,13 @@ function App() {
             </div>
             <div className="timeline-step">
               <div className="timeline-step-dot">3</div>
-              <h4>Fit Call with Irene</h4>
+              <h4>Review Call with Irene</h4>
               <p>If it's a fit, we cover financing</p>
             </div>
             <div className="timeline-step">
               <div className="timeline-step-dot">4</div>
               <h4>Enroll &amp; Kickoff</h4>
-              <p>Sept 8, 2026</p>
+              <p>Sept 14, 2026</p>
             </div>
           </div>
           <p style={{ textAlign: 'center', fontSize: 14, color: 'var(--forest)', marginTop: 24, maxWidth: 620, marginLeft: 'auto', marginRight: 'auto', lineHeight: 1.6 }}>Not a fit right now? No worries. We'll check in with you before every cohort to see if the timing and qualification are right, so you're never left wondering.</p>
@@ -943,13 +916,13 @@ function App() {
         <div className="container">
           <h2>Your Revenue Engine won't build itself. But you don't have to build it alone.</h2>
           <p className="closing-cta-sub" style={{ marginTop: 0, marginBottom: 8 }}>5-minute form &middot; 48-hour response</p>
-          <p className="closing-cta-sub" style={{ marginTop: 0, marginBottom: 32, fontSize: 14, opacity: 0.9 }}>Submit your interest below. We'll send a short pre-qualification assessment, then book a fit call with Irene. If it's a fit, we'll walk through financing options for your spot.</p>
+          <p className="closing-cta-sub" style={{ marginTop: 0, marginBottom: 32, fontSize: 14, opacity: 0.9 }}>Submit your interest below. We'll send a short pre-qualification assessment, then book a review call with Irene. If it's a fit, we'll walk through financing options for your spot.</p>
 
           {formSubmitted ? (
             <div className="form-success">
               <div className="form-success-icon">&#x2713;</div>
               <h3>Interest received!</h3>
-              <p>Thanks for your interest in the Beta Cohort. We'll review it and send you a short pre-qualification assessment within 48 hours, then book a fit call with Irene. Not a fit this round? No worries, we'll check in before each cohort.</p>
+              <p>Thanks for your interest in the Beta Cohort. We'll review it and send you a short pre-qualification assessment within 48 hours, then book a review call with Irene. Not a fit this round? No worries, we'll check in before each cohort.</p>
             </div>
           ) : (
             <form className="application-form" onSubmit={handleSubmit}>

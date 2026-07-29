@@ -63,37 +63,38 @@ const modules = [
     outcome: 'Walk away with: A live metrics dashboard and a monthly optimization checklist.',
   },
   {
-    num: 'CAP',
+    num: '07',
     week: 7,
     date: 'Oct 26',
-    title: 'Build Your Sales Engine',
-    tagline: 'Present your complete Revenue Engine to the cohort and mentors.',
-    body: 'Capstone week. You present your full Sales Engine: ICP, pipeline, CRM, frameworks, and metrics. Mentors and peers give final feedback. You leave with a complete, documented system you own forever.',
-    outcome: 'Walk away with: Your complete Sales Engine playbook, mentor feedback, and a peer network that keeps you accountable.',
+    title: 'Sales Plan Review',
+    tagline: 'Present your sales plan the way a real business reviews its numbers.',
+    body: 'Review week. You present your full sales architecture the way you would run a quarterly business review: ICP, pipeline, CRM, frameworks, and the numbers behind them. Mentors and peers give final feedback. You leave with the blueprint for a review you can run every quarter from here on.',
+    outcome: 'Walk away with: Your complete Sales Engine playbook, a repeatable sales plan review format, mentor feedback, and a peer network that keeps you accountable.',
   },
 ]
 
 const founderFaqs = [
   { q: 'Who is this for?', a: 'B2B founders and high-ticket service businesses doing their own sales, roughly pre-revenue through $250K ARR. If you have customer conversations happening but no repeatable system for turning them into revenue, this is built for you.' },
-  { q: 'What if I have zero sales experience?', a: 'Perfect. The program is designed for founders who never trained in sales. We build from first principles, not jargon. Most founders in the Revenue Room are technical and have never had formal sales training.' },
-  { q: 'How much time per week?', a: 'Plan for 2.5 to 3 hours: a 90-minute live session plus homework, peer pod check-ins, and CRM setup work. Most founders say the structure actually saves them time because they stop context-switching on sales.' },
-  { q: 'Is this live or self-paced?', a: 'Fully live and virtual. One 90-minute session per week over Zoom with your cohort, plus async support in the community space inside your Revenue Room platform and your Notion Success Hub. Recordings are available if you miss a session, but the real value is in the live interaction.' },
-  { q: 'What is the beta cohort size?', a: 'Capped at 8 founders. This is deliberately small so Irene can personally work with every founder. Small enough for real feedback, real practice, and real accountability.' },
+  { q: 'What if I have zero sales experience?', a: 'That is exactly who this is built for. Sales is a skill with its own tools and techniques, and most founders were never taught them. We build from first principles, including a plain-language glossary of the terms you are expected to already know, so nobody has to nod along to words like pipeline, qualification, or forecast. Most founders in the Revenue Room are technical or domain experts with no formal sales training.' },
+  { q: 'How much time per week?', a: 'Plan for 2.5 to 3 hours: a 90-minute live session plus homework, peer check-ins, and CRM setup work. Most founders say the structure actually saves them time because they stop context-switching on sales.' },
+  { q: 'Is this live or self-paced?', a: 'Fully live and virtual. One 90-minute session per week over Zoom with your cohort, plus your worksheets, readings, and submissions inside the Revenue Room learning platform. Recordings are available if you miss a session, but the real value is in the live interaction.' },
+  { q: 'What is the beta cohort size?', a: 'Capped at 8 founders for the beta. It is deliberately small so Irene and Chris can work directly with every founder. Small enough for real feedback, real practice, and real accountability.' },
   { q: 'Do I need a CRM already?', a: 'No. We help you choose and configure one during Week 4. If you already have one, we will audit and optimize it. We are CRM-agnostic. The frameworks work with HubSpot, Pipedrive, Close, Attio, or even a well-structured spreadsheet.' },
-  { q: 'What happens after I submit interest?', a: 'Submitting interest is not a commitment. First, we send you a short pre-qualification assessment so we can understand where you are. Next, you book a review call with Irene. If the Revenue Room is the right fit, we walk through financing options for your spot. If it is not the right fit right now, no worries, we will check in with you before every cohort to see if the timing and qualification are right.' },
-  { q: 'How does pricing work?', a: 'The Revenue Room is sponsor-funded. Accelerators, incubators, and ecosystem partners sponsor seats so founders can participate. On your review call we will work through financing options for your spot, including sponsorship and provincial training grants you may be eligible for. Pricing details are shared on that call.' },
-  { q: 'What happens after the 7 weeks?', a: 'You keep your complete Sales Engine Playbook forever, plus lifetime access to the alumni community and all future playbook updates. Your Revenue Index diagnostic gives you a before-and-after snapshot of your progress.' },
-  { q: 'What is the refund policy?', a: 'For sponsor-funded seats, a full refund is available through the end of Week 1 if the program is not the right fit. After Week 1, all seats are non-refundable. The Revenue Engine only works if you build it, and we ask for your full commitment once you are past that first week.' },
-  { q: 'What do I walk away with?', a: 'A complete, documented Revenue Engine: validated ICP, structured pipeline with exit criteria, configured CRM, discovery call scripts, objection playbook, closing framework, metrics dashboard, and a capstone Sales Engine Playbook reviewed by mentors and peers.' },
+  { q: 'What happens after I submit interest?', a: 'Submitting interest is not a commitment. First, we send you a short pre-qualification assessment so we can understand where you are. Next, you book a review call with the team. If the Revenue Room is the right fit, we walk through the ways founders fund a seat. If it is not the right fit right now, no worries, we will check in with you before every cohort to see if the timing and qualification are right.' },
+  { q: 'How does pricing work?', a: 'The Revenue Room is a paid program, and there is more than one way to cover a seat. Most founders fund it themselves out of their operating or growth budget. Others have it covered by an accelerator, an incubator, an ecosystem or corporate sponsor, an investor, or a provincial training grant. On your review call we work through which route fits you. Pricing is shared on that call.' },
+  { q: 'What happens after the 7 weeks?', a: 'You keep your complete Sales Engine Playbook forever, along with the sales plan review format you can run every quarter and all future playbook updates. Your Revenue Index diagnostic gives you a before-and-after snapshot of your progress.' },
+  { q: 'What is the refund policy?', a: 'A full refund is available through the end of Week 1 if the program is not the right fit. After Week 1, all seats are non-refundable. What you build here only works if you build it, and we ask for your full commitment once you are past that first week. It also lets us offer the seat to another founder while the cohort is still early.' },
+  { q: 'What do I walk away with?', a: 'A complete, documented sales architecture: validated ICP, structured pipeline with exit criteria, configured CRM, discovery call scripts, objection playbook, closing framework, metrics dashboard, and a Sales Engine Playbook you present in your Week 7 sales plan review.' },
 ]
 
 const sponsorFaqs = [
   { q: 'What does sponsoring a cohort mean?', a: 'You fund seats for founders in your ecosystem. They get the full Revenue Room experience, and you get measurable outcomes: pipeline created, deals closed, revenue generated. Plus brand visibility and first access to high-potential founders building real sales systems.' },
+  { q: 'We are a university or college. Can we sponsor our startups?', a: 'Yes, and it is one of our favourite routes. If you run an entrepreneurship centre, an incubator, or a startup studio inside a post-secondary institution, you can sponsor a block of seats for the founders in your programs. We coordinate with your program lead on nominations and report back on cohort outcomes.' },
   { q: 'What are the sponsorship tiers?', a: 'Three tiers: Community/Partner at $1,500 per seat (for smaller incubators and mission-aligned orgs), Standard at $1,950 per seat (for mid-sized accelerators and economic development agencies), and Enterprise at $2,500+ per seat (for large corporates, banks, and national programs). Beta cohort sponsors receive a 50% discount at $750 per seat.' },
   { q: 'How many seats can we sponsor?', a: 'Minimum 3 seats per partner for the beta cohort. Most partners sponsor 3-5 seats. Volume discounts of 10% apply for 10+ seats from one sponsor, and multi-cohort commitments (3+ cohorts per year) receive 15% off.' },
   { q: 'What reporting do sponsors receive?', a: 'Standard tier and above includes a cohort performance report with aggregated, anonymized outcomes, founder progress snapshots, and a quarterly state-of-the-cohort briefing. Enterprise tier adds co-branded materials and custom reporting tied to your KPIs.' },
   { q: 'Can we nominate founders from our portfolio?', a: 'Absolutely. Nominated founders still go through the application process to ensure fit, but they receive priority review. We coordinate the fit interview with your program lead.' },
-  { q: 'What does the founder experience include?', a: 'Every sponsored founder gets: 7 live modules, cohort sessions, homework accountability, Accountability Pod placement, cohort community access, a DigitalFlow Revenue Index diagnostic, Notion Success Hub with SOPs, certificate of completion, and a capstone review of their Sales Engine Playbook.' },
+  { q: 'What does the founder experience include?', a: 'Every sponsored founder gets: 7 live modules, cohort sessions, worksheets and homework with direct feedback, a Revenue Index diagnostic taken at the start and again at the end, the full library of templates and SOPs in the Revenue Room platform, a certificate of completion, and a Week 7 sales plan review of their Sales Engine Playbook.' },
   { q: 'How do we get started?', a: 'Email irene@digitalflowconsulting.ca with your program name, founder count, and target cohort. We will send back a 1-page sponsor brief within 48 hours and set up a 20-minute scoping call.' },
 ]
 
@@ -107,41 +108,42 @@ const expectedOutcomes = [
 ]
 
 const fundingPaths = {
-  canada: {
-    region: 'Building in Canada',
-    title: 'Grants & Accelerators',
-    summary: 'Fund your seat through provincial training grants, an accelerator or incubator, or a corporate sponsor. Most Canadian founders never pay out of pocket.',
-    intro: 'The Revenue Room is sponsor-funded, and in Canada that usually means a founder pays little or nothing themselves. On your review call we help you find the route that fits.',
+  founder: {
+    region: 'Most founders',
+    title: 'Founder-Funded',
+    summary: 'You have raised, or you are running on revenue, and you cover the seat out of your own growth budget. This is how most founders join.',
+    intro: 'If you have angel money, venture money, or a healthy operating budget, the seat comes out of the same growth budget you would otherwise spend on ads or another hire. It is a small line item against the cost of a sales cycle you keep losing.',
     ways: [
-      { h: 'Provincial training grants', p: 'Workforce and skills-training grants can cover part or all of a seat. We point you to the ones you may qualify for, including WIPSI, ACOA, and REGI-style programs.' },
-      { h: 'Accelerator or incubator', p: 'If you are in a program, they can sponsor your seat directly as founder development.' },
+      { h: 'Out of your growth budget', p: 'You already budget for growth. Before the next round of ad spend or a first sales hire, put a few thousand into knowing how to sell.' },
+      { h: 'From the raise you already closed', p: 'Investors write the cheque to the company and expect you to figure out revenue. This is one of the cheapest ways to de-risk that.' },
+      { h: 'Team seats', p: 'If a co-founder or your first salesperson should be in the room too, ask us about a second seat.' },
+    ],
+    steps: [
+      'Submit interest below',
+      'Complete a short pre-qualification',
+      'Review call with the team, where we confirm fit and cover pricing',
+      'Enroll in the next cohort block',
+    ],
+    selfPay: 'Pricing is shared on the review call, and payment plans across the seven weeks are available.',
+  },
+  sponsor: {
+    region: 'Sponsored seats',
+    title: 'Grants, Accelerators & Investors',
+    summary: 'Someone else covers the seat: a training grant, an accelerator or university program, an ecosystem partner, or your investor.',
+    intro: 'Plenty of founders never pay out of pocket. If you are inside a program, or you have a backer with a stake in your revenue, there is usually a route that covers the seat. On your fit call we help you find it and give you what you need to ask.',
+    ways: [
+      { h: 'Training grants', p: 'Workforce and skills-training grants can cover part or all of a seat. In Canada we point you to the ones you may qualify for, including WIPSI, ACOA, and REGI-style programs.' },
+      { h: 'Accelerator, incubator, or university', p: 'If you are in a program, it can sponsor your seat directly as founder development. Entrepreneurship centres often sponsor a block of seats for their startups.' },
+      { h: 'An investor or private equity firm', p: 'A backer can fund the seat as a small, high-leverage investment in revenue-readiness, so you stop being the bottleneck for your own pipeline.' },
       { h: 'Corporate or ecosystem sponsor', p: 'Ecosystem partners sponsor seats for founders in their network, often at the beta-cohort rate.' },
     ],
     steps: [
       'Submit interest below',
-      'Complete a short pre-qualification (a funding question routes you to the Canada path)',
+      'Complete a short pre-qualification, including how you expect to fund the seat',
       'Review call with the team, where we map your funding options together',
       'Enroll in the next cohort block',
     ],
-    selfPay: 'If no funded route fits right now, a self-pay option is available and quoted privately on your review call.',
-  },
-  us: {
-    region: 'Building in the United States',
-    title: 'Investors & Private Equity',
-    summary: 'Fund your seat through an investor or private equity firm as an investment in revenue-readiness, so you stop being the bottleneck for your own revenue.',
-    intro: 'In the US the seat is usually funded as a portfolio investment: a founder who builds predictable pipeline and stops being founder-dependent for revenue is a better bet. We help you frame it that way.',
-    ways: [
-      { h: 'A current investor', p: 'Your existing backer funds the seat as a small, high-leverage investment in revenue-readiness and ROI.' },
-      { h: 'A private equity firm', p: 'For portfolio companies, an operating partner at the firm can fund the seat to de-risk founder-led sales.' },
-      { h: 'Accelerator or corporate sponsor', p: 'If you are in a US program or have a corporate sponsor, they can cover the seat directly.' },
-    ],
-    steps: [
-      'Submit interest below',
-      'Complete a short pre-qualification (a funding question routes you to the US path)',
-      'Review call with the team, where we map your funding options together',
-      'Enroll in the next cohort block',
-    ],
-    selfPay: 'If no funded route fits right now, a self-pay option is available and quoted privately on your review call.',
+    selfPay: 'If no sponsored route fits right now, founders fund the seat themselves and we quote it privately on your review call.',
   },
 } as const
 
@@ -165,7 +167,7 @@ function App() {
   const [formSubmitted, setFormSubmitted] = useState(false)
   const [formError, setFormError] = useState('')
   const [showContact, setShowContact] = useState(false)
-  const [fundingModal, setFundingModal] = useState<'canada' | 'us' | null>(null)
+  const [fundingModal, setFundingModal] = useState<'founder' | 'sponsor' | null>(null)
   const [contactData, setContactData] = useState({ firstName: '', lastName: '', email: '', message: '' })
   const [contactLoading, setContactLoading] = useState(false)
   const [contactSubmitted, setContactSubmitted] = useState(false)
@@ -251,7 +253,7 @@ function App() {
     if (filter === 'all') {
       setOpenModules([])
     } else {
-      const weekNum = filter === 'cap' ? 7 : parseInt(filter)
+      const weekNum = parseInt(filter)
       const matched = modules.filter(m => m.week === weekNum).map(m => m.num)
       setOpenModules(matched)
     }
@@ -259,10 +261,7 @@ function App() {
 
   const filteredModules = weekFilter === 'all'
     ? modules
-    : modules.filter(m => {
-        if (weekFilter === 'cap') return m.week === 7
-        return m.week === parseInt(weekFilter)
-      })
+    : modules.filter(m => m.week === parseInt(weekFilter))
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id)
@@ -291,11 +290,12 @@ function App() {
           </a>
           <ul className="nav-links">
             <li><a href="#curriculum" onClick={(e) => { e.preventDefault(); scrollTo('curriculum') }}>Program</a></li>
-            <li><a href="#funding" onClick={(e) => { e.preventDefault(); scrollTo('funding') }}>Funding</a></li>
+            <li><a href="#about" onClick={(e) => { e.preventDefault(); scrollTo('about') }}>The Founders</a></li>
+            {/* "Funding" deliberately removed from the nav (Chris, Jul 28): a funded founder reads it as
+                "they are asking me for money" and it confuses the header. The section still lives on the page. */}
             {/* Hidden until content is ready
             <li><a href="#outcomes" onClick={(e) => { e.preventDefault(); scrollTo('outcomes') }}>Outcomes</a></li>
             <li><a href="#community" onClick={(e) => { e.preventDefault(); scrollTo('community') }}>Community</a></li>
-            <li><a href="#about" onClick={(e) => { e.preventDefault(); scrollTo('about') }}>About</a></li>
             */}
             <li><a href="#faq" onClick={(e) => { e.preventDefault(); scrollTo('faq') }}>FAQ</a></li>
           </ul>
@@ -305,57 +305,6 @@ function App() {
 
       {/* Hero */}
       <section className="hero" id="hero">
-        <div className="hero-blobs">
-          <div className="hero-blob hero-blob--gold"></div>
-          <div className="hero-blob hero-blob--forest"></div>
-        </div>
-        <div className="hero-orbit">
-          <svg width="700" height="700" viewBox="0 0 700 700" fill="none" style={{ opacity: 0.12 }}>
-            <circle cx="350" cy="350" r="140" stroke="#0F5B54" strokeWidth="0.8" strokeDasharray="6 8" />
-            <circle cx="350" cy="350" r="210" stroke="#D19A34" strokeWidth="1" strokeDasharray="8 6" />
-            <circle cx="350" cy="350" r="280" stroke="#0F5B54" strokeWidth="0.6" strokeDasharray="4 10" />
-            <circle cx="350" cy="350" r="340" stroke="#D19A34" strokeWidth="0.5" strokeDasharray="3 12" />
-            {/* Dots on orbits */}
-            <circle cx="350" cy="210" r="4" fill="#0F5B54" />
-            <circle cx="560" cy="350" r="3" fill="#D19A34" />
-            <circle cx="210" cy="530" r="3" fill="#0F5B54" />
-            <circle cx="490" cy="140" r="2.5" fill="#D19A34" />
-            <circle cx="100" cy="300" r="3" fill="#0F5B54" />
-            <circle cx="600" cy="500" r="2" fill="#D19A34" />
-          </svg>
-        </div>
-        <div className="hero-orbit hero-orbit--reverse">
-          <svg width="500" height="500" viewBox="0 0 500 500" fill="none" style={{ opacity: 0.08 }}>
-            <circle cx="250" cy="250" r="180" stroke="#D19A34" strokeWidth="0.6" strokeDasharray="2 8" />
-            <circle cx="250" cy="250" r="230" stroke="#0F5B54" strokeWidth="0.5" strokeDasharray="6 12" />
-            <circle cx="250" cy="70" r="3" fill="#D19A34" />
-            <circle cx="430" cy="250" r="2.5" fill="#0F5B54" />
-          </svg>
-        </div>
-        <div className="hero-particles">
-          <span className="particle particle-1"></span>
-          <span className="particle particle-2"></span>
-          <span className="particle particle-3"></span>
-          <span className="particle particle-4"></span>
-          <span className="particle particle-5"></span>
-          <span className="particle particle-6"></span>
-        </div>
-        <div className="hero-coins">
-          <span className="coin coin-1">$</span>
-          <span className="coin coin-2">$</span>
-          <span className="coin coin-3">$</span>
-          <span className="coin coin-4">$</span>
-          <span className="coin coin-5">$</span>
-          <span className="coin coin-6">$</span>
-          <span className="coin coin-7">$</span>
-          <span className="coin coin-8">$</span>
-        </div>
-        <div className="hero-rings">
-          <span className="ring ring-1"></span>
-          <span className="ring ring-2"></span>
-          <span className="ring ring-3"></span>
-          <span className="ring ring-4"></span>
-        </div>
         <div className="hero-content container">
           <a href="#apply" className="hero-meta hero-meta-link" onClick={(e) => { e.preventDefault(); scrollTo('apply') }}>
             <span className="hero-meta-dot"></span>
@@ -363,7 +312,7 @@ function App() {
           </a>
           <h1 className="hero-title">The Revenue Room</h1>
           <p className="hero-tagline">
-            A 7-week community accelerator where B2B founders stop winging it and build a real sales system, together, from the ground up.
+            A 7-week accelerator where B2B founders learn the craft of selling and build the architecture that turns conversations into repeatable revenue.
           </p>
           <div className="hero-buttons">
             <a href="#apply" className="btn-primary" onClick={(e) => { e.preventDefault(); scrollTo('apply') }}>Submit Interest &rarr;</a>
@@ -403,23 +352,23 @@ function App() {
       {/* Problem Headline */}
       <section className="problem-headline container">
         <p className="kicker">The Real Problem Nobody Talks About</p>
-        <h2>You Don't Have a Sales Problem.<br /><span style={{ color: 'var(--gold)' }}>You Have a System Problem.</span></h2>
-        <p>And until you fix the system, no amount of "better pitching" is going to change your close rate.</p>
+        <h2>Selling Is a Skill.<br /><span style={{ color: 'var(--gold)' }}>Nobody Ever Taught You the Techniques.</span></h2>
+        <p>Sales has its own tools, techniques, and structure. Most founders were never trained in any of them, so they build the product and then improvise the revenue.</p>
       </section>
 
       {/* Problem Prose */}
       <div className="problem-prose" style={{ textAlign: 'center' }}>
         <p>
-          Let me ask you something uncomfortable: <strong>how many real conversations did you have last month that didn't close?</strong>
+          You built the thing. You got it in front of people. <strong>So why is the revenue still unpredictable?</strong>
         </p>
         <p>
-          Not cold leads. Not spam replies. Real conversations with people who seemed interested, asked questions, maybe even said "send me something" or "let's circle back next quarter."
+          You are having real conversations. People are interested. They ask good questions. Some of them say "send me something" or "let's circle back next quarter." Then the quarter turns over and you are back at the top of the funnel, starting again.
         </p>
         <p>
-          If you're like most founders I work with, the answer is somewhere between 3 and 8. Each one representing $5K-$15K in potential revenue. That's $50K just sitting on the table. Not because your product isn't good. Not because you can't communicate value. But because you have no system for what happens after "that sounds interesting."
+          It is not that your product is weak or that you cannot explain its value. It is that nobody handed you the craft: how to qualify a real buyer, how to run a discovery call, how to read the room, how to structure a pipeline you can actually forecast from.
         </p>
         <p>
-          You're doing your own sales. You're winging every conversation. And the results reflect it.
+          Founders reach for a CRM and hope the tool fixes it. The tool is not the problem. A perfectly configured CRM does nothing for you if the conversations feeding it were never qualified. And the technique alone does nothing if there is no structure holding it together. You need both, and that is exactly what the Revenue Room teaches.
         </p>
       </div>
 
@@ -482,7 +431,7 @@ function App() {
             <p className="eyebrow">The Partnership</p>
             <h2>Two operators. One room.</h2>
             <p>
-              The Revenue Room is a partnership between DigitalFlow and North Peak, built and taught by people who have carried the bag in real B2B rooms, not career instructors.
+              The Revenue Room is a partnership between DigitalFlow and North Peak, built and taught by operators who have carried the quota in real B2B rooms, not career instructors.
             </p>
           </div>
 
@@ -522,7 +471,7 @@ function App() {
               </div>
             </div>
 
-            {/* Chris — PLACEHOLDER: swap headshot, bio, badges, and logos for Chris's real content */}
+            {/* Chris — bio is final. TODO: drop his headshot in as /public/chris-headshot.jpg and swap the placeholder below. */}
             <div className="founder-card">
               <div className="founder-photo founder-photo--placeholder">
                 <span className="founder-draft-badge">Placeholder</span>
@@ -532,24 +481,19 @@ function App() {
               <div className="founder-body">
                 <p className="founder-role">Co-founder &middot; North Peak</p>
                 <h3 className="founder-name">Chris</h3>
-                <p className="founder-oneliner">[Draft] The enterprise-sales operator who has closed the deals our founders are learning to run.</p>
+                <p className="founder-oneliner">The go-to-market operator who helps founders turn growth into a repeatable business.</p>
                 <div className="founder-bio">
                   <p>
-                    [Placeholder, to finalize with Chris.] Chris has spent years on the other side of the table, building and leading B2B revenue: real pipeline, real quotas, real rooms. He knows the founder-led sales wall because he has helped teams climb it.
+                    For more than 25 years I've helped startups, scale-ups, and enterprise organizations build revenue, launch new markets, and close complex B2B deals. I've led commercial teams, built strategic partnerships, and scaled revenue engines across venture-backed companies and Fortune 50 organizations.
                   </p>
                   <p>
-                    [Placeholder.] In the Revenue Room he brings the operator's edge: the discipline, the deal mechanics, and an honest read on what actually moves a pilot to a signed contract.
+                    I've learned that founders don't need more theory. They need practical advice from someone who has carried the quota, built the team, and navigated the challenges of scaling a business. That's why we created The Revenue Room: a place for honest conversations, shared experiences, and actionable insights from operators who have been there.
                   </p>
                 </div>
                 <div className="founder-badges">
-                  <span className="founder-badge">&#x2691; North Peak</span>
-                  <span className="founder-badge">&#x2B50; [Draft] Add a credential</span>
-                  <span className="founder-badge">&#x2B50; [Draft] Add a credential</span>
-                </div>
-                <div className="founder-logos">
-                  <p className="founder-logos-label">Mentor and Partner to:</p>
-                  {/* PLACEHOLDER: swap in North Peak's own mentor / partner logos */}
-                  <div className="founder-logos-placeholder">Add North Peak's partner &amp; mentor logos</div>
+                  <span className="founder-badge">&#x1F680; 25+ Years Building &amp; Scaling B2B Revenue</span>
+                  <span className="founder-badge">&#x2B50; Built and led commercial organizations from startup to Fortune 50</span>
+                  <span className="founder-badge">&#x2B50; Negotiated strategic partnerships with global enterprise organizations</span>
                 </div>
               </div>
             </div>
@@ -558,7 +502,9 @@ function App() {
           {/* Partnership lockup — the two marks side by side in the middle */}
           <div className="partnership">
             <div className="partnership-lockup">
-              <p className="partnership-label">A Cross-Border Partnership</p>
+              {/* Kept deliberately understated (Chris, Jul 28): Canadian buyers look for the Canadian signal,
+                  US buyers get confused by heavy patriotic framing. One quiet line, no flags. */}
+              <p className="partnership-label">A Partnership</p>
               <div className="partnership-logos">
                 {/* Leaf mark paired with a wordmark so it matches North Peak. Swap for an official horizontal DigitalFlow logo when available. */}
                 <span className="df-wordmark">
@@ -572,7 +518,7 @@ function App() {
                   North Peak
                 </span>
               </div>
-              <p className="partnership-caption">Canada &times; United States</p>
+              <p className="partnership-caption">Working with founders across Canada and the United States</p>
             </div>
           </div>
         </div>
@@ -583,16 +529,16 @@ function App() {
         <div className="container">
           <div className="solution-prose">
             <p className="eyebrow">The insight that changes everything</p>
-            <h2>Conversation and System Need to Work Together</h2>
+            <h2>Skill and Structure Have to Be Built Together</h2>
             <p>
-              Most sales advice focuses on one or the other: either "get better at talking to people" or "set up this tool." Neither works alone. A great conversation with no system behind it produces a good feeling and no revenue. A perfect CRM with bad conversations produces clean data about deals you never close.
+              Most sales advice picks a side: either "get better at talking to people" or "set up this tool." Neither works alone. A great conversation with no structure behind it produces a good feeling and no revenue. A perfect CRM fed by unqualified conversations produces clean data about deals you were never going to close.
             </p>
             <p>
-              The Revenue Room teaches both simultaneously because that's how revenue actually works: the conversation generates the signal, and the system captures, tracks, and amplifies it.
+              The Revenue Room builds both at once, because that is how revenue actually works. The technique generates the signal. The architecture captures it, tracks it, and shows you where to improve.
             </p>
           </div>
           <div className="method-box">
-            <p className="method-box-label">The Revenue Engine Method</p>
+            <p className="method-box-label">The Revenue Room Process</p>
             <div className="method-steps">
               <span className="method-step">Conversations that qualify correctly</span>
               <span className="method-arrow">&rarr;</span>
@@ -608,27 +554,27 @@ function App() {
       <section className="meaning">
         <div className="container" style={{ textAlign: 'center' }}>
           <h2>Because this isn't really about closing rates.</h2>
-          <p className="meaning-sub" style={{ margin: '0 auto 40px' }}>It's about being able to build a business without the constant anxiety of not knowing where your next dollar is coming from.</p>
+          <p className="meaning-sub" style={{ margin: '0 auto 40px' }}>It's about building a repeatable, profitable sales engine: one that sustains growth and stands up to the goals your board, your investors, and your own plan are holding you to.</p>
           <div className="meaning-bullets">
             <div className="meaning-bullet">
               <span className="meaning-bullet-icon">&rarr;</span>
-              <p>Knowing exactly which conversations are worth your time and which ones aren't</p>
+              <p>Knowing which conversations deserve your time and which ones are costing you a quarter</p>
             </div>
             <div className="meaning-bullet">
               <span className="meaning-bullet-icon">&rarr;</span>
-              <p>Having a clear view of your pipeline so you can plan months ahead, not days</p>
+              <p>A pipeline you can forecast from, so you can commit to a number and defend it</p>
             </div>
             <div className="meaning-bullet">
               <span className="meaning-bullet-icon">&rarr;</span>
-              <p>Waking up on Monday knowing exactly who to talk to and what to say</p>
+              <p>Speaking about revenue with the fluency an investor or a board expects from a founder</p>
             </div>
             <div className="meaning-bullet">
               <span className="meaning-bullet-icon">&rarr;</span>
-              <p>Building something that compounds instead of resetting to zero every month</p>
+              <p>Building something that compounds quarter over quarter instead of resetting to zero</p>
             </div>
           </div>
           <p className="meaning-close" style={{ margin: '0 auto' }}>
-            <span style={{ textDecoration: 'underline', textUnderlineOffset: '4px' }}>A system gives you predictable revenue. That changes everything.</span>
+            <span style={{ textDecoration: 'underline', textUnderlineOffset: '4px' }}>Revenue you can repeat is what turns a good product into a business.</span>
           </p>
         </div>
       </section>
@@ -638,7 +584,7 @@ function App() {
         <div className="container">
           <p className="eyebrow">Introducing</p>
           <h2>The Revenue Room</h2>
-          <p>A 7-week community accelerator that gives B2B founders a complete, operational sales system, built live, with peers and mentors, from first conversation to closed deal.</p>
+          <p>A 7-week accelerator that gives B2B founders the techniques and the operating architecture behind repeatable revenue, built live with peers and mentors, from first conversation to closed deal.</p>
         </div>
       </section>
 
@@ -701,7 +647,7 @@ function App() {
           </div>
         </div>
         <div className="benefits-closer">
-          <p>This isn't a course. It's a build sprint. You leave with a working system plus a certificate.</p>
+          <p>This isn't a course. It's business development architecture. You leave with a working system you built yourself, plus a certificate.</p>
           <a href="#apply" className="btn-primary" onClick={(e) => { e.preventDefault(); scrollTo('apply') }}>Submit Interest &rarr;</a>
         </div>
       </section>
@@ -737,15 +683,15 @@ function App() {
       <section className="modules" id="curriculum">
         <div className="container">
           <p className="eyebrow">The Curriculum</p>
-          <h2 style={{ fontSize: 'clamp(28px, 3.5vw, 40px)', fontWeight: 700, marginBottom: 32 }}>7 weeks. One system. Zero fluff.</h2>
+          <h2 style={{ fontSize: 'clamp(28px, 3.5vw, 40px)', fontWeight: 700, marginBottom: 32 }}>7 weeks. One architecture. Zero fluff.</h2>
           <div className="modules-filters">
-            {['1', '2', '3', '4', '5', '6', 'cap', 'all'].map(f => (
+            {['1', '2', '3', '4', '5', '6', '7', 'all'].map(f => (
               <button
                 key={f}
                 className={`modules-filter-btn ${weekFilter === f ? 'active' : ''}`}
                 onClick={() => handleWeekFilter(f)}
               >
-                {f === 'all' ? 'All' : f === 'cap' ? 'Capstone' : `Wk ${f}`}
+                {f === 'all' ? 'All' : `Wk ${f}`}
               </button>
             ))}
           </div>
@@ -754,7 +700,7 @@ function App() {
               <div className="module-card-header" onClick={() => toggleModule(m.num)}>
                 <span className="module-number">{m.num}</span>
                 <div className="module-meta">
-                  <div className="module-week">Week {m.week === 7 ? 'Capstone' : m.week} &middot; {m.date}</div>
+                  <div className="module-week">Week {m.week} &middot; {m.date}</div>
                   <div className="module-title">{m.title}</div>
                   <div className="module-tagline">{m.tagline}</div>
                 </div>
@@ -766,7 +712,7 @@ function App() {
               </div>
             </div>
           ))}
-          <p style={{ textAlign: 'center', fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 15, color: 'var(--forest)', marginTop: 32, lineHeight: 1.6 }}>Intentionally capped at 8 founders per cohort for maximum accountability and personalized feedback.</p>
+          <p style={{ textAlign: 'center', fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 15, color: 'var(--forest)', marginTop: 32, lineHeight: 1.6 }}>The beta cohort is intentionally capped at 8 founders, so every founder gets direct feedback on their own numbers.</p>
         </div>
       </section>
 
@@ -775,22 +721,26 @@ function App() {
         <div className="container">
           <div className="funding-head">
             <p className="eyebrow">Funding Your Seat</p>
-            <h2>A selective, paid cohort, with two ways to fund your seat.</h2>
-            <p>The Revenue Room is a paid accelerator, and most founders never pay out of pocket. How you fund your seat depends on where you are building. Choose your path to see exactly how it works.</p>
+            <h2>A selective, paid cohort, with two ways to cover your seat.</h2>
+            <p>Most founders fund the seat themselves out of their growth budget. Others have it covered by a grant, a program, or an investor. Choose your path to see exactly how it works.</p>
           </div>
           <div className="funding-grid">
-            <button className="funding-card" onClick={() => setFundingModal('canada')}>
-              <img className="funding-flag" src="/Flag-Canada.webp" alt="Canada flag" />
-              <span className="funding-region">{fundingPaths.canada.region}</span>
-              <h3>{fundingPaths.canada.title}</h3>
-              <p>{fundingPaths.canada.summary}</p>
+            <button className="funding-card" onClick={() => setFundingModal('founder')}>
+              <span className="funding-card-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M10 21v-6h4v6"/></svg>
+              </span>
+              <span className="funding-region">{fundingPaths.founder.region}</span>
+              <h3>{fundingPaths.founder.title}</h3>
+              <p>{fundingPaths.founder.summary}</p>
               <span className="funding-card-more">See how it works &rarr;</span>
             </button>
-            <button className="funding-card" onClick={() => setFundingModal('us')}>
-              <img className="funding-flag" src="/Flag-United-States-of-America.webp" alt="United States flag" />
-              <span className="funding-region">{fundingPaths.us.region}</span>
-              <h3>{fundingPaths.us.title}</h3>
-              <p>{fundingPaths.us.summary}</p>
+            <button className="funding-card" onClick={() => setFundingModal('sponsor')}>
+              <span className="funding-card-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </span>
+              <span className="funding-region">{fundingPaths.sponsor.region}</span>
+              <h3>{fundingPaths.sponsor.title}</h3>
+              <p>{fundingPaths.sponsor.summary}</p>
               <span className="funding-card-more">See how it works &rarr;</span>
             </button>
           </div>
@@ -857,8 +807,8 @@ function App() {
             </div>
             <div className="timeline-step">
               <div className="timeline-step-dot">3</div>
-              <h4>Review Call with Irene</h4>
-              <p>If it's a fit, we cover financing</p>
+              <h4>Review Call with the Team</h4>
+              <p>If it's a fit, we cover pricing</p>
             </div>
             <div className="timeline-step">
               <div className="timeline-step-dot">4</div>
@@ -877,7 +827,7 @@ function App() {
             <span className="guarantee-badge">The Revenue Room Guarantee</span>
             <div className="guarantee-icon">&#x1F6E1;&#xFE0F;</div>
             <h3>We guarantee the value. You bring the commitment.</h3>
-            <p>A full refund is available through the end of Week 1 if the program is not the right fit. No questions asked. After Week 1, all seats are non-refundable. The Revenue Engine only works if you build it, and we ask for your full commitment once you are past that first week.</p>
+            <p>A full refund is available through the end of Week 1 if the program is not the right fit. No questions asked. After Week 1, all seats are non-refundable. What you build here only works if you build it, and we ask for your full commitment once you are past that first week.</p>
             <div className="guarantee-tags">
               <span className="guarantee-tag">Qualified ICP</span>
               <span className="guarantee-tag">Structured pipeline</span>
@@ -914,15 +864,15 @@ function App() {
       {/* Application Form */}
       <section className="closing-cta" id="apply">
         <div className="container">
-          <h2>Your Revenue Engine won't build itself. But you don't have to build it alone.</h2>
+          <h2>Your sales engine won't build itself. But you don't have to build it alone.</h2>
           <p className="closing-cta-sub" style={{ marginTop: 0, marginBottom: 8 }}>5-minute form &middot; 48-hour response</p>
-          <p className="closing-cta-sub" style={{ marginTop: 0, marginBottom: 32, fontSize: 14, opacity: 0.9 }}>Submit your interest below. We'll send a short pre-qualification assessment, then book a review call with Irene. If it's a fit, we'll walk through financing options for your spot.</p>
+          <p className="closing-cta-sub" style={{ marginTop: 0, marginBottom: 32, fontSize: 14, opacity: 0.9 }}>Submit your interest below. We'll send a short pre-qualification assessment, then book a review call with the team. If it's a fit, we'll walk through the ways founders cover a seat.</p>
 
           {formSubmitted ? (
             <div className="form-success">
               <div className="form-success-icon">&#x2713;</div>
               <h3>Interest received!</h3>
-              <p>Thanks for your interest in the Beta Cohort. We'll review it and send you a short pre-qualification assessment within 48 hours, then book a review call with Irene. Not a fit this round? No worries, we'll check in before each cohort.</p>
+              <p>Thanks for your interest in the Beta Cohort. We'll review it and send you a short pre-qualification assessment within 48 hours, then book a review call with the team. Not a fit this round? No worries, we'll check in before each cohort.</p>
             </div>
           ) : (
             <form className="application-form" onSubmit={handleSubmit}>

@@ -474,12 +474,12 @@ function App() {
               </div>
             </div>
 
-            {/* Chris — bio is final. TODO: drop his headshot in as /public/chris-headshot.jpg and swap the placeholder below. */}
+            {/* Chris. NOTE: chris-headshot.jpg is currently a 133x136 thumbnail and is being
+                upscaled hard in this 320px-tall slot. Swap in the full-resolution original when
+                it turns up. Its own object-position because it is a square crop, not a wide one. */}
             <div className="founder-card">
-              <div className="founder-photo founder-photo--placeholder">
-                <span className="founder-draft-badge">Placeholder</span>
-                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg>
-                <span>Add Chris's headshot</span>
+              <div className="founder-photo founder-photo--chris">
+                <img src="/chris-headshot.jpg" alt="Chris, co-founder of The Revenue Room and founder of North Peak" />
               </div>
               <div className="founder-body">
                 <p className="founder-role">Co-founder &middot; North Peak</p>

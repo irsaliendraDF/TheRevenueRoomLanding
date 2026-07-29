@@ -108,34 +108,17 @@ const expectedOutcomes = [
 ]
 
 const fundingPaths = {
-  founder: {
-    region: 'Most founders',
-    title: 'Founder-Funded',
-    summary: 'You have raised, or you are running on revenue, and you cover the seat out of your own growth budget. This is how most founders join.',
-    intro: 'If you have angel money, venture money, or a healthy operating budget, the seat comes out of the same growth budget you would otherwise spend on ads or another hire. It is a small line item against the cost of a sales cycle you keep losing.',
+  canada: {
+    region: 'Building in Canada',
+    title: 'Grants, Programs & Self-Funded',
+    summary: 'A training grant, an accelerator or incubator, a university program, or an ecosystem sponsor. Many Canadian founders do not pay the full seat out of pocket.',
+    intro: 'Canada has real funding infrastructure for founder development, and most founders here use some of it. On your review call we help you find the route that fits and give you the language to ask for it.',
     ways: [
-      { h: 'Out of your growth budget', p: 'You already budget for growth. Before the next round of ad spend or a first sales hire, put a few thousand into knowing how to sell.' },
-      { h: 'From the raise you already closed', p: 'Investors write the cheque to the company and expect you to figure out revenue. This is one of the cheapest ways to de-risk that.' },
-      { h: 'Team seats', p: 'If a co-founder or your first salesperson should be in the room too, ask us about a second seat.' },
-    ],
-    steps: [
-      'Submit interest below',
-      'Complete a short pre-qualification',
-      'Review call with the team, where we confirm fit and cover pricing',
-      'Enroll in the next cohort block',
-    ],
-    selfPay: 'Pricing is shared on the review call, and payment plans across the seven weeks are available.',
-  },
-  sponsor: {
-    region: 'Sponsored seats',
-    title: 'Grants, Accelerators & Investors',
-    summary: 'Someone else covers the seat: a training grant, an accelerator or university program, an ecosystem partner, or your investor.',
-    intro: 'Plenty of founders never pay out of pocket. If you are inside a program, or you have a backer with a stake in your revenue, there is usually a route that covers the seat. On your fit call we help you find it and give you what you need to ask.',
-    ways: [
-      { h: 'Training grants', p: 'Workforce and skills-training grants can cover part or all of a seat. In Canada we point you to the ones you may qualify for, including WIPSI, ACOA, and REGI-style programs.' },
-      { h: 'Accelerator, incubator, or university', p: 'If you are in a program, it can sponsor your seat directly as founder development. Entrepreneurship centres often sponsor a block of seats for their startups.' },
-      { h: 'An investor or private equity firm', p: 'A backer can fund the seat as a small, high-leverage investment in revenue-readiness, so you stop being the bottleneck for your own pipeline.' },
+      { h: 'Training grants', p: 'Workforce and skills-training grants can cover part or all of a seat. We point you to the ones you may qualify for, including WIPSI, ACOA, and REGI-style programs.' },
+      { h: 'Accelerator or incubator', p: 'If you are in a program, it can sponsor your seat directly as founder development.' },
+      { h: 'University or college program', p: 'Entrepreneurship centres and campus incubators can sponsor a block of seats for the founders in their programs.' },
       { h: 'Corporate or ecosystem sponsor', p: 'Ecosystem partners sponsor seats for founders in their network, often at the beta-cohort rate.' },
+      { h: 'Self-funded', p: 'Plenty of founders simply cover the seat from their own growth budget, and that is a completely normal way in. Payment plans across the seven weeks are available.' },
     ],
     steps: [
       'Submit interest below',
@@ -143,7 +126,27 @@ const fundingPaths = {
       'Review call with the team, where we map your funding options together',
       'Enroll in the next cohort block',
     ],
-    selfPay: 'If no sponsored route fits right now, founders fund the seat themselves and we quote it privately on your review call.',
+    selfPay: 'If no funded route fits right now, the self-pay option is straightforward and quoted privately on your review call.',
+  },
+  us: {
+    region: 'Building in the United States',
+    title: 'Founder-Funded & Investor-Backed',
+    summary: 'Most US founders cover the seat from money they have already raised. Investors and PE firms back the decision, but the cheque usually comes from you.',
+    intro: 'Here is the honest version: an investor writes the cheque to your company and expects you to go figure out revenue. So the seat almost always comes out of your own budget, and it is a small line against a shorter sales cycle and a better close rate.',
+    ways: [
+      { h: 'Out of your war chest', p: 'You raised money to go build the business. Before the next round of ad spend or a first sales hire, put a few thousand of it into knowing how to sell. It is the cheapest lever you have.' },
+      { h: 'Angel or venture backed', p: 'If you have angel or venture money in the bank, this comes out of the growth budget you already hold. It is a line item, not a raise.' },
+      { h: 'Your investor or board', p: 'Some backers fund it directly as an investment in revenue-readiness, so the founder stops being the bottleneck for the company pipeline.' },
+      { h: 'A private equity portfolio', p: 'A PE firm can put several portfolio companies through together when founder-led selling is the common weak spot across the portfolio.' },
+      { h: 'Accelerator, university, or corporate sponsor', p: 'If you are inside a US program or have a corporate sponsor, they can cover the seat directly.' },
+    ],
+    steps: [
+      'Submit interest below',
+      'Complete a short pre-qualification, including how you expect to fund the seat',
+      'Review call with the team, where we confirm fit and cover pricing',
+      'Enroll in the next cohort block',
+    ],
+    selfPay: 'Pricing is shared on the review call, and payment plans across the seven weeks are available.',
   },
 } as const
 
@@ -167,7 +170,7 @@ function App() {
   const [formSubmitted, setFormSubmitted] = useState(false)
   const [formError, setFormError] = useState('')
   const [showContact, setShowContact] = useState(false)
-  const [fundingModal, setFundingModal] = useState<'founder' | 'sponsor' | null>(null)
+  const [fundingModal, setFundingModal] = useState<'canada' | 'us' | null>(null)
   const [contactData, setContactData] = useState({ firstName: '', lastName: '', email: '', message: '' })
   const [contactLoading, setContactLoading] = useState(false)
   const [contactSubmitted, setContactSubmitted] = useState(false)
@@ -721,26 +724,22 @@ function App() {
         <div className="container">
           <div className="funding-head">
             <p className="eyebrow">Funding Your Seat</p>
-            <h2>A selective, paid cohort, with two ways to cover your seat.</h2>
-            <p>Most founders fund the seat themselves out of their growth budget. Others have it covered by a grant, a program, or an investor. Choose your path to see exactly how it works.</p>
+            <h2>A selective, paid cohort. How you cover your seat depends on where you are building.</h2>
+            <p>The funding routes are genuinely different on each side of the border. Choose your path to see exactly how it works.</p>
           </div>
           <div className="funding-grid">
-            <button className="funding-card" onClick={() => setFundingModal('founder')}>
-              <span className="funding-card-icon">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M10 21v-6h4v6"/></svg>
-              </span>
-              <span className="funding-region">{fundingPaths.founder.region}</span>
-              <h3>{fundingPaths.founder.title}</h3>
-              <p>{fundingPaths.founder.summary}</p>
+            <button className="funding-card" onClick={() => setFundingModal('canada')}>
+              <img className="funding-flag" src="/Flag-Canada.webp" alt="" aria-hidden="true" />
+              <span className="funding-region">{fundingPaths.canada.region}</span>
+              <h3>{fundingPaths.canada.title}</h3>
+              <p>{fundingPaths.canada.summary}</p>
               <span className="funding-card-more">See how it works &rarr;</span>
             </button>
-            <button className="funding-card" onClick={() => setFundingModal('sponsor')}>
-              <span className="funding-card-icon">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              </span>
-              <span className="funding-region">{fundingPaths.sponsor.region}</span>
-              <h3>{fundingPaths.sponsor.title}</h3>
-              <p>{fundingPaths.sponsor.summary}</p>
+            <button className="funding-card" onClick={() => setFundingModal('us')}>
+              <img className="funding-flag" src="/Flag-United-States-of-America.webp" alt="" aria-hidden="true" />
+              <span className="funding-region">{fundingPaths.us.region}</span>
+              <h3>{fundingPaths.us.title}</h3>
+              <p>{fundingPaths.us.summary}</p>
               <span className="funding-card-more">See how it works &rarr;</span>
             </button>
           </div>

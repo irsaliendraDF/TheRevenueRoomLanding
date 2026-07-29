@@ -1141,17 +1141,17 @@ img {
   transform: translateY(-3px);
 }
 
-.funding-card-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
+/* Flags are kept here on purpose: on these two cards the flag is wayfinding
+   ("which set of funding routes applies to me"), not patriotic signalling.
+   The rest of the page stays country-neutral per the Jul 28 call. */
+.funding-flag {
+  display: block;
+  height: 26px;
+  width: auto;
   margin-bottom: 14px;
-  border-radius: 10px;
-  background: var(--cream);
+  border-radius: 3px;
   border: 1px solid var(--border-soft);
-  color: var(--forest);
+  box-shadow: 0 1px 3px rgba(11,31,29,0.12);
 }
 
 .funding-region {

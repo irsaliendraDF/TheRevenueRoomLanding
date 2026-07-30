@@ -497,7 +497,6 @@ function App() {
                   <span className="founder-badge">&#x1F680; 25+ Years Building &amp; Scaling B2B Revenue</span>
                   <span className="founder-badge">&#x2B50; Built and led commercial organizations from startup to Fortune 50</span>
                   <span className="founder-badge">&#x2B50; Negotiated strategic partnerships with global enterprise organizations</span></div><div className="founder-logos"><p className="founder-logos-label">Worked With:</p><div className="founder-logos-row"><img src="/fortune500-logo.png" alt="Fortune 500" className="mentor-logo" /></div></div>
-                </div>
               </div>
             </div>
           </div>

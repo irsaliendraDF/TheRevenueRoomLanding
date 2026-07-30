@@ -67,9 +67,9 @@ const modules = [
     week: 7,
     date: 'Oct 26',
     title: 'Sales Plan Review',
-    tagline: 'Present your sales plan the way a real business reviews its numbers.',
-    body: "Review week. You compile everything into your Sales Engine Playbook, then present it as a 10-slide, 3-minute quarterly business review: your top targets, what each one is worth, where it stands, the activities moving it, and your goals for next quarter. Mentors and peers give final feedback, and top performers earn a Stand and Deliver slot pitching a real enterprise organization.",
-    outcome: 'Walk away with: Your complete Sales Engine playbook, a repeatable sales plan review format, mentor feedback, and a peer network that keeps you accountable.',
+    tagline: 'Present your sales plan the way a real business reviews its numbers, and defend it under real questions.',
+    body: "Review week. You compile everything into your Sales Engine Playbook and bring it into a live sales plan review: a concise deck of 10 slides or fewer covering your top targets, what each one is worth, where it stands, the activities moving it, and your plan for next quarter. This is not a scripted read-through. Irene and Chris question you on every slide, so you prepare and dry-run beforehand and walk in ready, not caught off guard by the easy questions. Think of it as presenting to your boss's boss: how you make the quarter look reflects on you, so it is in your interest as the founder or manager to have the answers tight before you are in the room. It is not sequential, it is a dialogue. We pick apart the weak spots in your plan together, which is exactly what sharpens you as a salesperson, and you walk out knowing more than when you walked in.",
+    outcome: 'Walk away with: Your complete Sales Engine playbook, a rehearsed sales plan review you can defend under real questions, mentor feedback, and a peer network that keeps you accountable.',
   },
 ]
 
@@ -134,7 +134,7 @@ const fundingPaths = {
     summary: 'Most US founders cover the seat from money they have already raised. Investors and PE firms back the decision, but the cheque usually comes from you.',
     intro: 'Here is the honest version: an investor writes the cheque to your company and expects you to go figure out revenue. So the seat almost always comes out of your own budget, and it is a small line against a shorter sales cycle and a better close rate.',
     ways: [
-      { h: 'Out of your war chest', p: 'You raised money to go build the business. Before the next round of ad spend or a first sales hire, put a few thousand of it into knowing how to sell. It is the cheapest lever you have.' },
+      { h: 'Self-Funded Sales Expense', p: 'You raised money to go build the business. Before the next round of ad spend or a first sales hire, put a few thousand of it into knowing how to sell. It is the cheapest lever you have.' },
       { h: 'Angel or venture backed', p: 'If you have angel or venture money in the bank, this comes out of the growth budget you already hold. It is a line item, not a raise.' },
       { h: 'Your investor or board', p: 'Some backers fund it directly as an investment in revenue-readiness, so the founder stops being the bottleneck for the company pipeline.' },
       { h: 'A private equity portfolio', p: 'A PE firm can put several portfolio companies through together when founder-led selling is the common weak spot across the portfolio.' },
@@ -355,8 +355,8 @@ function App() {
       {/* Problem Headline */}
       <section className="problem-headline container">
         <p className="kicker">The Real Problem Nobody Talks About</p>
-        <h2>Selling Is a Skill.<br /><span style={{ color: 'var(--gold)' }}>Nobody Ever Taught You the Techniques.</span></h2>
-        <p>Sales has its own tools, techniques, and structure. Most founders were never trained in any of them, so they build the product and then improvise the revenue.</p>
+        <h2>Selling Is a Skill.<br /><span style={{ color: 'var(--gold)' }}>Nobody Ever Taught You the Strategies and Systems.</span></h2>
+        <p>Sales has its own tools, strategies, and systems. Most founders were never trained in any of them, so they build the product and then improvise the revenue.</p>
       </section>
 
       {/* Problem Prose */}
@@ -371,7 +371,7 @@ function App() {
           It is not that your product is weak or that you cannot explain its value. It is that nobody handed you the craft: how to qualify a real buyer, how to run a discovery call, how to read the room, how to structure a pipeline you can actually forecast from.
         </p>
         <p>
-          Founders reach for a CRM and hope the tool fixes it. The tool is not the problem. A perfectly configured CRM does nothing for you if the conversations feeding it were never qualified. And the technique alone does nothing if there is no structure holding it together. You need both, and that is exactly what the Revenue Room teaches.
+          Founders reach for a CRM and hope the tool fixes it. The tool is not the problem. A perfectly configured CRM does nothing for you if the conversations feeding it were never qualified. And the right strategy alone does nothing if there is no system holding it together. It is the right combination of tools, strategies, and systems that unlocks real success, and gives you a genuine strategic advantage over founders who are still winging it. That is exactly what the Revenue Room teaches.
         </p>
       </div>
 
@@ -496,7 +496,7 @@ function App() {
                 <div className="founder-badges">
                   <span className="founder-badge">&#x1F680; 25+ Years Building &amp; Scaling B2B Revenue</span>
                   <span className="founder-badge">&#x2B50; Built and led commercial organizations from startup to Fortune 50</span>
-                  <span className="founder-badge">&#x2B50; Negotiated strategic partnerships with global enterprise organizations</span>
+                  <span className="founder-badge">&#x2B50; Negotiated strategic partnerships with global enterprise organizations</span></div><div className="founder-logos"><p className="founder-logos-label">Worked With:</p><div className="founder-logos-row"><img src="/fortune500-logo.png" alt="Fortune 500" className="mentor-logo" /></div></div>
                 </div>
               </div>
             </div>
@@ -556,12 +556,12 @@ function App() {
       {/* Meaning Section (Dark) */}
       <section className="meaning">
         <div className="container" style={{ textAlign: 'center' }}>
-          <h2>Because this isn't really about closing rates.</h2>
-          <p className="meaning-sub" style={{ margin: '0 auto 40px' }}>It's about building a repeatable, profitable sales engine: one that sustains growth and stands up to the goals your board, your investors, and your own plan are holding you to.</p>
+          <h2>Because this isn't really about closing the next deal.</h2>
+          <p className="meaning-sub" style={{ margin: '0 auto 40px' }}>It's about staying accountable to your business today, and to the team you'll build tomorrow, so you keep growing instead of resetting to zero. A repeatable, profitable sales engine is what stands up to the goals your board, your investors, and your own plan are holding you to.</p>
           <div className="meaning-bullets">
             <div className="meaning-bullet">
               <span className="meaning-bullet-icon">&rarr;</span>
-              <p>Knowing which conversations deserve your time and which ones are costing you a quarter</p>
+              <p>Knowing exactly what you sold today, not just what's stuck in the pipeline</p>
             </div>
             <div className="meaning-bullet">
               <span className="meaning-bullet-icon">&rarr;</span>
@@ -569,7 +569,7 @@ function App() {
             </div>
             <div className="meaning-bullet">
               <span className="meaning-bullet-icon">&rarr;</span>
-              <p>Speaking about revenue with the fluency an investor or a board expects from a founder</p>
+              <p>Staying accountable to your business now, and to the team you'll build to carry it forward</p>
             </div>
             <div className="meaning-bullet">
               <span className="meaning-bullet-icon">&rarr;</span>
@@ -577,7 +577,7 @@ function App() {
             </div>
           </div>
           <p className="meaning-close" style={{ margin: '0 auto' }}>
-            <span style={{ textDecoration: 'underline', textUnderlineOffset: '4px' }}>Revenue you can repeat is what turns a good product into a business.</span>
+            <span style={{ textDecoration: 'underline', textUnderlineOffset: '4px' }}>Sales isn't a quick turnaround. It's an investment in the sustainability of your business, and the insight you walk out with carries forward well beyond the next deal.</span>
           </p>
         </div>
       </section>

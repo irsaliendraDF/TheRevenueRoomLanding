@@ -773,6 +773,12 @@ img {
   height: 32px;
 }
 
+.mentor-logo[alt="Fortune 500"] {
+  height: 60px;
+  max-width: none;
+  opacity: 1;
+}
+
 /* ---- Founders / Partnership (About) ---- */
 .founders {
   background: var(--cream);

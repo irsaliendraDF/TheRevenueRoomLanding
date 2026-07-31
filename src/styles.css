@@ -841,10 +841,8 @@ img {
   object-position: center 18%;
 }
 
-/* Chris's source is a square crop with the head higher in frame than Irene's
-   wide shot, so it needs its own vertical anchor to sit level beside hers. */
 .founder-photo--chris img {
-  object-position: center 30%;
+  object-position: center 20%;
 }
 
 /* Placeholder headshot (clearly marked, swap for the real photo) */

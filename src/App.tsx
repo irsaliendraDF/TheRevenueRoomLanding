@@ -50,7 +50,7 @@ const modules = [
     date: 'Oct 12',
     title: "Deal-Maker's Lab",
     tagline: 'Handle objections without freezing, read the buying signals, and ask for the close.',
-    body: 'The live practice week. You run real discovery calls, work your top five objections through the A.R.Q. framework in Objection Island, play the Wrong Audience Game to find the true buyer among five personas, and practice closing in a way that feels natural rather than pushy. Peers give live feedback.',
+    body: 'The live practice week. You run real discovery calls, work your top five objections through the A.R.Q. framework, play the Wrong Audience Game to find the true buyer among five personas, and practice closing in a way that feels natural rather than pushy. Peers give live feedback.',
     outcome: 'Walk away with: An objection playbook for your top 5 objections, a closing approach you can actually run, and real reps with peer feedback.',
   },
   {
@@ -76,7 +76,7 @@ const modules = [
 const founderFaqs = [
   { q: 'Who is this for?', a: 'B2B founders and high-ticket service businesses doing their own sales, roughly pre-revenue through $250K ARR. If you have customer conversations happening but no repeatable system for turning them into revenue, this is built for you.' },
   { q: 'What if I have zero sales experience?', a: 'That is exactly who this is built for. Sales is a skill with its own tools and techniques, and most founders were never taught them. We build from first principles, including a plain-language glossary of the terms you are expected to already know, so nobody has to nod along to words like pipeline, qualification, or forecast. Most founders in the Revenue Room are technical or domain experts with no formal sales training.' },
-  { q: 'How much time per week?', a: 'Plan for 2.5 to 3 hours: a 90-minute live session plus homework, peer check-ins, and CRM setup work. Most founders say the structure actually saves them time because they stop context-switching on sales.' },
+  { q: 'How much time per week?', a: 'Plan for 2.5 to 3 hours: a 90-minute live session plus homework, cohort check-ins, and CRM setup work. Most founders say the structure actually saves them time because they stop context-switching on sales.' },
   { q: 'Is this live or self-paced?', a: 'Fully live and virtual. One 90-minute session per week over Zoom with your cohort, plus your worksheets, readings, and submissions inside the Revenue Room learning platform. Recordings are available if you miss a session, but the real value is in the live interaction.' },
   { q: 'What is the beta cohort size?', a: 'Capped at 8 founders for the beta. It is deliberately small so Irene and Chris can work directly with every founder. Small enough for real feedback, real practice, and real accountability.' },
   { q: 'Do I need a CRM already?', a: 'No, and you may not need one yet. In Week 3 we right-size the tool to where you actually are: most early founders start with a structured tracker for the accounts they are really working and graduate to a CRM when the volume demands it. If you already have one, we will audit and configure it properly. We are CRM-agnostic. The frameworks work with HubSpot, Pipedrive, Close, Attio, or a well-built spreadsheet.' },
@@ -93,7 +93,7 @@ const sponsorFaqs = [
   { q: 'What are the sponsorship tiers?', a: 'Three tiers: Community/Partner at $1,500 per seat (for smaller incubators and mission-aligned orgs), Standard at $1,950 per seat (for mid-sized accelerators and economic development agencies), and Enterprise at $2,500+ per seat (for large corporates, banks, and national programs). Beta cohort sponsors receive a 50% discount at $750 per seat.' },
   { q: 'How many seats can we sponsor?', a: 'Minimum 3 seats per partner for the beta cohort. Most partners sponsor 3-5 seats. Volume discounts of 10% apply for 10+ seats from one sponsor, and multi-cohort commitments (3+ cohorts per year) receive 15% off.' },
   { q: 'What reporting do sponsors receive?', a: 'Standard tier and above includes a cohort performance report with aggregated, anonymized outcomes, founder progress snapshots, and a quarterly state-of-the-cohort briefing. Enterprise tier adds co-branded materials and custom reporting tied to your KPIs.' },
-  { q: 'Can we nominate founders from our portfolio?', a: 'Absolutely. Nominated founders still go through the application process to ensure fit, but they receive priority review. We coordinate the fit interview with your program lead.' },
+  { q: 'Can we nominate founders from our portfolio?', a: 'Absolutely. Nominated founders still go through the review process to ensure fit, but they receive priority review. We coordinate the fit interview with your program lead.' },
   { q: 'What does the founder experience include?', a: 'Every sponsored founder gets: 7 live modules, cohort sessions, worksheets and homework with direct feedback, a Revenue Index diagnostic taken at the start and again at the end, the full library of templates and SOPs in the Revenue Room platform, a certificate of completion, and a Week 7 sales plan review of their Sales Engine Playbook.' },
   { q: 'How do we get started?', a: 'Email irene@digitalflowconsulting.ca with your program name, founder count, and target cohort. We will send back a 1-page sponsor brief within 48 hours and set up a 20-minute scoping call.' },
 ]
@@ -750,8 +750,8 @@ function App() {
           <h2 className="text-center" style={{ fontSize: 'clamp(28px, 3.5vw, 40px)', fontWeight: 700 }}>You're not doing this alone.</h2>
           <div className="community-grid">
             <div className="community-card">
-              <h4>Accountability Pods</h4>
-              <p>You're matched with 3-5 peers for weekly check-ins. Share wins, troubleshoot blockers, and hold each other to commitments. The pod is where the real accountability happens.</p>
+              <h4>Cohort Accountability</h4>
+              <p>Weekly check-ins with your cohort keep you moving. Share wins, troubleshoot blockers, and hold each other to commitments. The Community section is where the real accountability happens.</p>
             </div>
             <div className="community-card">
               <h4>Cohort Community</h4>
@@ -831,7 +831,7 @@ function App() {
               <span className="guarantee-tag">Objection playbook</span>
               <span className="guarantee-tag">Metrics dashboard</span>
             </div>
-            <p className="guarantee-fine">These are the deliverables every founder walks away with. Accelerator-sponsored seats are subject to the sponsoring organization's terms.</p>
+            <p className="guarantee-fine">These are the tools every founder walks away with. Accelerator-sponsored seats are subject to the sponsoring organization's terms.</p>
           </div>
         </div>
       </section>

@@ -928,6 +928,12 @@ img {
   margin-bottom: 18px;
 }
 
+/* Grow the bio so the badge pills land at the same height on both founder
+   cards even when the two bios differ slightly in length. */
+.founder-bio {
+  flex: 1;
+}
+
 .founder-bio p {
   font-size: 14px;
   color: var(--ink-soft);
@@ -977,6 +983,9 @@ img {
   gap: 22px;
   align-items: center;
   flex-wrap: wrap;
+  /* Fixed row height so the tallest logo on either card (Volta 70px vs
+     Fortune 500 60px) does not shift the badge pills out of alignment. */
+  min-height: 70px;
 }
 
 .founder-logos-placeholder {

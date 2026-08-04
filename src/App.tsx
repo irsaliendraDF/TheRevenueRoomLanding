@@ -450,10 +450,10 @@ function App() {
                 <p className="founder-oneliner">The revenue-systems operator who turns founder conversations into repeatable sales.</p>
                 <div className="founder-bio">
                   <p>
-                    For the last 7 years I've helped B2B founders build sales systems that actually work. Not theory, not frameworks you'll never open. Real, operational systems that turn conversations into contracts. Through DigitalFlow I've designed CRM architectures, built revenue operations from scratch, and created go-to-market playbooks for startups and growing teams across Atlantic Canada.
+                    For the last 7 years I've helped B2B founders build sales systems that actually work. Not theory, not frameworks you'll never open. Real, operational systems that turn conversations into contracts. Through DigitalFlow I've built CRM architectures, revenue operations, and go-to-market playbooks for founders across Atlantic Canada.
                   </p>
                   <p>
-                    I've watched brilliant founders leave hundreds of thousands on the table because nobody ever showed them how to build a repeatable process. I mentor at Volta and advise through the CGLCC and Tribe networks, and I see the same pattern everywhere: technical founders who are exceptional at what they build but were never taught how to sell it. The Revenue Room is what I wish existed when I started.
+                    I've watched brilliant founders leave hundreds of thousands on the table because nobody showed them how to build a repeatable process. I mentor at Volta and advise through the CGLCC and Tribe networks, and I see the same pattern: founders who are exceptional at what they build but were never taught how to sell it. The Revenue Room is what I wish existed when I started.
                   </p>
                 </div>
                 <div className="founder-badges">

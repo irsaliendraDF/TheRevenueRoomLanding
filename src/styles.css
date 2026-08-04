@@ -3,24 +3,38 @@
    ============================================================ */
 
 :root {
-  --ink: #1a2e1a;
-  --ink-soft: #2d3f2a;
-  --cream: #fff3e2;
-  --warm-white: #fffaf3;
-  --gold: #FFA74F;
-  --gold-deep: #c9943a;
-  --gold-light: #ffc474;
-  --gold-pale: #fff3e2;
-  --rust: #5e734e;
-  --forest: #3e4d34;
-  --forest-deep: #2d3a25;
-  --forest-light: #5e734e;
-  --muted: #8a7d6e;
-  --border: #e0d8ce;
-  --border-soft: #ece4d8;
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-body: 'DM Sans', system-ui, sans-serif;
-  --font-mono: 'DM Mono', 'JetBrains Mono', ui-monospace, monospace;
+  /* ---- The Revenue Room · Brand Kit v1.0 (DigitalFlow × North Peak) ----
+     Bone-forward and warm, led by deep teal, with warm gold as the accent
+     and ink used only as a grounding anchor. Brass is retired. */
+
+  /* Brand palette (canonical names) */
+  --teal: #0F5B54;         /* deep teal · primary */
+  --teal-deep: #0A423D;    /* darker teal · hovers */
+  --teal-signal: #17857C;  /* signal teal · secondary / links */
+  --gold-warm: #D19A34;    /* warm gold · accent */
+  --mint: #9FE1CB;         /* soft mint tint */
+  --bone: #F4F0E8;         /* bone · surface / light type */
+
+  /* Legacy variable names remapped to the new palette so every existing
+     component picks up the rebrand automatically. */
+  --ink: #0B1F1D;          /* ink · anchor / deepest contrast */
+  --ink-soft: #1d332e;     /* soft ink for body copy */
+  --cream: #F4F0E8;        /* -> bone surface */
+  --warm-white: #FBF8F1;   /* -> lightest bone */
+  --gold: #D19A34;         /* -> warm gold accent */
+  --gold-deep: #A9781F;    /* deep gold for text/hover on light */
+  --gold-light: #E3B75B;   /* lighter gold */
+  --gold-pale: #F4E9CF;    /* pale gold tint (fills) */
+  --rust: #17857C;         /* -> signal teal */
+  --forest: #0F5B54;       /* -> deep teal (primary dark accent) */
+  --forest-deep: #0A423D;  /* -> darker teal */
+  --forest-light: #17857C; /* -> signal teal */
+  --muted: #7d7466;        /* warm muted grey */
+  --border: #e0dace;       /* bone-tuned border */
+  --border-soft: #ebe5d8;  /* soft bone border */
+  --font-display: 'Piazzolla', Georgia, 'Times New Roman', serif;
+  --font-body: 'Schibsted Grotesk', system-ui, -apple-system, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'JetBrains Mono', ui-monospace, monospace;
   --nav-height: 68px;
   --radius-sm: 4px;
   --radius: 6px;
@@ -248,64 +262,19 @@ img {
 }
 
 /* ---- Hero ---- */
+/* Hero: deliberately still. All floating decor (blobs, orbits, particles, coins, rings)
+   was removed Jul 29 2026 per Chris's note that motion undercuts credibility with an
+   older, established buyer. What is left is a single static wash. */
 .hero {
   position: relative;
-  background: var(--cream);
+  background:
+    radial-gradient(900px 420px at 50% -10%, rgba(15,91,84,0.07) 0%, transparent 70%),
+    radial-gradient(600px 300px at 85% 15%, rgba(209,154,52,0.07) 0%, transparent 70%),
+    var(--cream);
   overflow: hidden;
   padding: 80px 0 64px;
   text-align: center;
-}
-
-.hero-blobs {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.hero-blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.35;
-  animation: blobFloat 12s ease-in-out infinite alternate;
-}
-
-.hero-blob--gold {
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, var(--gold-light) 0%, transparent 70%);
-  top: -100px;
-  right: -80px;
-}
-
-.hero-blob--forest {
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, var(--forest-light) 0%, transparent 70%);
-  bottom: -80px;
-  left: -100px;
-  animation-delay: -4s;
-}
-
-@keyframes blobFloat {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(30px, -20px) scale(1.08); }
-}
-
-.hero-orbit {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  animation: orbitSpin 60s linear infinite;
-}
-
-@keyframes orbitSpin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  border-bottom: 1px solid var(--border-soft);
 }
 
 .hero-content {
@@ -349,7 +318,7 @@ img {
   color: var(--ink);
   margin-bottom: 20px;
   letter-spacing: -0.02em;
-  text-shadow: 0 4px 24px rgba(62,77,52,0.15), 0 1px 3px rgba(42,42,34,0.1);
+  text-shadow: 0 4px 24px rgba(15,91,84,0.18), 0 1px 3px rgba(11,31,29,0.1);
   animation: heroTitleIn 0.8s ease-out both;
 }
 
@@ -527,198 +496,6 @@ img {
   font-size: 11px;
   color: var(--muted);
   line-height: 1.3;
-}
-
-/* Hero particles */
-.hero-particles {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.particle {
-  position: absolute;
-  border-radius: 50%;
-  opacity: 0.4;
-}
-
-.particle-1 {
-  width: 6px; height: 6px;
-  background: var(--gold);
-  top: 20%; left: 15%;
-  animation: particleFloat 6s ease-in-out infinite;
-}
-
-.particle-2 {
-  width: 4px; height: 4px;
-  background: var(--forest);
-  top: 35%; right: 12%;
-  animation: particleFloat 8s ease-in-out infinite reverse;
-}
-
-.particle-3 {
-  width: 8px; height: 8px;
-  background: var(--gold-light);
-  bottom: 25%; left: 8%;
-  animation: particleFloat 7s ease-in-out infinite 1s;
-}
-
-.particle-4 {
-  width: 5px; height: 5px;
-  background: var(--forest-light);
-  top: 15%; right: 25%;
-  animation: particleFloat 9s ease-in-out infinite 2s;
-}
-
-.particle-5 {
-  width: 3px; height: 3px;
-  background: var(--gold);
-  bottom: 35%; right: 18%;
-  animation: particleFloat 5s ease-in-out infinite 0.5s;
-}
-
-.particle-6 {
-  width: 7px; height: 7px;
-  background: var(--forest);
-  top: 60%; left: 22%;
-  animation: particleFloat 10s ease-in-out infinite 3s;
-}
-
-@keyframes particleFloat {
-  0%, 100% { transform: translate(0, 0); opacity: 0.4; }
-  25% { transform: translate(15px, -20px); opacity: 0.6; }
-  50% { transform: translate(-10px, -35px); opacity: 0.3; }
-  75% { transform: translate(20px, -15px); opacity: 0.5; }
-}
-
-/* Reverse orbit */
-.hero-orbit--reverse {
-  animation: orbitSpin 90s linear infinite reverse;
-}
-
-/* Floating coins */
-.hero-coins {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.coin {
-  position: absolute;
-  font-family: var(--font-display);
-  font-weight: 700;
-  color: var(--gold);
-  opacity: 0;
-  animation: coinFloat linear infinite;
-}
-
-.coin-1 {
-  font-size: 18px; left: 8%; animation-duration: 14s; animation-delay: 0s;
-}
-.coin-2 {
-  font-size: 14px; left: 22%; animation-duration: 18s; animation-delay: -3s;
-}
-.coin-3 {
-  font-size: 20px; left: 38%; animation-duration: 16s; animation-delay: -7s;
-}
-.coin-4 {
-  font-size: 12px; left: 55%; animation-duration: 20s; animation-delay: -2s;
-}
-.coin-5 {
-  font-size: 16px; left: 70%; animation-duration: 15s; animation-delay: -10s;
-}
-.coin-6 {
-  font-size: 22px; left: 85%; animation-duration: 17s; animation-delay: -5s;
-}
-.coin-7 {
-  font-size: 13px; left: 45%; animation-duration: 22s; animation-delay: -12s;
-}
-.coin-8 {
-  font-size: 15px; left: 92%; animation-duration: 19s; animation-delay: -8s;
-}
-
-@keyframes coinFloat {
-  0% {
-    bottom: -30px;
-    opacity: 0;
-    transform: translateX(0) rotate(0deg);
-  }
-  10% {
-    opacity: 0.25;
-  }
-  50% {
-    opacity: 0.15;
-  }
-  90% {
-    opacity: 0.2;
-  }
-  100% {
-    bottom: 110%;
-    opacity: 0;
-    transform: translateX(40px) rotate(360deg);
-  }
-}
-
-/* Floating ring circles */
-.hero-rings {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.ring {
-  position: absolute;
-  border-radius: 50%;
-  border: 1px solid var(--gold);
-  opacity: 0;
-  animation: ringDrift linear infinite;
-}
-
-.ring-1 {
-  width: 60px; height: 60px;
-  top: 12%; left: 5%;
-  animation-duration: 20s; animation-delay: 0s;
-}
-.ring-2 {
-  width: 40px; height: 40px;
-  top: 60%; right: 8%;
-  border-color: var(--forest);
-  animation-duration: 25s; animation-delay: -6s;
-}
-.ring-3 {
-  width: 80px; height: 80px;
-  top: 30%; right: 15%;
-  animation-duration: 22s; animation-delay: -11s;
-}
-.ring-4 {
-  width: 50px; height: 50px;
-  bottom: 20%; left: 12%;
-  border-color: var(--forest);
-  animation-duration: 28s; animation-delay: -4s;
-}
-
-@keyframes ringDrift {
-  0% {
-    opacity: 0;
-    transform: scale(0.5) rotate(0deg);
-  }
-  15% {
-    opacity: 0.18;
-  }
-  50% {
-    opacity: 0.12;
-    transform: scale(1.2) rotate(180deg);
-  }
-  85% {
-    opacity: 0.15;
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0.8) rotate(360deg);
-  }
 }
 
 @keyframes heroFadeUp {
@@ -994,6 +771,574 @@ img {
 
 .mentor-logo[alt="Halifax Chamber of Commerce"] {
   height: 32px;
+}
+
+.mentor-logo[alt="Fortune 500"] {
+  height: 60px;
+  max-width: none;
+  opacity: 1;
+}
+
+/* ---- Founders / Partnership (About) ---- */
+.founders {
+  background: var(--cream);
+  padding: 72px 0;
+}
+
+/* Wider container so Irene + Chris's cards get more room on screen */
+.founders .container {
+  max-width: 1260px;
+}
+
+.founders-head {
+  max-width: 720px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.founders-head h2 {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+
+.founders-head p {
+  font-size: 16px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+
+.founders-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.founder-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.founder-card:hover {
+  box-shadow: var(--shadow-lift);
+  transform: translateY(-3px);
+}
+
+.founder-photo {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  background: var(--border-soft);
+  overflow: hidden;
+}
+
+.founder-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+}
+
+.founder-photo--chris img {
+  object-position: center 20%;
+}
+
+/* Placeholder headshot (clearly marked, swap for the real photo) */
+.founder-photo--placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(160deg, var(--teal) 0%, var(--ink) 100%);
+  color: var(--mint);
+}
+
+.founder-photo--placeholder svg {
+  opacity: 0.85;
+}
+
+.founder-photo--placeholder span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.72);
+}
+
+.founder-draft-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: var(--gold);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 100px;
+}
+
+.founder-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 26px 26px 28px;
+}
+
+.founder-role {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--teal-signal);
+  margin-bottom: 6px;
+}
+
+.founder-role a {
+  color: var(--teal-signal);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.founder-name {
+  font-size: 27px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.founder-oneliner {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--teal);
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+/* Grow the bio so the badge pills land at the same height on both founder
+   cards even when the two bios differ slightly in length. */
+.founder-bio {
+  flex: 1;
+}
+
+.founder-bio p {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.72;
+  margin-bottom: 12px;
+}
+
+.founder-badges {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 2px;
+  padding-top: 18px;
+}
+
+.founder-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--teal);
+  background: rgba(15,91,84,0.07);
+  padding: 6px 12px;
+  border-radius: 100px;
+}
+
+/* Per-founder logo strip (Irene's ecosystem partners; North Peak's for Chris) */
+.founder-logos {
+  margin-top: auto;
+  padding-top: 22px;
+  border-top: 1px solid var(--border-soft);
+}
+
+.founder-logos-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.founder-logos-row {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  flex-wrap: wrap;
+  /* Fixed row height so the tallest logo on either card (Volta 70px vs
+     Fortune 500 60px) does not shift the badge pills out of alignment. */
+  min-height: 70px;
+}
+
+.founder-logos-placeholder {
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Partnership lockup — the two marks side by side in the middle */
+.partnership {
+  margin-top: 44px;
+  text-align: center;
+}
+
+.partnership-lockup {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 28px 40px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--warm-white);
+}
+
+.partnership-label {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--ink);
+}
+
+.partnership-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.partnership-logos .df-logo {
+  height: 42px;
+  width: auto;
+}
+
+/* DigitalFlow mark + wordmark, mirrored to the North Peak lockup */
+.df-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.df-wordmark img {
+  height: 38px;
+  width: auto;
+}
+
+.partnership-x {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--gold);
+  line-height: 1;
+}
+
+/* Placeholder North Peak wordmark — swap for the real logo file */
+.northpeak-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.northpeak-wordmark svg {
+  color: var(--teal);
+  flex-shrink: 0;
+}
+
+.partnership-caption {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+/* Ecosystem / co-brand partners strip */
+.ecosystem {
+  margin-top: 44px;
+  padding-top: 36px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.ecosystem-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.ecosystem-logos {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ---- Funding Pathways ---- */
+.funding {
+  padding: 64px 0;
+}
+
+.funding-head {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.funding-head h2 {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+
+.funding-head p {
+  font-size: 16px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+
+.funding-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 44px;
+}
+
+.funding-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  font-family: inherit;
+  width: 100%;
+  background: #fff;
+  border: 1.5px solid var(--gold);
+  border-radius: var(--radius-lg);
+  padding: 30px 28px;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.funding-card:hover {
+  box-shadow: var(--shadow-lift);
+  transform: translateY(-3px);
+}
+
+/* Flags are kept here on purpose: on these two cards the flag is wayfinding
+   ("which set of funding routes applies to me"), not patriotic signalling.
+   The rest of the page stays country-neutral per the Jul 28 call. */
+.funding-flag {
+  display: block;
+  height: 26px;
+  width: auto;
+  margin-bottom: 14px;
+  border-radius: 3px;
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 1px 3px rgba(11,31,29,0.12);
+}
+
+.funding-region {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--teal-signal);
+  margin-bottom: 8px;
+}
+
+.funding-card h3 {
+  font-family: var(--font-display);
+  font-size: 23px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.funding-card > p {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
+
+.funding-card-more {
+  margin-top: 18px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gold-deep);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.funding-note-inline {
+  margin-top: 26px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* Funding detail modal */
+.modal.modal--funding {
+  max-width: 600px;
+  text-align: left;
+}
+
+.funding-modal-region {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--teal-signal);
+  margin-bottom: 6px;
+}
+
+.funding-modal h3 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.funding-modal-intro {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+
+.funding-ways {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.funding-way {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.funding-way-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--teal);
+  color: #fff;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.funding-way h4 {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 3px;
+}
+
+.funding-way p {
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+.funding-steps {
+  background: var(--gold-pale);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin-bottom: 20px;
+}
+
+.funding-steps-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold-deep);
+  margin-bottom: 10px;
+}
+
+.funding-steps ol {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.funding-steps li {
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+.funding-steps li:last-child {
+  margin-bottom: 0;
+}
+
+.funding-selfpay {
+  font-size: 12.5px;
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.funding-ctas {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.funding-ctas .btn-primary,
+.funding-ctas .btn-forest {
+  flex: 1;
+  min-width: 170px;
+  text-align: center;
 }
 
 /* ---- Solution / Method ---- */
@@ -1322,8 +1667,8 @@ img {
 }
 
 .outcome-ba-after {
-  background: rgba(62,77,52,0.25);
-  color: #2d5a1e;
+  background: rgba(15,91,84,0.16);
+  color: var(--teal);
 }
 
 /* ---- Modules / Curriculum ---- */
@@ -2078,6 +2423,28 @@ img {
   .rapport-grid {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  .founders-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .funding-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .funding-ctas {
+    flex-direction: column;
+  }
+
+  .partnership-lockup {
+    padding: 24px 24px;
+    width: 100%;
+  }
+
+  .partnership-logos {
+    gap: 20px;
   }
 
   .rapport-photo {

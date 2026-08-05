@@ -1723,6 +1723,12 @@ img {
   box-shadow: var(--shadow-card);
 }
 
+/* Week filter hides cards rather than unmounting them, so the prerendered
+   HTML carries all seven modules for search engines. See isModuleVisible. */
+.module-card.is-filtered-out {
+  display: none;
+}
+
 .module-card-header {
   display: flex;
   align-items: center;

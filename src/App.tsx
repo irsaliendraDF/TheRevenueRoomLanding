@@ -262,9 +262,12 @@ function App() {
     }
   }
 
-  const filteredModules = weekFilter === 'all'
-    ? modules
-    : modules.filter(m => m.week === parseInt(weekFilter))
+  // Every module stays mounted so the prerendered HTML carries the whole
+  // curriculum for search engines; the week filter hides cards via CSS rather
+  // than dropping them from the tree. Filtering the array instead would leave
+  // 6 of the 7 modules out of the static HTML, since weekFilter starts at '1'.
+  const isModuleVisible = (m: (typeof modules)[number]) =>
+    weekFilter === 'all' || m.week === parseInt(weekFilter)
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id)
@@ -694,8 +697,8 @@ function App() {
               </button>
             ))}
           </div>
-          {filteredModules.map(m => (
-            <div className="module-card" key={m.num}>
+          {modules.map(m => (
+            <div className={`module-card ${isModuleVisible(m) ? '' : 'is-filtered-out'}`} key={m.num}>
               <div className="module-card-header" onClick={() => toggleModule(m.num)}>
                 <span className="module-number">{m.num}</span>
                 <div className="module-meta">
